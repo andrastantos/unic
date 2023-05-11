@@ -37,3 +37,14 @@ GW1NSR      8pF        8pF       2.9V@4-24mA       0.4V@4-24mA                  
 This is actually rather typical for FPGAs: up to 24mA driver current. That's an equivalent source resistance of about 16 ohms.
 
 Overall, I'm thinking of lowering the series resistor to about 100ohms. It will not hurt TTL devices for sure and even CMOS devices that are potentially connected to us would see no more than 13mA of current. That is, if they have a 0-ohm source resistance. Seeing that they probably have something on the order of 100 ohms as well, that lowers the current to around 6-7mA, which should be highly acceptable.
+
+JTAG
+====
+
+If we want on-board JTAG, we have a few options:
+
+- FTDI (large, expensive)
+- BL702 (nice RiscV chip, used on the Tang Nano as an FTDI emulator: https://github.com/sipeed/RV-Debugger-BL702, but where to get it?)
+- stm32f103cbx8 (has FTDI emulator: https://github.com/rgwan/open-ec/tree/master/src, available around here, small)
+
+The CPU+FPGA combo is actually a rather potent one for this project: the CPU could be more than just a JTAG interface. It could do all sorts of fun stuff, such as implementing DSP algorithms, or even emulating protocols such as commodore or other floppy drives. We would only need to add some sort of FLASH device. An 8MB part can be had for $1 in single units. A 64MB one for $2. A 128MB for $3.
