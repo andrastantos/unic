@@ -1,0 +1,9 @@
+[submodule "cores/unic_t65"]
+	path = cores/unic_t65
+	url = git@github.com:andrastantos/unic_t65.git
+[submodule "cores/unic_t80"]
+	path = cores/unic_t80
+	url = git@github.com:andrastantos/unic_t80.git
+[submodule "cores/unic_fx68k"]
+	path = cores/unic_fx68k
+	url = git@github.com:andrastantos/unic_fx68k.git
