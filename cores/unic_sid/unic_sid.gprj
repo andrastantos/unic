@@ -1,0 +1,13 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1N-9C" pn="GW1N-LV9QN88C7/I6">gw1n9c-073</Device>
+    <FileList>
+        <File path="sid8580.v" type="file.verilog" enable="1"/>
+        <File path="sid_envelope.v" type="file.verilog" enable="1"/>
+        <File path="sid_filters.v" type="file.verilog" enable="1"/>
+        <File path="sid_voice.v" type="file.verilog" enable="1"/>
+    </FileList>
+</Project>

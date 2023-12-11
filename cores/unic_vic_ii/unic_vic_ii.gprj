@@ -1,0 +1,11 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1N-9C" pn="GW1N-LV9QN88C7/I6">gw1n9c-073</Device>
+    <FileList>
+        <File path="video_vicII_656x_a.vhd" type="file.vhdl" enable="1"/>
+        <File path="video_vicII_656x_e.vhd" type="file.vhdl" enable="1"/>
+    </FileList>
+</Project>
