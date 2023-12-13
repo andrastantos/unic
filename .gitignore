@@ -61,7 +61,7 @@ __pycache__
 *.vcd
 
 **/impl/**
-*.user
+#*.user -- stupid GoWin tool stores VHDL/Verliog std support setting in the user files instead of the project files
 
 **/*-backups/*
 *-cache

@@ -7,3 +7,6 @@
 [submodule "cores/unic_fx68k"]
 	path = cores/unic_fx68k
 	url = git@github.com:andrastantos/unic_fx68k.git
+[submodule "cores/anachron/anachron"]
+	path = cores/anachron/anachron
+	url = git@github.com:andrastantos/anachron.git

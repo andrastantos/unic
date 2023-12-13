@@ -1,0 +1,13 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1N-9C" pn="GW1N-LV9LQ176C7/I6">gw1n9c-081</Device>
+    <FileList>
+        <File path="biu_max.v" type="file.verilog" enable="1"/>
+        <File path="eu_rom.v" type="file.verilog" enable="1"/>
+        <File path="i8088.v" type="file.verilog" enable="1"/>
+        <File path="mcl86_eu_core.v" type="file.verilog" enable="1"/>
+    </FileList>
+</Project>
