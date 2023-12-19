@@ -86,7 +86,7 @@
         "pth_inside_courtyard": "ignore",
         "shorting_items": "error",
         "silk_over_copper": "warning",
-        "silk_overlap": "warning",
+        "silk_overlap": "ignore",
         "skew_out_of_range": "error",
         "through_hole_pad_without_hole": "error",
         "too_many_vias": "error",
@@ -351,7 +351,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "unic.kicad_pro",
+    "filename": "unic_gw1.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -377,7 +377,13 @@
     "meta": {
       "version": 2
     },
-    "net_colors": null
+    "net_colors": {
+      "+1V2": "rgb(255, 229, 191)",
+      "+3V3": "rgb(0, 132, 0)",
+      "+5V": "rgb(0, 194, 194)",
+      "GND": "rgb(194, 194, 0)",
+      "LINE": "rgb(194, 0, 194)"
+    }
   },
   "pcbnew": {
     "last_paths": {
