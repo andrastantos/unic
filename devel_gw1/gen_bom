@@ -1,0 +1,2 @@
+#!/bin/sh
+kicost -i devel_gw1.xml --overwrite -o devel_gw1_bom.xlsx
