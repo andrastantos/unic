@@ -1,0 +1,12 @@
+<?xml version="1" encoding="UTF-8"?>
+<!DOCTYPE gowin-fpga-project>
+<Project>
+    <Template>FPGA</Template>
+    <Version>5</Version>
+    <Device name="GW1NR-4D" pn="GW1NR-LV4QN88C6/I5">gw1nr4d-001</Device>
+    <FileList>
+        <File path="top.sv" type="file.verilog" enable="1"/>
+        <File path="/home/tantos/unic/cores/pin_constraints.cst" type="file.cst" enable="1"/>
+        <File path="/home/tantos/unic/cores/pin_constraints2.cst" type="file.cst" enable="0"/>
+    </FileList>
+</Project>

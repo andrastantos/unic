@@ -1,0 +1,9 @@
+#!/bin/sh
+iverilog -g2012 sim_top.sv top.sv -o sim_top || exit 1
+p=$PWD
+$p/sim_top
+cd $p
+
+
+
+
