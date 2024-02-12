@@ -5279,6 +5279,11 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 124f9ca5-a98e-426c-b576-88181a9cb695)
   )
+  (text "TODO:\n- Re-jiggle power supplies: DC/DC will be needed for 3.3 generation;\n  1.2V might be (CHECK!!!!) an LDO from 3.3\n- Add more vias to EPAD, make sure they are of the 'ENCROACHED' style,\n  which is to say, that they are open on the top and solder-mask-defined\n  on the bottom. See Microchip AN18.15 for details. They recommend:\n  0.25-0.3mm FHS and 0.055-0.075mm larger solder mask opening.\n- Can we relax manufacturing cost? by making the holes 0.3mm FHS?"
+    (at 334.01 57.15 0)
+    (effects (font (size 1.27 1.27)) (justify left bottom))
+    (uuid 1a4cba54-3c88-406d-ba66-762bf598248e)
+  )
   (text "GND" (at 158.75 351.79 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 1a6b38cd-24e2-4780-9bbd-7cf44659f37b)
@@ -5314,7 +5319,7 @@
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 548994ac-d818-4e88-bf1c-d2e3f4286926)
   )
-  (text "Static input current for an LS gate is 0.1mA.\nThis gives us <10mA static output current.\n\nWe can sustain with an LDO\n\nSee http://raven1.magix.net/Ti%20TTL%20DataBook%20vol1.pdf, page 20\nhttps://ecelabs.njit.edu/fed101/resources/Motorola_Short_Version.pdf page 12\n\nDetailed answer:\nhttps://electronics.stackexchange.com/questions/633886/what-does-limit-of-1-ttl-ls-load-mean"
+  (text "Static input current for an LS gate is 0.1mA.\nThis gives us <10mA static output current.\n\nWe can sustain with an LDO\n\nSee http://raven1.magix.net/Ti%20TTL%20DataBook%20vol1.pdf, page 20\nhttps://ecelabs.njit.edu/fed101/resources/Motorola_Short_Version.pdf page 12\n\nDetailed answer:\nhttps://electronics.stackexchange.com/questions/633886/what-does-limit-of-1-ttl-ls-load-mean\n\nBuilt-in SDRAM however can consume up to 80mA it seems\n(https://www.mouser.com/datasheet/2/12/Alliance_Memory_64M_AS4C4M16SA_CI_v5_0_October_201-3045386.pdf)\nThat we can't sustain with an LDO. We need a switcher."
     (at 139.7 245.11 0)
     (effects (font (size 1.27 1.27)) (justify left bottom))
     (uuid 58ead62d-8e85-43a9-b549-a8dea7508821)
@@ -7666,7 +7671,7 @@
     (property "MF" "Gowin Semiconductor" (at 166.37 109.22 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
-    (property "Description" "\nVolatile SRAM based and non-volatile flash-based field-programmable gate array (FPGA) technology\n" (at 166.37 109.22 0)
+    (property "Description" "Volatile SRAM based and non-volatile flash-based field-programmable gate array (FPGA) technology" (at 166.37 109.22 0)
       (effects (font (size 1.27 1.27)) (justify bottom) hide)
     )
     (property "Package" "Package" (at 166.37 109.22 0)
