@@ -1,0 +1,7 @@
+#!/bin/sh
+
+find impl -type f -delete
+#mkdir _bin
+#GowinSynthesis -i oled_ctrl.sv -i top.sv -pn GW1NR-LV4QN88C6/I5 -verilog_language sysv-2017 -o _bin/oled_ctrl.vg
+gw_sh cmd.do
+

@@ -130,9 +130,10 @@ class OledCtrl(Module):
     spi_clk = Output(logic)
     spi_mosi = Output(logic)
     spi_ncs = Output(logic)
-    spi_nrst = Output(logic)
+    lcd_nrst = Output(logic)
 
     clk_divider = Input(Unsigned(8))
+    rst_divider = Input(Unsigned(8))
 
     def body(self) -> None:
 
@@ -222,14 +223,18 @@ class OledCtrl(Module):
 
         init_code = Memory(init_code_cfg)
 
-        fsm_pacer = Wire(logic)
+
+        rst_cnt = Wire(Unsigned(8))
+
         fsm = FSM()
-        fsm.clock_en <<= fsm_pacer
         class States(Enum):
             idle = 0
-            read_cmd = 1
-            read_last = 2
-            done = 3
+            reset = 1
+            reset_release = 2
+            wait_on = 3
+            read_cmd = 4
+            read_last = 5
+            done = 6
 
         init_len = Wire(Unsigned(9))
         init_cnt = Wire(Unsigned(9))
@@ -237,18 +242,18 @@ class OledCtrl(Module):
         fsm.reset_value <<= States.idle
         fsm.default_state <<= States.idle
 
-        fsm.add_transition(States.idle, 1, States.read_cmd)
+        fsm.add_transition(States.idle, 1, States.reset)
+        fsm.add_transition(States.reset, rst_cnt == self.rst_divider, States.reset_release)
+        fsm.add_transition(States.reset_release, 1, States.wait_on)
+        fsm.add_transition(States.wait_on, rst_cnt == self.rst_divider, States.read_cmd)
         fsm.add_transition(States.read_cmd, (init_cnt == init_len) & ~spi_busy, States.read_last)
         fsm.add_transition(States.read_last, ~spi_busy, States.done)
         fsm.add_transition(States.done, self.refresh, States.idle)
 
         last_state = Reg(fsm.state)
-        fsm_pacer <<= 1
-        #fsm_pacer <<= Reg(Select(
-        #    self.rst | (fsm.state == States.idle),
-        #    ~fsm_pacer,
-        #    0,
-        #))
+
+        rst_cnt <<= Reg(Select((fsm.state == States.idle) | (fsm.state == States.reset_release), increment(rst_cnt), 0))
+        self.lcd_nrst <<= ~(fsm.state == States.reset)
 
         init_code.addr <<= init_cnt
 
@@ -256,6 +261,9 @@ class OledCtrl(Module):
         spi_send = Wire(logic)
         init_cnt <<= Reg(SelectOne(
             fsm.state == States.idle, 1,
+            fsm.state == States.reset, 1,
+            fsm.state == States.reset_release, 1,
+            fsm.state == States.wait_on, 1,
             fsm.state == States.read_cmd, Select(spi_send, init_cnt, increment(init_cnt)),
             fsm.state == States.read_last, 0,
             fsm.state == States.done, 0
@@ -343,6 +351,7 @@ def sim_oled_ctrl():
             self.busy = Wire(logic)
 
             oled_ctrl.clk_divider <<= 4
+            oled_ctrl.rst_divider <<= 10
 
             oled_ctrl.reset <<= 0
             oled_ctrl.refresh <<= self.refresh
@@ -387,18 +396,13 @@ def sim_oled_ctrl():
 
     Build.simulation(top, "oled_ctrl.vcd", add_unnamed_scopes=True)
 
-"""
 def gen():
-    def top():
-        return ScanWrapper(FetchStage, {"clk", "rst"})
-
-    netlist = Build.generate_rtl(top, "fetch.sv")
-    top_level_name = netlist.get_module_class_name(netlist.top_level)
-    flow = QuartusFlow(target_dir="q_fetch", top_level=top_level_name, source_files=("fetch.sv",), clocks=(("clk", 10), ("top_clk", 100)), project_name="fetch")
-    flow.generate()
-    flow.run()
-"""
+    netlist = Build.generate_rtl(OledCtrl, "oled_ctrl.sv")
+    #top_level_name = netlist.get_module_class_name(netlist.top_level)
+    #flow = QuartusFlow(target_dir="q_fetch", top_level=top_level_name, source_files=("fetch.sv",), clocks=(("clk", 10), ("top_clk", 100)), project_name="fetch")
+    #flow.generate()
+    #flow.run()
 
 if __name__ == "__main__":
-    #gen()
-    sim_oled_ctrl()
+    gen()
+    #sim_oled_ctrl()
