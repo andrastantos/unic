@@ -497,7 +497,7 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "",
+      "plot": "release/",
       "pos_files": "",
       "specctra_dsn": "",
       "step": "unic_gw1.step",
