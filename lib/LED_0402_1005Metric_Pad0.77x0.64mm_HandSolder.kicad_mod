@@ -1,0 +1,240 @@
+(footprint "LED_0402_1005Metric_Pad0.77x0.64mm_HandSolder"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "LED SMD 0402 (1005 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: http://www.tortai-tech.com/upload/download/2011102023233369053.pdf), generated with kicad-footprint-generator")
+	(tags "LED handsolder")
+	(property "Reference" "REF**"
+		(at -3.175 -1.143 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "785f81de-cbad-4314-aa2f-f0722b40a5f9")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "K"
+		(at -0.7 0 0)
+		(layer "F.Fab")
+		(uuid "391a1c58-ce27-49a0-a10b-1d062975fc85")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			)
+		)
+	)
+	(property "Footprint" "LED_SMD:LED_0402_1005Metric_Pad0.77x0.64mm_HandSolder"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "d2d57861-f2a0-4e1b-b5cc-93f0a502a672")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Datasheet" "https://chromeled.com/pdf/smd/CS42C-QL4.pdf"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "81c44cad-576b-4383-b535-78363e88ebe0")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "709fd16c-4583-4f83-8518-912ba86be994")
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+		)
+	)
+	(property "manf#" "CS42C-QL4"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "9cafbff4-6768-4cad-a113-e424c34ec19d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "manf" "ChromeLED"
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "6caf32e3-f8a5-45af-a0c2-6f19d45564e2")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_circle
+		(center -1 -0.375)
+		(end -0.95 -0.375)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(fill none)
+		(layer "F.SilkS")
+		(uuid "f28b11e2-f523-4127-9120-ee4f3c04b816")
+	)
+	(fp_line
+		(start -1.1 -0.47)
+		(end 1.1 -0.47)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "b33ba8da-ac60-4bcd-bf87-93d48b37041b")
+	)
+	(fp_line
+		(start -1.1 0.47)
+		(end -1.1 -0.47)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "594872ef-3338-4850-b7a3-dec50b0a6915")
+	)
+	(fp_line
+		(start 1.1 -0.47)
+		(end 1.1 0.47)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "ef33629e-efa0-4edb-9e6a-ecab9a941315")
+	)
+	(fp_line
+		(start 1.1 0.47)
+		(end -1.1 0.47)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "6dccd6a8-edae-42ba-8262-8d7171f699a3")
+	)
+	(fp_line
+		(start -0.5 -0.25)
+		(end 0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e6fb2ee3-44f6-4a70-8c67-3c0224e1093c")
+	)
+	(fp_line
+		(start -0.5 0.25)
+		(end -0.5 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "16a22017-0121-4310-8b20-f29a9e208a1f")
+	)
+	(fp_line
+		(start -0.4 0.25)
+		(end -0.4 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "d4f26376-f958-4de2-bd7a-29dca98cc074")
+	)
+	(fp_line
+		(start -0.3 0.25)
+		(end -0.3 -0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "0b0eff89-3347-460b-a7be-f2088b88a7c2")
+	)
+	(fp_line
+		(start 0.5 -0.25)
+		(end 0.5 0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "31a744a4-cbb2-4402-b506-e3be630b40d0")
+	)
+	(fp_line
+		(start 0.5 0.25)
+		(end -0.5 0.25)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "02fbf3a1-d3e3-421a-b67d-ef05b2d76dc2")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0.551 0)
+		(layer "F.Fab")
+		(uuid "e5e67de1-caba-4e59-a532-219d79c6df43")
+		(effects
+			(font
+				(size 0.25 0.25)
+				(thickness 0.04)
+			)
+		)
+	)
+	(pad "1" smd roundrect
+		(at -0.5725 0)
+		(size 0.765 0.64)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "6fc70dfe-0b1c-4f22-b7b5-c0a5398fe184")
+	)
+	(pad "2" smd roundrect
+		(at 0.5725 0)
+		(size 0.765 0.64)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(roundrect_rratio 0.25)
+		(uuid "bb98cdd2-1e5d-42e1-a9ef-ef19dfc8ccd4")
+	)
+	(model "${KICAD8_3DMODEL_DIR}/LED_SMD.3dshapes/LED_0402_1005Metric.wrl"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+)

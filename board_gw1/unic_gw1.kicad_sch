@@ -17966,7 +17966,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 132.08 275.59 0)
 			(effects
 				(font
@@ -18408,7 +18408,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 261.62 48.26 0)
 			(effects
 				(font
@@ -18496,7 +18496,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1mm"
+		(property "Footprint" "UNIC:Fiducial_0.5mm_Mask1mm"
 			(at 275.59 129.54 0)
 			(effects
 				(font
@@ -18560,7 +18560,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 127 162.56 0)
 			(effects
 				(font
@@ -19030,7 +19030,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1mm"
+		(property "Footprint" "UNIC:Fiducial_0.5mm_Mask1mm"
 			(at 262.89 124.46 0)
 			(effects
 				(font
@@ -19094,7 +19094,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1mm"
+		(property "Footprint" "UNIC:Fiducial_0.5mm_Mask1mm"
 			(at 262.89 129.54 0)
 			(effects
 				(font
@@ -19157,7 +19157,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 321.945 330.2 0)
 			(effects
 				(font
@@ -19262,7 +19262,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 198.12 368.3 0)
 			(effects
 				(font
@@ -20022,7 +20022,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 255.27 48.26 0)
 			(effects
 				(font
@@ -20174,7 +20174,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-563"
+		(property "Footprint" "UNIC:SOT-563"
 			(at 204.47 264.16 0)
 			(effects
 				(font
@@ -20273,7 +20273,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 321.945 242.57 0)
 			(effects
 				(font
@@ -20444,7 +20444,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 494.665 96.52 0)
 			(effects
 				(font
@@ -20985,7 +20985,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 321.945 359.41 0)
 			(effects
 				(font
@@ -21889,7 +21889,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 123.19 59.69 0)
 			(effects
 				(font
@@ -22491,7 +22491,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 229.87 271.78 0)
 			(effects
 				(font
@@ -23013,7 +23013,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 321.945 96.52 0)
 			(effects
 				(font
@@ -23251,7 +23251,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 130.81 59.69 0)
 			(effects
 				(font
@@ -23799,7 +23799,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+		(property "Footprint" "UNIC:SOT-23-5"
 			(at 152.4 255.905 0)
 			(effects
 				(font
@@ -23895,7 +23895,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 436.245 359.41 0)
 			(effects
 				(font
@@ -25097,7 +25097,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 379.095 154.94 0)
 			(effects
 				(font
@@ -25266,7 +25266,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 220.98 264.16 0)
 			(effects
 				(font
@@ -25710,7 +25710,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 48.26 387.35 0)
 			(effects
 				(font
@@ -26431,7 +26431,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 494.665 154.94 0)
 			(effects
 				(font
@@ -26893,7 +26893,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1mm"
+		(property "Footprint" "UNIC:Fiducial_0.5mm_Mask1mm"
 			(at 275.59 119.38 0)
 			(effects
 				(font
@@ -27232,7 +27232,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Inductor_SMD:L_1008_2520Metric_Pad1.43x2.20mm_HandSolder"
+		(property "Footprint" "UNIC:L_1008_2520Metric_Pad1.43x2.20mm_HandSolder"
 			(at 220.98 259.08 0)
 			(effects
 				(font
@@ -27477,7 +27477,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 140.97 269.24 0)
 			(effects
 				(font
@@ -27762,7 +27762,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 193.04 368.3 0)
 			(effects
 				(font
@@ -27849,7 +27849,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 379.095 96.52 0)
 			(effects
 				(font
@@ -27954,7 +27954,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 379.095 271.78 0)
 			(effects
 				(font
@@ -28191,7 +28191,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 379.095 330.2 0)
 			(effects
 				(font
@@ -28362,7 +28362,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 267.97 48.26 0)
 			(effects
 				(font
@@ -29031,7 +29031,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+		(property "Footprint" "UNIC:TestPoint_Pad_D2.0mm"
 			(at 153.67 234.95 0)
 			(effects
 				(font
@@ -29296,7 +29296,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 200.66 173.99 0)
 			(effects
 				(font
@@ -30545,7 +30545,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 436.245 96.52 0)
 			(effects
 				(font
@@ -30808,7 +30808,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 284.48 48.26 0)
 			(effects
 				(font
@@ -31028,7 +31028,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1mm"
+		(property "Footprint" "UNIC:Fiducial_0.5mm_Mask1mm"
 			(at 262.89 139.7 0)
 			(effects
 				(font
@@ -31575,7 +31575,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1mm"
+		(property "Footprint" "UNIC:Fiducial_0.5mm_Mask1mm"
 			(at 275.59 124.46 0)
 			(effects
 				(font
@@ -31823,7 +31823,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 236.22 48.26 0)
 			(effects
 				(font
@@ -31910,7 +31910,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 321.945 213.36 0)
 			(effects
 				(font
@@ -32133,7 +32133,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-5"
+		(property "Footprint" "UNIC:SOT-23-5"
 			(at 260.35 271.78 0)
 			(effects
 				(font
@@ -33351,7 +33351,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 436.245 271.78 0)
 			(effects
 				(font
@@ -33720,7 +33720,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 494.665 242.57 0)
 			(effects
 				(font
@@ -33918,7 +33918,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 228.6 66.04 0)
 			(effects
 				(font
@@ -34479,7 +34479,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 379.095 184.15 0)
 			(effects
 				(font
@@ -34584,7 +34584,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 297.18 48.26 0)
 			(effects
 				(font
@@ -35001,7 +35001,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 436.245 213.36 0)
 			(effects
 				(font
@@ -36570,7 +36570,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 242.57 48.26 0)
 			(effects
 				(font
@@ -36961,7 +36961,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 190.5 392.43 0)
 			(effects
 				(font
@@ -37049,7 +37049,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 228.6 76.2 0)
 			(effects
 				(font
@@ -37527,7 +37527,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 101.6 370.84 0)
 			(effects
 				(font
@@ -37614,7 +37614,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 494.665 125.73 0)
 			(effects
 				(font
@@ -37720,7 +37720,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+		(property "Footprint" "UNIC:TestPoint_Pad_D2.0mm"
 			(at 153.67 224.79 0)
 			(effects
 				(font
@@ -38036,7 +38036,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "UNIC:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 238.76 266.7 0)
 			(effects
 				(font
@@ -38123,7 +38123,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 494.665 184.15 0)
 			(effects
 				(font
@@ -38414,7 +38414,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+		(property "Footprint" "UNIC:TestPoint_Pad_D2.0mm"
 			(at 153.67 251.46 0)
 			(effects
 				(font
@@ -38480,7 +38480,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 436.245 184.15 0)
 			(effects
 				(font
@@ -39115,7 +39115,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 321.945 271.78 0)
 			(effects
 				(font
@@ -39352,7 +39352,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 187.96 368.3 0)
 			(effects
 				(font
@@ -39571,7 +39571,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 494.665 271.78 0)
 			(effects
 				(font
@@ -39850,7 +39850,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1mm"
+		(property "Footprint" "UNIC:Fiducial_0.5mm_Mask1mm"
 			(at 262.89 134.62 0)
 			(effects
 				(font
@@ -39979,7 +39979,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 494.665 330.2 0)
 			(effects
 				(font
@@ -40322,7 +40322,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 274.32 48.26 0)
 			(effects
 				(font
@@ -40595,7 +40595,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 67.31 91.44 0)
 			(effects
 				(font
@@ -40682,7 +40682,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 321.945 300.99 0)
 			(effects
 				(font
@@ -40879,7 +40879,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 227.33 48.26 0)
 			(effects
 				(font
@@ -40966,7 +40966,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 321.945 184.15 0)
 			(effects
 				(font
@@ -41771,7 +41771,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 379.095 242.57 0)
 			(effects
 				(font
@@ -41967,7 +41967,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 187.96 320.04 0)
 			(effects
 				(font
@@ -42451,7 +42451,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "TestPoint:TestPoint_Pad_D2.0mm"
+		(property "Footprint" "UNIC:TestPoint_Pad_D2.0mm"
 			(at 153.67 243.84 0)
 			(effects
 				(font
@@ -42610,7 +42610,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1mm"
+		(property "Footprint" "UNIC:Fiducial_0.5mm_Mask1mm"
 			(at 275.59 134.62 0)
 			(effects
 				(font
@@ -42937,7 +42937,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 321.945 125.73 0)
 			(effects
 				(font
@@ -43201,7 +43201,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 229.87 262.89 0)
 			(effects
 				(font
@@ -43288,7 +43288,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 436.245 242.57 0)
 			(effects
 				(font
@@ -44001,7 +44001,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "UNIC:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 185.42 266.7 0)
 			(effects
 				(font
@@ -44365,7 +44365,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 436.245 300.99 0)
 			(effects
 				(font
@@ -44536,7 +44536,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 40.64 387.35 0)
 			(effects
 				(font
@@ -44756,7 +44756,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Fiducial:Fiducial_0.5mm_Mask1mm"
+		(property "Footprint" "UNIC:Fiducial_0.5mm_Mask1mm"
 			(at 262.89 119.38 0)
 			(effects
 				(font
@@ -44951,7 +44951,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 321.945 154.94 0)
 			(effects
 				(font
@@ -45056,7 +45056,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 494.665 359.41 0)
 			(effects
 				(font
@@ -45320,7 +45320,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 163.83 264.16 0)
 			(effects
 				(font
@@ -46147,7 +46147,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 170.18 269.24 0)
 			(effects
 				(font
@@ -46550,7 +46550,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 248.92 48.26 0)
 			(effects
 				(font
@@ -46822,7 +46822,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 494.665 300.99 0)
 			(effects
 				(font
@@ -47627,7 +47627,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 379.095 213.36 0)
 			(effects
 				(font
@@ -47865,7 +47865,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 273.05 264.16 0)
 			(effects
 				(font
@@ -48176,7 +48176,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
+		(property "Footprint" "UNIC:C_0805_2012Metric_Pad1.18x1.45mm_HandSolder"
 			(at 242.57 266.7 0)
 			(effects
 				(font
@@ -48263,7 +48263,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 290.83 48.26 0)
 			(effects
 				(font
@@ -48508,7 +48508,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 436.245 330.2 0)
 			(effects
 				(font
@@ -48679,7 +48679,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 379.095 359.41 0)
 			(effects
 				(font
@@ -48785,7 +48785,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:R_0402_1005Metric_Pad0.72x0.64mm_HandSolder"
 			(at 163.83 271.78 0)
 			(effects
 				(font
@@ -49836,7 +49836,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 436.245 125.73 0)
 			(effects
 				(font
@@ -49941,7 +49941,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 379.095 300.99 0)
 			(effects
 				(font
@@ -50112,7 +50112,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 494.665 213.36 0)
 			(effects
 				(font
@@ -50415,7 +50415,7 @@
 				(justify left)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
+		(property "Footprint" "UNIC:C_0402_1005Metric_Pad0.74x0.62mm_HandSolder"
 			(at 303.53 48.26 0)
 			(effects
 				(font
@@ -50568,7 +50568,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 436.245 154.94 0)
 			(effects
 				(font
@@ -51425,7 +51425,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-666"
+		(property "Footprint" "UNIC:SOT-666"
 			(at 379.095 125.73 0)
 			(effects
 				(font
@@ -51531,7 +51531,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_0402_1005Metric_Pad0.77x0.64mm_HandSolder"
+		(property "Footprint" "UNIC:LED_0402_1005Metric_Pad0.77x0.64mm_HandSolder"
 			(at 67.31 100.33 0)
 			(effects
 				(font
