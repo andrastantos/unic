@@ -17993,7 +17993,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 132.08 275.59 0)
 			(effects
 				(font
@@ -18002,7 +18002,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 132.08 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 132.08 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 132.08 275.59 0)
 			(effects
 				(font
@@ -18345,7 +18363,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 381 185.42 0)
 			(effects
 				(font
@@ -18354,7 +18372,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 381 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 381 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 381 185.42 0)
 			(effects
 				(font
@@ -18435,7 +18471,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 261.62 48.26 0)
 			(effects
 				(font
@@ -18444,7 +18480,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 261.62 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 261.62 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 261.62 48.26 0)
 			(effects
 				(font
@@ -18523,6 +18577,24 @@
 				(hide yes)
 			)
 		)
+		(property "manf" ""
+			(at 275.59 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
+			(at 275.59 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project "unic_gw1"
 				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
@@ -18587,7 +18659,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 127 162.56 0)
 			(effects
 				(font
@@ -18596,7 +18668,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 127 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 127 162.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 127 162.56 0)
 			(effects
 				(font
@@ -18676,7 +18766,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 323.85 302.26 0)
 			(effects
 				(font
@@ -18685,7 +18775,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 323.85 302.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 323.85 302.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 323.85 302.26 0)
 			(effects
 				(font
@@ -18768,7 +18876,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 323.85 185.42 0)
 			(effects
 				(font
@@ -18777,7 +18885,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 323.85 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 323.85 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 323.85 185.42 0)
 			(effects
 				(font
@@ -19057,6 +19183,24 @@
 				(hide yes)
 			)
 		)
+		(property "manf" ""
+			(at 262.89 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
+			(at 262.89 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project "unic_gw1"
 				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
@@ -19113,6 +19257,24 @@
 			)
 		)
 		(property "Description" "Fiducial Marker"
+			(at 262.89 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 262.89 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 262.89 129.54 0)
 			(effects
 				(font
@@ -19184,7 +19346,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 317.5 330.2 0)
 			(effects
 				(font
@@ -19193,7 +19355,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 317.5 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 317.5 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 317.5 330.2 0)
 			(effects
 				(font
@@ -19289,7 +19469,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 198.12 368.3 0)
 			(effects
 				(font
@@ -19298,7 +19478,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 198.12 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 198.12 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 198.12 368.3 0)
 			(effects
 				(font
@@ -19444,7 +19642,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 457.2 363.22 0)
 			(effects
 				(font
@@ -19453,7 +19651,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 457.2 363.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 457.2 363.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 457.2 363.22 0)
 			(effects
 				(font
@@ -19629,7 +19845,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 496.57 97.79 0)
 			(effects
 				(font
@@ -19638,7 +19854,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 496.57 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 496.57 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 496.57 97.79 0)
 			(effects
 				(font
@@ -20049,7 +20283,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 255.27 48.26 0)
 			(effects
 				(font
@@ -20058,7 +20292,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 255.27 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 255.27 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 255.27 48.26 0)
 			(effects
 				(font
@@ -20201,7 +20453,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "AP62150Z6-7"
+		(property "mpn" "AP62150Z6-7"
 			(at 204.47 264.16 0)
 			(effects
 				(font
@@ -20210,7 +20462,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Diodes Incorporated"
+		(property "manufacturer" "Diodes Incorporated"
+			(at 204.47 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 204.47 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 204.47 264.16 0)
 			(effects
 				(font
@@ -20300,7 +20570,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 317.5 242.57 0)
 			(effects
 				(font
@@ -20309,7 +20579,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 317.5 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 317.5 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 317.5 242.57 0)
 			(effects
 				(font
@@ -20471,7 +20759,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 490.22 96.52 0)
 			(effects
 				(font
@@ -20480,7 +20768,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 490.22 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 490.22 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 490.22 96.52 0)
 			(effects
 				(font
@@ -20578,7 +20884,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 457.2 304.8 0)
 			(effects
 				(font
@@ -20587,7 +20893,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 457.2 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 457.2 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 457.2 304.8 0)
 			(effects
 				(font
@@ -20763,7 +21087,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 342.9 158.75 0)
 			(effects
 				(font
@@ -20772,7 +21096,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 342.9 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 342.9 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 342.9 158.75 0)
 			(effects
 				(font
@@ -21012,7 +21354,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 317.5 359.41 0)
 			(effects
 				(font
@@ -21021,7 +21363,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 317.5 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 317.5 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 317.5 359.41 0)
 			(effects
 				(font
@@ -21426,7 +21786,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "GW1N-LV9QN88C6/I5"
+		(property "mpn" "GW1N-LV9QN88C6/I5"
 			(at 166.37 109.22 0)
 			(effects
 				(font
@@ -21444,7 +21804,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "GOWIN Semiconductor"
+		(property "manufacturer" "GOWIN Semiconductor"
+			(at 166.37 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 166.37 109.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 166.37 109.22 0)
 			(effects
 				(font
@@ -21916,7 +22294,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 123.19 59.69 0)
 			(effects
 				(font
@@ -21925,7 +22303,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 123.19 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 123.19 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 123.19 59.69 0)
 			(effects
 				(font
@@ -22203,7 +22599,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 323.85 127 0)
 			(effects
 				(font
@@ -22212,7 +22608,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 323.85 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 323.85 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 323.85 127 0)
 			(effects
 				(font
@@ -22361,7 +22775,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 496.57 243.84 0)
 			(effects
 				(font
@@ -22370,7 +22784,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 496.57 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 496.57 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 496.57 243.84 0)
 			(effects
 				(font
@@ -22518,7 +22950,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 229.87 271.78 0)
 			(effects
 				(font
@@ -22527,7 +22959,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 229.87 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 229.87 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 229.87 271.78 0)
 			(effects
 				(font
@@ -22673,7 +23123,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 515.62 158.75 0)
 			(effects
 				(font
@@ -22682,7 +23132,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 515.62 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 515.62 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 515.62 158.75 0)
 			(effects
 				(font
@@ -22792,7 +23260,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 323.85 360.68 0)
 			(effects
 				(font
@@ -22801,7 +23269,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 323.85 360.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 323.85 360.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 323.85 360.68 0)
 			(effects
 				(font
@@ -22884,7 +23370,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 381 97.79 0)
 			(effects
 				(font
@@ -22893,7 +23379,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 381 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 381 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 381 97.79 0)
 			(effects
 				(font
@@ -23040,7 +23544,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 317.5 96.52 0)
 			(effects
 				(font
@@ -23049,7 +23553,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 317.5 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 317.5 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 317.5 96.52 0)
 			(effects
 				(font
@@ -23278,7 +23800,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 130.81 59.69 0)
 			(effects
 				(font
@@ -23287,7 +23809,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 130.81 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 130.81 59.69 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 130.81 59.69 0)
 			(effects
 				(font
@@ -23826,7 +24366,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "MIC5203-3.3YM5-TR"
+		(property "mpn" "MIC5203-3.3YM5-TR"
 			(at 152.4 264.16 0)
 			(effects
 				(font
@@ -23835,7 +24375,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Microchip Technology"
+		(property "manufacturer" "Microchip Technology"
+			(at 152.4 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 152.4 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 152.4 264.16 0)
 			(effects
 				(font
@@ -23922,7 +24480,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 431.8 359.41 0)
 			(effects
 				(font
@@ -23931,7 +24489,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 431.8 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 431.8 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 431.8 359.41 0)
 			(effects
 				(font
@@ -24029,7 +24605,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 515.62 246.38 0)
 			(effects
 				(font
@@ -24038,7 +24614,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 515.62 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 515.62 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 515.62 246.38 0)
 			(effects
 				(font
@@ -24344,7 +24938,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CF31121D0R0-05-NH"
+		(property "mpn" "CF31121D0R0-05-NH"
 			(at 156.21 335.28 0)
 			(effects
 				(font
@@ -24353,7 +24947,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Cvilux USA"
+		(property "manufacturer" "Cvilux USA"
+			(at 156.21 335.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 156.21 335.28 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 156.21 335.28 0)
 			(effects
 				(font
@@ -24466,7 +25078,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 438.15 243.84 0)
 			(effects
 				(font
@@ -24475,7 +25087,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 438.15 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 438.15 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 438.15 243.84 0)
 			(effects
 				(font
@@ -24558,7 +25188,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 342.9 246.38 0)
 			(effects
 				(font
@@ -24567,7 +25197,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 342.9 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 342.9 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 342.9 246.38 0)
 			(effects
 				(font
@@ -24743,7 +25391,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 400.05 129.54 0)
 			(effects
 				(font
@@ -24752,7 +25400,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 400.05 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 400.05 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 400.05 129.54 0)
 			(effects
 				(font
@@ -25124,7 +25790,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 374.65 154.94 0)
 			(effects
 				(font
@@ -25133,7 +25799,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 374.65 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 374.65 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 374.65 154.94 0)
 			(effects
 				(font
@@ -25293,7 +25977,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 220.98 264.16 0)
 			(effects
 				(font
@@ -25302,7 +25986,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 220.98 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 220.98 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 220.98 264.16 0)
 			(effects
 				(font
@@ -25382,7 +26084,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 515.62 334.01 0)
 			(effects
 				(font
@@ -25391,7 +26093,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 515.62 334.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 515.62 334.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 515.62 334.01 0)
 			(effects
 				(font
@@ -25501,7 +26221,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 457.2 187.96 0)
 			(effects
 				(font
@@ -25510,7 +26230,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 457.2 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 457.2 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 457.2 187.96 0)
 			(effects
 				(font
@@ -25620,7 +26358,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 342.9 334.01 0)
 			(effects
 				(font
@@ -25629,7 +26367,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 342.9 334.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 342.9 334.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 342.9 334.01 0)
 			(effects
 				(font
@@ -25737,7 +26493,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 48.26 387.35 0)
 			(effects
 				(font
@@ -25746,7 +26502,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 48.26 387.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 48.26 387.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 48.26 387.35 0)
 			(effects
 				(font
@@ -26090,7 +26864,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 515.62 187.96 0)
 			(effects
 				(font
@@ -26099,7 +26873,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 515.62 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 515.62 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 515.62 187.96 0)
 			(effects
 				(font
@@ -26275,7 +27067,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 400.05 246.38 0)
 			(effects
 				(font
@@ -26284,7 +27076,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 400.05 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 400.05 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 400.05 246.38 0)
 			(effects
 				(font
@@ -26458,7 +27268,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 490.22 154.94 0)
 			(effects
 				(font
@@ -26467,7 +27277,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 490.22 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 490.22 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 490.22 154.94 0)
 			(effects
 				(font
@@ -26697,7 +27525,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 381 243.84 0)
 			(effects
 				(font
@@ -26706,7 +27534,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 381 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 381 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 381 243.84 0)
 			(effects
 				(font
@@ -26920,6 +27766,24 @@
 				(hide yes)
 			)
 		)
+		(property "manf" ""
+			(at 275.59 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
+			(at 275.59 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project "unic_gw1"
 				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
@@ -27051,7 +27915,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 342.9 100.33 0)
 			(effects
 				(font
@@ -27060,7 +27924,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 342.9 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 342.9 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 342.9 100.33 0)
 			(effects
 				(font
@@ -27170,7 +28052,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 381 127 0)
 			(effects
 				(font
@@ -27179,7 +28061,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 381 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 381 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 381 127 0)
 			(effects
 				(font
@@ -27259,7 +28159,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "UHP 252012BF-100M"
+		(property "mpn" "UHP 252012BF-100M"
 			(at 220.98 259.08 0)
 			(effects
 				(font
@@ -27268,7 +28168,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "TAI-TECH Advanced Electronics Co., Ltd."
+		(property "manufacturer" "TAI-TECH Advanced Electronics Co., Ltd."
+			(at 220.98 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 220.98 259.08 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 220.98 259.08 0)
 			(effects
 				(font
@@ -27348,7 +28266,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 323.85 97.79 0)
 			(effects
 				(font
@@ -27357,7 +28275,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 323.85 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 323.85 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 323.85 97.79 0)
 			(effects
 				(font
@@ -27504,7 +28440,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 140.97 269.24 0)
 			(effects
 				(font
@@ -27513,7 +28449,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 140.97 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 140.97 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 140.97 269.24 0)
 			(effects
 				(font
@@ -27789,7 +28743,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 193.04 368.3 0)
 			(effects
 				(font
@@ -27798,7 +28752,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 193.04 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 193.04 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 193.04 368.3 0)
 			(effects
 				(font
@@ -27876,7 +28848,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 374.65 96.52 0)
 			(effects
 				(font
@@ -27885,7 +28857,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 374.65 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 374.65 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 374.65 96.52 0)
 			(effects
 				(font
@@ -27981,7 +28971,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 374.65 271.78 0)
 			(effects
 				(font
@@ -27990,7 +28980,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 374.65 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 374.65 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 374.65 271.78 0)
 			(effects
 				(font
@@ -28218,7 +29226,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 374.65 330.2 0)
 			(effects
 				(font
@@ -28227,7 +29235,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 374.65 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 374.65 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 374.65 330.2 0)
 			(effects
 				(font
@@ -28389,7 +29415,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 267.97 48.26 0)
 			(effects
 				(font
@@ -28398,7 +29424,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 267.97 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 267.97 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 267.97 48.26 0)
 			(effects
 				(font
@@ -28940,7 +29984,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 342.9 363.22 0)
 			(effects
 				(font
@@ -28949,7 +29993,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 342.9 363.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 342.9 363.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 342.9 363.22 0)
 			(effects
 				(font
@@ -29008,7 +30070,7 @@
 		(at 148.59 234.95 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -29050,6 +30112,24 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 148.59 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 148.59 234.95 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 148.59 234.95 0)
 			(effects
 				(font
@@ -29323,7 +30403,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 200.66 173.99 0)
 			(effects
 				(font
@@ -29332,7 +30412,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 200.66 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 200.66 173.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 200.66 173.99 0)
 			(effects
 				(font
@@ -29412,7 +30510,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 342.9 187.96 0)
 			(effects
 				(font
@@ -29421,7 +30519,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 342.9 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 342.9 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 342.9 187.96 0)
 			(effects
 				(font
@@ -29663,7 +30779,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 515.62 217.17 0)
 			(effects
 				(font
@@ -29672,7 +30788,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 515.62 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 515.62 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 515.62 217.17 0)
 			(effects
 				(font
@@ -29848,7 +30982,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 457.2 275.59 0)
 			(effects
 				(font
@@ -29857,7 +30991,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 457.2 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 457.2 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 457.2 275.59 0)
 			(effects
 				(font
@@ -30165,7 +31317,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 438.15 214.63 0)
 			(effects
 				(font
@@ -30174,7 +31326,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 438.15 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 438.15 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 438.15 214.63 0)
 			(effects
 				(font
@@ -30455,7 +31625,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 515.62 129.54 0)
 			(effects
 				(font
@@ -30464,7 +31634,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 515.62 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 515.62 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 515.62 129.54 0)
 			(effects
 				(font
@@ -30572,7 +31760,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 431.8 96.52 0)
 			(effects
 				(font
@@ -30581,7 +31769,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 431.8 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 431.8 96.52 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 431.8 96.52 0)
 			(effects
 				(font
@@ -30745,7 +31951,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 496.57 273.05 0)
 			(effects
 				(font
@@ -30754,7 +31960,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 496.57 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 496.57 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 496.57 273.05 0)
 			(effects
 				(font
@@ -30835,7 +32059,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 284.48 48.26 0)
 			(effects
 				(font
@@ -30844,7 +32068,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 284.48 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 284.48 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 284.48 48.26 0)
 			(effects
 				(font
@@ -31055,6 +32297,24 @@
 				(hide yes)
 			)
 		)
+		(property "manf" ""
+			(at 262.89 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
+			(at 262.89 139.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project "unic_gw1"
 				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
@@ -31185,7 +32445,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "502598-2793"
+		(property "mpn" "502598-2793"
 			(at 82.55 171.45 0)
 			(effects
 				(font
@@ -31194,7 +32454,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Molex"
+		(property "manufacturer" "Molex"
+			(at 82.55 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 82.55 171.45 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 82.55 171.45 0)
 			(effects
 				(font
@@ -31418,7 +32696,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 400.05 187.96 0)
 			(effects
 				(font
@@ -31427,7 +32705,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 400.05 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 400.05 187.96 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 400.05 187.96 0)
 			(effects
 				(font
@@ -31602,6 +32898,24 @@
 				(hide yes)
 			)
 		)
+		(property "manf" ""
+			(at 275.59 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
+			(at 275.59 124.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project "unic_gw1"
 				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
@@ -31733,7 +33047,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 400.05 334.01 0)
 			(effects
 				(font
@@ -31742,7 +33056,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 400.05 334.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 400.05 334.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 400.05 334.01 0)
 			(effects
 				(font
@@ -31850,7 +33182,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 236.22 48.26 0)
 			(effects
 				(font
@@ -31859,7 +33191,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 236.22 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 236.22 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 236.22 48.26 0)
 			(effects
 				(font
@@ -31937,7 +33287,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 317.5 213.36 0)
 			(effects
 				(font
@@ -31946,7 +33296,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 317.5 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 317.5 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 317.5 213.36 0)
 			(effects
 				(font
@@ -32044,7 +33412,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 400.05 158.75 0)
 			(effects
 				(font
@@ -32053,7 +33421,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 400.05 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 400.05 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 400.05 158.75 0)
 			(effects
 				(font
@@ -32160,7 +33546,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Microchip Technology"
+		(property "manufacturer" "Microchip Technology"
 			(at 260.35 261.62 0)
 			(effects
 				(font
@@ -32169,7 +33555,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "MIC5504-1.2YM5-TR"
+		(property "mpn" "MIC5504-1.2YM5-TR"
+			(at 260.35 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 260.35 261.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 260.35 261.62 0)
 			(effects
 				(font
@@ -32324,7 +33728,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 400.05 304.8 0)
 			(effects
 				(font
@@ -32333,7 +33737,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 400.05 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 400.05 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 400.05 304.8 0)
 			(effects
 				(font
@@ -32509,7 +33931,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 323.85 214.63 0)
 			(effects
 				(font
@@ -32518,7 +33940,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 323.85 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 323.85 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 323.85 214.63 0)
 			(effects
 				(font
@@ -32997,7 +34437,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 457.2 246.38 0)
 			(effects
 				(font
@@ -33006,7 +34446,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 457.2 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 457.2 246.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 457.2 246.38 0)
 			(effects
 				(font
@@ -33378,7 +34836,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 431.8 271.78 0)
 			(effects
 				(font
@@ -33387,7 +34845,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 431.8 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 431.8 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 431.8 271.78 0)
 			(effects
 				(font
@@ -33747,7 +35223,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 490.22 242.57 0)
 			(effects
 				(font
@@ -33756,7 +35232,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 490.22 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 490.22 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 490.22 242.57 0)
 			(effects
 				(font
@@ -33854,7 +35348,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 381 156.21 0)
 			(effects
 				(font
@@ -33863,7 +35357,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 381 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 381 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 381 156.21 0)
 			(effects
 				(font
@@ -33945,7 +35457,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-JW-102GLF"
+		(property "mpn" "CR0402-JW-102GLF"
 			(at 228.6 66.04 0)
 			(effects
 				(font
@@ -33954,7 +35466,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 228.6 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 228.6 66.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 228.6 66.04 0)
 			(effects
 				(font
@@ -34100,7 +35630,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 496.57 214.63 0)
 			(effects
 				(font
@@ -34109,7 +35639,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 496.57 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 496.57 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 496.57 214.63 0)
 			(effects
 				(font
@@ -34192,7 +35740,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 438.15 185.42 0)
 			(effects
 				(font
@@ -34201,7 +35749,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 438.15 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 438.15 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 438.15 185.42 0)
 			(effects
 				(font
@@ -34284,7 +35850,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 381 214.63 0)
 			(effects
 				(font
@@ -34293,7 +35859,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 381 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 381 214.63 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 381 214.63 0)
 			(effects
 				(font
@@ -34506,7 +36090,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 374.65 184.15 0)
 			(effects
 				(font
@@ -34515,7 +36099,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 374.65 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 374.65 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 374.65 184.15 0)
 			(effects
 				(font
@@ -34611,7 +36213,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 297.18 48.26 0)
 			(effects
 				(font
@@ -34620,7 +36222,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 297.18 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 297.18 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 297.18 48.26 0)
 			(effects
 				(font
@@ -34700,7 +36320,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 457.2 217.17 0)
 			(effects
 				(font
@@ -34709,7 +36329,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 457.2 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 457.2 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 457.2 217.17 0)
 			(effects
 				(font
@@ -34819,7 +36457,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 342.9 275.59 0)
 			(effects
 				(font
@@ -34828,7 +36466,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 342.9 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 342.9 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 342.9 275.59 0)
 			(effects
 				(font
@@ -34938,7 +36594,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 381 331.47 0)
 			(effects
 				(font
@@ -34947,7 +36603,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 381 331.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 381 331.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 381 331.47 0)
 			(effects
 				(font
@@ -35028,7 +36702,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 431.8 213.36 0)
 			(effects
 				(font
@@ -35037,7 +36711,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 431.8 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 431.8 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 431.8 213.36 0)
 			(effects
 				(font
@@ -35267,7 +36959,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 457.2 158.75 0)
 			(effects
 				(font
@@ -35276,7 +36968,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 457.2 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 457.2 158.75 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 457.2 158.75 0)
 			(effects
 				(font
@@ -35451,7 +37161,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 515.62 275.59 0)
 			(effects
 				(font
@@ -35460,7 +37170,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 515.62 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 515.62 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 515.62 275.59 0)
 			(effects
 				(font
@@ -35966,7 +37694,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 438.15 302.26 0)
 			(effects
 				(font
@@ -35975,7 +37703,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 438.15 302.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 438.15 302.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 438.15 302.26 0)
 			(effects
 				(font
@@ -36190,7 +37936,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 457.2 129.54 0)
 			(effects
 				(font
@@ -36199,7 +37945,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 457.2 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 457.2 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 457.2 129.54 0)
 			(effects
 				(font
@@ -36309,7 +38073,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 381 360.68 0)
 			(effects
 				(font
@@ -36318,7 +38082,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 381 360.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 381 360.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 381 360.68 0)
 			(effects
 				(font
@@ -36597,7 +38379,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 242.57 48.26 0)
 			(effects
 				(font
@@ -36606,7 +38388,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 242.57 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 242.57 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 242.57 48.26 0)
 			(effects
 				(font
@@ -36686,7 +38486,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 457.2 100.33 0)
 			(effects
 				(font
@@ -36695,7 +38495,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 457.2 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 457.2 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 457.2 100.33 0)
 			(effects
 				(font
@@ -36871,7 +38689,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 515.62 100.33 0)
 			(effects
 				(font
@@ -36880,7 +38698,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 515.62 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 515.62 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 515.62 100.33 0)
 			(effects
 				(font
@@ -36988,7 +38824,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 190.5 392.43 0)
 			(effects
 				(font
@@ -36997,7 +38833,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 190.5 392.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 190.5 392.43 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 190.5 392.43 0)
 			(effects
 				(font
@@ -37076,7 +38930,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 228.6 76.2 0)
 			(effects
 				(font
@@ -37085,7 +38939,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 228.6 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 228.6 76.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 228.6 76.2 0)
 			(effects
 				(font
@@ -37230,7 +39102,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CFAL12832C-0091B-W_A"
+		(property "mpn" "CFAL12832C-0091B-W_A"
 			(at 254 71.12 0)
 			(effects
 				(font
@@ -37257,7 +39129,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Crystalfontz America, Inc."
+		(property "manufacturer" "Crystalfontz America, Inc."
+			(at 254 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 254 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 254 71.12 0)
 			(effects
 				(font
@@ -37397,7 +39287,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 496.57 360.68 0)
 			(effects
 				(font
@@ -37406,7 +39296,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 496.57 360.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 496.57 360.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 496.57 360.68 0)
 			(effects
 				(font
@@ -37554,7 +39462,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 101.6 370.84 0)
 			(effects
 				(font
@@ -37563,7 +39471,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 101.6 370.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 101.6 370.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 101.6 370.84 0)
 			(effects
 				(font
@@ -37641,7 +39567,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 490.22 125.73 0)
 			(effects
 				(font
@@ -37650,7 +39576,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 490.22 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 490.22 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 490.22 125.73 0)
 			(effects
 				(font
@@ -37697,7 +39641,7 @@
 		(at 148.59 224.79 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -37739,6 +39683,24 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 148.59 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 148.59 224.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 148.59 224.79 0)
 			(effects
 				(font
@@ -37881,7 +39843,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 323.85 243.84 0)
 			(effects
 				(font
@@ -37890,7 +39852,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 323.85 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 323.85 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 323.85 243.84 0)
 			(effects
 				(font
@@ -37973,7 +39953,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 438.15 156.21 0)
 			(effects
 				(font
@@ -37982,7 +39962,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 438.15 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 438.15 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 438.15 156.21 0)
 			(effects
 				(font
@@ -38063,7 +40061,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CL21A226MQQNNNE"
+		(property "mpn" "CL21A226MQQNNNE"
 			(at 238.76 266.7 0)
 			(effects
 				(font
@@ -38072,7 +40070,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Samsung Electro-Mechanics"
+		(property "manufacturer" "Samsung Electro-Mechanics"
+			(at 238.76 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 238.76 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 238.76 266.7 0)
 			(effects
 				(font
@@ -38150,7 +40166,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 490.22 184.15 0)
 			(effects
 				(font
@@ -38159,7 +40175,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 490.22 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 490.22 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 490.22 184.15 0)
 			(effects
 				(font
@@ -38323,7 +40357,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 400.05 363.22 0)
 			(effects
 				(font
@@ -38332,7 +40366,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 400.05 363.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 400.05 363.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 400.05 363.22 0)
 			(effects
 				(font
@@ -38391,7 +40443,7 @@
 		(at 148.59 251.46 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -38433,6 +40485,24 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 148.59 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 148.59 251.46 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 148.59 251.46 0)
 			(effects
 				(font
@@ -38507,7 +40577,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 431.8 184.15 0)
 			(effects
 				(font
@@ -38516,7 +40586,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 431.8 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 431.8 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 431.8 184.15 0)
 			(effects
 				(font
@@ -38629,7 +40717,7 @@
 		(at 87.63 279.4 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -38677,7 +40765,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BA3760-TUBL-4A-F5"
+		(property "mpn" "BA3760-TUBL-4A-F5"
 			(at 87.63 279.4 0)
 			(effects
 				(font
@@ -38686,7 +40774,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Batten & Allen Limited"
+		(property "manufacturer" "Batten & Allen Limited"
+			(at 87.63 279.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 87.63 279.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 87.63 279.4 0)
 			(effects
 				(font
@@ -39142,7 +41248,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 317.5 271.78 0)
 			(effects
 				(font
@@ -39151,7 +41257,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 317.5 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 317.5 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 317.5 271.78 0)
 			(effects
 				(font
@@ -39379,7 +41503,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 187.96 368.3 0)
 			(effects
 				(font
@@ -39388,7 +41512,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 187.96 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 187.96 368.3 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 187.96 368.3 0)
 			(effects
 				(font
@@ -39598,7 +41740,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 490.22 271.78 0)
 			(effects
 				(font
@@ -39607,7 +41749,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 490.22 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 490.22 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 490.22 271.78 0)
 			(effects
 				(font
@@ -39771,7 +41931,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "APS6404L-3SQR-ZR"
+		(property "mpn" "APS6404L-3SQR-ZR"
 			(at 118.11 383.54 0)
 			(effects
 				(font
@@ -39780,7 +41940,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "AP Memory"
+		(property "manufacturer" "AP Memory"
+			(at 118.11 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 118.11 383.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 118.11 383.54 0)
 			(effects
 				(font
@@ -39869,6 +42047,24 @@
 			)
 		)
 		(property "Description" "Fiducial Marker"
+			(at 262.89 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 262.89 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 262.89 134.62 0)
 			(effects
 				(font
@@ -40006,7 +42202,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 490.22 330.2 0)
 			(effects
 				(font
@@ -40015,7 +42211,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 490.22 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 490.22 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 490.22 330.2 0)
 			(effects
 				(font
@@ -40113,7 +42327,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 515.62 363.22 0)
 			(effects
 				(font
@@ -40122,7 +42336,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 515.62 363.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 515.62 363.22 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 515.62 363.22 0)
 			(effects
 				(font
@@ -40232,7 +42464,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 400.05 275.59 0)
 			(effects
 				(font
@@ -40241,7 +42473,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 400.05 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 400.05 275.59 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 400.05 275.59 0)
 			(effects
 				(font
@@ -40349,7 +42599,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 274.32 48.26 0)
 			(effects
 				(font
@@ -40358,7 +42608,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 274.32 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 274.32 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 274.32 48.26 0)
 			(effects
 				(font
@@ -40438,7 +42706,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 515.62 304.8 0)
 			(effects
 				(font
@@ -40447,7 +42715,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 515.62 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 515.62 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 515.62 304.8 0)
 			(effects
 				(font
@@ -40622,7 +42908,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-JW-221GLF"
+		(property "mpn" "CR0402-JW-221GLF"
 			(at 67.31 91.44 0)
 			(effects
 				(font
@@ -40631,7 +42917,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 67.31 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 67.31 91.44 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 67.31 91.44 0)
 			(effects
 				(font
@@ -40709,7 +43013,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 317.5 300.99 0)
 			(effects
 				(font
@@ -40718,7 +43022,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 317.5 300.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 317.5 300.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 317.5 300.99 0)
 			(effects
 				(font
@@ -40816,7 +43138,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 381 302.26 0)
 			(effects
 				(font
@@ -40825,7 +43147,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 381 302.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 381 302.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 381 302.26 0)
 			(effects
 				(font
@@ -40906,7 +43246,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 227.33 48.26 0)
 			(effects
 				(font
@@ -40915,7 +43255,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 227.33 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 227.33 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 227.33 48.26 0)
 			(effects
 				(font
@@ -40993,7 +43351,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 317.5 184.15 0)
 			(effects
 				(font
@@ -41002,7 +43360,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 317.5 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 317.5 184.15 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 317.5 184.15 0)
 			(effects
 				(font
@@ -41166,7 +43542,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 496.57 302.26 0)
 			(effects
 				(font
@@ -41175,7 +43551,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 496.57 302.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 496.57 302.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 496.57 302.26 0)
 			(effects
 				(font
@@ -41324,7 +43718,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 323.85 273.05 0)
 			(effects
 				(font
@@ -41333,7 +43727,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 323.85 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 323.85 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 323.85 273.05 0)
 			(effects
 				(font
@@ -41416,7 +43828,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 381 273.05 0)
 			(effects
 				(font
@@ -41425,7 +43837,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 381 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 381 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 381 273.05 0)
 			(effects
 				(font
@@ -41708,7 +44138,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 149.86 279.4 0)
 			(effects
 				(font
@@ -41717,7 +44147,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 149.86 279.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 149.86 279.4 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 149.86 279.4 0)
 			(effects
 				(font
@@ -41798,7 +44246,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 374.65 242.57 0)
 			(effects
 				(font
@@ -41807,7 +44255,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 374.65 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 374.65 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 374.65 242.57 0)
 			(effects
 				(font
@@ -41901,7 +44367,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "O 27\\,0-JO32-B-1V3-1-T1-LF"
+		(property "mpn" "O 27\\,0-JO32-B-1V3-1-T1-LF"
 			(at 267.97 389.89 0)
 			(effects
 				(font
@@ -41910,7 +44376,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Jauch Quartz"
+		(property "manufacturer" "Jauch Quartz"
+			(at 267.97 389.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 267.97 389.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 267.97 389.89 0)
 			(effects
 				(font
@@ -41994,7 +44478,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 187.96 320.04 0)
 			(effects
 				(font
@@ -42003,7 +44487,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 187.96 320.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 187.96 320.04 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 187.96 320.04 0)
 			(effects
 				(font
@@ -42428,7 +44930,7 @@
 		(at 148.59 243.84 0)
 		(unit 1)
 		(exclude_from_sim no)
-		(in_bom yes)
+		(in_bom no)
 		(on_board yes)
 		(dnp no)
 		(fields_autoplaced yes)
@@ -42470,6 +44972,24 @@
 			)
 		)
 		(property "Description" "test point"
+			(at 148.59 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 148.59 243.84 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 148.59 243.84 0)
 			(effects
 				(font
@@ -42546,7 +45066,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 438.15 360.68 0)
 			(effects
 				(font
@@ -42555,7 +45075,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 438.15 360.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 438.15 360.68 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 438.15 360.68 0)
 			(effects
 				(font
@@ -42629,6 +45167,24 @@
 			)
 		)
 		(property "Description" "Fiducial Marker"
+			(at 275.59 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 275.59 134.62 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 275.59 134.62 0)
 			(effects
 				(font
@@ -42964,7 +45520,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 317.5 125.73 0)
 			(effects
 				(font
@@ -42973,7 +45529,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 317.5 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 317.5 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 317.5 125.73 0)
 			(effects
 				(font
@@ -43071,7 +45645,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 496.57 127 0)
 			(effects
 				(font
@@ -43080,7 +45654,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 496.57 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 496.57 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 496.57 127 0)
 			(effects
 				(font
@@ -43228,7 +45820,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-3162GLF"
+		(property "mpn" "CR0402-FX-3162GLF"
 			(at 229.87 262.89 0)
 			(effects
 				(font
@@ -43237,7 +45829,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 229.87 262.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 229.87 262.89 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 229.87 262.89 0)
 			(effects
 				(font
@@ -43315,7 +45925,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 431.8 242.57 0)
 			(effects
 				(font
@@ -43324,7 +45934,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 431.8 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 431.8 242.57 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 431.8 242.57 0)
 			(effects
 				(font
@@ -43422,7 +46050,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 438.15 97.79 0)
 			(effects
 				(font
@@ -43431,7 +46059,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 438.15 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 438.15 97.79 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 438.15 97.79 0)
 			(effects
 				(font
@@ -43910,7 +46556,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 457.2 334.01 0)
 			(effects
 				(font
@@ -43919,7 +46565,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 457.2 334.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 457.2 334.01 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 457.2 334.01 0)
 			(effects
 				(font
@@ -44028,7 +46692,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CL21A106KAYNNNG"
+		(property "mpn" "CL21A106KAYNNNG"
 			(at 185.42 266.7 0)
 			(effects
 				(font
@@ -44037,7 +46701,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Samsung Electro-Mechanics"
+		(property "manufacturer" "Samsung Electro-Mechanics"
+			(at 185.42 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 185.42 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 185.42 266.7 0)
 			(effects
 				(font
@@ -44117,7 +46799,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 400.05 217.17 0)
 			(effects
 				(font
@@ -44126,7 +46808,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 400.05 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 400.05 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 400.05 217.17 0)
 			(effects
 				(font
@@ -44302,7 +47002,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 323.85 331.47 0)
 			(effects
 				(font
@@ -44311,7 +47011,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 323.85 331.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 323.85 331.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 323.85 331.47 0)
 			(effects
 				(font
@@ -44392,7 +47110,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 431.8 300.99 0)
 			(effects
 				(font
@@ -44401,7 +47119,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 431.8 300.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 431.8 300.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 431.8 300.99 0)
 			(effects
 				(font
@@ -44563,7 +47299,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 40.64 387.35 0)
 			(effects
 				(font
@@ -44572,7 +47308,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 40.64 387.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 40.64 387.35 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 40.64 387.35 0)
 			(effects
 				(font
@@ -44783,6 +47537,24 @@
 				(hide yes)
 			)
 		)
+		(property "manf" ""
+			(at 262.89 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
+			(at 262.89 119.38 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
 		(instances
 			(project "unic_gw1"
 				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
@@ -44978,7 +47750,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 317.5 154.94 0)
 			(effects
 				(font
@@ -44987,7 +47759,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 317.5 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 317.5 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 317.5 154.94 0)
 			(effects
 				(font
@@ -45083,7 +47873,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 490.22 359.41 0)
 			(effects
 				(font
@@ -45092,7 +47882,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 490.22 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 490.22 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 490.22 359.41 0)
 			(effects
 				(font
@@ -45256,7 +48064,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 438.15 273.05 0)
 			(effects
 				(font
@@ -45265,7 +48073,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 438.15 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 438.15 273.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 438.15 273.05 0)
 			(effects
 				(font
@@ -45347,7 +48173,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-4991GLF"
+		(property "mpn" "CR0402-FX-4991GLF"
 			(at 163.83 264.16 0)
 			(effects
 				(font
@@ -45356,7 +48182,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 163.83 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 163.83 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 163.83 264.16 0)
 			(effects
 				(font
@@ -45832,7 +48676,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 400.05 100.33 0)
 			(effects
 				(font
@@ -45841,7 +48685,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 400.05 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 400.05 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 400.05 100.33 0)
 			(effects
 				(font
@@ -46017,7 +48879,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 496.57 185.42 0)
 			(effects
 				(font
@@ -46026,7 +48888,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 496.57 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 496.57 185.42 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 496.57 185.42 0)
 			(effects
 				(font
@@ -46174,7 +49054,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 170.18 269.24 0)
 			(effects
 				(font
@@ -46183,7 +49063,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 170.18 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 170.18 269.24 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 170.18 269.24 0)
 			(effects
 				(font
@@ -46329,7 +49227,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 496.57 156.21 0)
 			(effects
 				(font
@@ -46338,7 +49236,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 496.57 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 496.57 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 496.57 156.21 0)
 			(effects
 				(font
@@ -46421,7 +49337,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 496.57 331.47 0)
 			(effects
 				(font
@@ -46430,7 +49346,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 496.57 331.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 496.57 331.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 496.57 331.47 0)
 			(effects
 				(font
@@ -46577,7 +49511,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 248.92 48.26 0)
 			(effects
 				(font
@@ -46586,7 +49520,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 248.92 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 248.92 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 248.92 48.26 0)
 			(effects
 				(font
@@ -46732,7 +49684,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 342.9 304.8 0)
 			(effects
 				(font
@@ -46741,7 +49693,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 342.9 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 342.9 304.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 342.9 304.8 0)
 			(effects
 				(font
@@ -46849,7 +49819,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 490.22 300.99 0)
 			(effects
 				(font
@@ -46858,7 +49828,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 490.22 300.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 490.22 300.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 490.22 300.99 0)
 			(effects
 				(font
@@ -46956,7 +49944,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 342.9 217.17 0)
 			(effects
 				(font
@@ -46965,7 +49953,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 342.9 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 342.9 217.17 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 342.9 217.17 0)
 			(effects
 				(font
@@ -47141,7 +50147,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54DF"
+		(property "mpn" "BAT54DF"
 			(at 342.9 129.54 0)
 			(effects
 				(font
@@ -47150,7 +50156,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "SMC Diode Solutions"
+		(property "manufacturer" "SMC Diode Solutions"
+			(at 342.9 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 342.9 129.54 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 342.9 129.54 0)
 			(effects
 				(font
@@ -47654,7 +50678,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 374.65 213.36 0)
 			(effects
 				(font
@@ -47663,7 +50687,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 374.65 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 374.65 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 374.65 213.36 0)
 			(effects
 				(font
@@ -47892,7 +50934,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 273.05 264.16 0)
 			(effects
 				(font
@@ -47901,7 +50943,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 273.05 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 273.05 264.16 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 273.05 264.16 0)
 			(effects
 				(font
@@ -47981,7 +51041,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 438.15 127 0)
 			(effects
 				(font
@@ -47990,7 +51050,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 438.15 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 438.15 127 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 438.15 127 0)
 			(effects
 				(font
@@ -48203,7 +51281,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CL21A226MQQNNNE"
+		(property "mpn" "CL21A226MQQNNNE"
 			(at 242.57 266.7 0)
 			(effects
 				(font
@@ -48212,7 +51290,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Samsung Electro-Mechanics"
+		(property "manufacturer" "Samsung Electro-Mechanics"
+			(at 242.57 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 242.57 266.7 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 242.57 266.7 0)
 			(effects
 				(font
@@ -48290,7 +51386,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 290.83 48.26 0)
 			(effects
 				(font
@@ -48299,7 +51395,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 290.83 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 290.83 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 290.83 48.26 0)
 			(effects
 				(font
@@ -48445,7 +51559,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 323.85 156.21 0)
 			(effects
 				(font
@@ -48454,7 +51568,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 323.85 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 323.85 156.21 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 323.85 156.21 0)
 			(effects
 				(font
@@ -48535,7 +51667,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 431.8 330.2 0)
 			(effects
 				(font
@@ -48544,7 +51676,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 431.8 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 431.8 330.2 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 431.8 330.2 0)
 			(effects
 				(font
@@ -48706,7 +51856,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 374.65 359.41 0)
 			(effects
 				(font
@@ -48715,7 +51865,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 374.65 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 374.65 359.41 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 374.65 359.41 0)
 			(effects
 				(font
@@ -48812,7 +51980,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CR0402-FX-1002GLF"
+		(property "mpn" "CR0402-FX-1002GLF"
 			(at 163.83 271.78 0)
 			(effects
 				(font
@@ -48821,7 +51989,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Bourns Inc."
+		(property "manufacturer" "Bourns Inc."
+			(at 163.83 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 163.83 271.78 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 163.83 271.78 0)
 			(effects
 				(font
@@ -49296,7 +52482,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "W25Q16JVUXIQ TR"
+		(property "mpn" "W25Q16JVUXIQ TR"
 			(at 212.09 382.27 0)
 			(effects
 				(font
@@ -49305,7 +52491,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Winbond Electronics"
+		(property "manufacturer" "Winbond Electronics"
+			(at 212.09 382.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 212.09 382.27 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 212.09 382.27 0)
 			(effects
 				(font
@@ -49863,7 +53067,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 431.8 125.73 0)
 			(effects
 				(font
@@ -49872,7 +53076,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 431.8 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 431.8 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 431.8 125.73 0)
 			(effects
 				(font
@@ -49968,7 +53190,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 374.65 300.99 0)
 			(effects
 				(font
@@ -49977,7 +53199,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 374.65 300.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 374.65 300.99 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 374.65 300.99 0)
 			(effects
 				(font
@@ -50139,7 +53379,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 490.22 213.36 0)
 			(effects
 				(font
@@ -50148,7 +53388,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 490.22 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 490.22 213.36 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 490.22 213.36 0)
 			(effects
 				(font
@@ -50442,7 +53700,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CC0402MRX5R6BB225"
+		(property "mpn" "CC0402MRX5R6BB225"
 			(at 303.53 48.26 0)
 			(effects
 				(font
@@ -50451,7 +53709,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "YAGEO"
+		(property "manufacturer" "YAGEO"
+			(at 303.53 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 303.53 48.26 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 303.53 48.26 0)
 			(effects
 				(font
@@ -50595,7 +53871,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 431.8 154.94 0)
 			(effects
 				(font
@@ -50604,7 +53880,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 431.8 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 431.8 154.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 431.8 154.94 0)
 			(effects
 				(font
@@ -51164,7 +54458,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "2N7002KL3A-TP"
+		(property "mpn" "2N7002KL3A-TP"
 			(at 438.15 331.47 0)
 			(effects
 				(font
@@ -51173,7 +54467,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Micro Commercial Co"
+		(property "manufacturer" "Micro Commercial Co"
+			(at 438.15 331.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 438.15 331.47 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 438.15 331.47 0)
 			(effects
 				(font
@@ -51452,7 +54764,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "BAT54CV\\,115"
+		(property "mpn" "BAT54CV\\,115"
 			(at 374.65 125.73 0)
 			(effects
 				(font
@@ -51461,7 +54773,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Nexperia USA Inc."
+		(property "manufacturer" "Nexperia USA Inc."
+			(at 374.65 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 374.65 125.73 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 374.65 125.73 0)
 			(effects
 				(font
@@ -51558,7 +54888,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "CS42C-QL4"
+		(property "mpn" "CS42C-QL4"
 			(at 67.31 100.33 0)
 			(effects
 				(font
@@ -51567,7 +54897,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "ChromeLED"
+		(property "manufacturer" "ChromeLED"
+			(at 67.31 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 67.31 100.33 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 67.31 100.33 0)
 			(effects
 				(font
@@ -51710,7 +55058,7 @@
 				(hide yes)
 			)
 		)
-		(property "manf#" "10152265-1121HF"
+		(property "mpn" "10152265-1121HF"
 			(at 200.66 210.82 0)
 			(effects
 				(font
@@ -51719,7 +55067,25 @@
 				(hide yes)
 			)
 		)
-		(property "manf" "Amphenol ICC (FCI)"
+		(property "manufacturer" "Amphenol ICC (FCI)"
+			(at 200.66 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 200.66 210.82 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
 			(at 200.66 210.82 0)
 			(effects
 				(font
