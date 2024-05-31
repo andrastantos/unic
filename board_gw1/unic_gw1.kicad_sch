@@ -21639,7 +21639,7 @@
 				)
 			)
 		)
-		(property "Value" "GW1N-LV9QN88C6_I5_"
+		(property "Value" "GW1NR-LV9-QN88-C6/I5"
 			(at 166.37 45.72 0)
 			(effects
 				(font
@@ -21657,7 +21657,7 @@
 				(hide yes)
 			)
 		)
-		(property "Datasheet" "https://www.digikey.com/en/models/776031"
+		(property "Datasheet" ""
 			(at 166.37 109.22 0)
 			(effects
 				(font
@@ -21746,26 +21746,6 @@
 				(hide yes)
 			)
 		)
-		(property "SnapEDA_Link" "https://www.snapeda.com/parts/GW1N-LV9QN88C6/I5//Gowin+Semiconductor/view-part/?ref=snap"
-			(at 166.37 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
-		(property "MP" "GW1N-LV9QN88C6/I5/"
-			(at 166.37 109.22 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify bottom)
-				(hide yes)
-			)
-		)
 		(property "Availability" "Not in stock"
 			(at 166.37 109.22 0)
 			(effects
@@ -21786,7 +21766,7 @@
 				(hide yes)
 			)
 		)
-		(property "mpn" "GW1N-LV9QN88C6/I5"
+		(property "mpn" "GW1NR-LV9-QN88-C6/I5"
 			(at 166.37 109.22 0)
 			(effects
 				(font
