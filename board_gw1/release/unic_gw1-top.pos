@@ -1,0 +1,30 @@
+### Footprint positions - created on 2024-05-05T11:43:29-0700 ###
+### Printed by KiCad version 8.0.1-8.0.1-1~ubuntu22.04.1
+## Unit = mm, Angle = deg.
+## Side : top
+# Ref       Val                     Package                                             PosX       PosY       Rot  Side
+C4          2.2u                    C_0402_1005Metric_Pad0.74x0.62mm_HandSolder      56.1175   -58.0500  -90.0000  top
+C5          10u                     C_0805_2012Metric_Pad1.18x1.45mm_HandSolder      41.4775   -62.9500  180.0000  top
+C6          2.2u                    C_0402_1005Metric_Pad0.74x0.62mm_HandSolder      41.2775   -67.1500  180.0000  top
+C7          22u                     C_0805_2012Metric_Pad1.18x1.45mm_HandSolder      40.3775   -60.0500  -90.0000  top
+C11         2.2u                    C_0402_1005Metric_Pad0.74x0.62mm_HandSolder      56.9675   -67.5900   90.0000  top
+C15         2.2u                    C_0402_1005Metric_Pad0.74x0.62mm_HandSolder      70.2475   -66.8200    0.0000  top
+C20         2.2u                    C_0402_1005Metric_Pad0.74x0.62mm_HandSolder      57.0675   -58.0500  -90.0000  top
+C23         2.2u                    C_0402_1005Metric_Pad0.74x0.62mm_HandSolder      69.4275   -57.8500  -90.0000  top
+FID2        Fiducial                Fiducial_0.5mm_Mask1mm                           70.8775   -57.3500    0.0000  top
+FID4        Fiducial                Fiducial_0.5mm_Mask1mm                           43.1775   -67.9500    0.0000  top
+FID6        Fiducial                Fiducial_0.5mm_Mask1mm                           86.4775   -63.0500    0.0000  top
+FID8        Fiducial                Fiducial_0.5mm_Mask1mm                           56.3775   -60.8500    0.0000  top
+FID9        Fiducial                Fiducial_0.5mm_Mask1mm                           69.6775   -68.0500    0.0000  top
+J_DISPLAY1  Conn_01x12_MountingPin  CF31121D0R0-05-NH                                71.9385   -62.5730   90.0000  top
+J_EXT1      Conn_01x27_MountingPin  Molex_502598-2793_2Rows-23P~0.60mm_Horizontal    50.0975   -66.3600    0.0000  top
+L1          10uH                    L_1008_2520Metric_Pad1.43x2.20mm_HandSolder      44.7775   -60.7500   90.0000  top
+LED_DONE1   LED                     LED_0402_1005Metric_Pad0.77x0.64mm_HandSolder    39.8775   -57.4500    0.0000  top
+R1          220                     R_0402_1005Metric_Pad0.72x0.64mm_HandSolder      42.3775   -57.4500  180.0000  top
+R3          10k                     R_0402_1005Metric_Pad0.72x0.64mm_HandSolder      79.1775   -58.4500  180.0000  top
+R4          31.6k                   R_0402_1005Metric_Pad0.72x0.64mm_HandSolder      44.4775   -63.4500  180.0000  top
+R5          10k                     R_0402_1005Metric_Pad0.72x0.64mm_HandSolder      43.7775   -65.1500  -90.0000  top
+R16         10k                     R_0402_1005Metric_Pad0.72x0.64mm_HandSolder      45.7775   -57.8500    0.0000  top
+U1          GW1N-LV9QN88C6_I5_      QFN40P1000X1000X95-89N                           63.3025   -62.8505  -90.0000  top
+U6          AP62150Z6               SOT-563                                          42.1285   -65.3000  -90.0000  top
+## End
