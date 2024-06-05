@@ -219,8 +219,8 @@
           "drill": 0.0
         },
         {
-          "diameter": 0.2,
-          "drill": 0.4
+          "diameter": 0.25,
+          "drill": 0.45
         }
       ],
       "zones_allow_external_fillets": false,
@@ -497,8 +497,8 @@
       "gencad": "",
       "idf": "",
       "netlist": "",
-      "plot": "release/",
-      "pos_files": "",
+      "plot": "release_u1_depop/",
+      "pos_files": "release/",
       "specctra_dsn": "",
       "step": "unic_gw1.step",
       "svg": "",
