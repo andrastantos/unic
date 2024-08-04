@@ -14759,6 +14759,19 @@
 		)
 		(uuid "9a07a684-3616-4e83-bc22-34e873f04f41")
 	)
+	(text "ECO: change part to TPS562242"
+		(exclude_from_sim no)
+		(at 206.756 264.16 0)
+		(effects
+			(font
+				(size 1.905 1.905)
+				(thickness 0.762)
+				(bold yes)
+				(color 255 0 0 1)
+			)
+		)
+		(uuid "a83e7dd5-f4fd-4d14-9168-6fb787059764")
+	)
 	(text "Dedicated pin"
 		(exclude_from_sim no)
 		(at 105.41 83.82 0)
