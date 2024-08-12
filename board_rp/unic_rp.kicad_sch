@@ -6926,126 +6926,6 @@
 				)
 			)
 		)
-		(symbol "power:+1V2"
-			(power)
-			(pin_names
-				(offset 0)
-			)
-			(exclude_from_sim no)
-			(in_bom yes)
-			(on_board yes)
-			(property "Reference" "#PWR"
-				(at 0 -3.81 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Value" "+1V2"
-				(at 0 3.556 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-				)
-			)
-			(property "Footprint" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Datasheet" ""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "Description" "Power symbol creates a global label with name \"+1V2\""
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(property "ki_keywords" "power-flag"
-				(at 0 0 0)
-				(effects
-					(font
-						(size 1.27 1.27)
-					)
-					(hide yes)
-				)
-			)
-			(symbol "+1V2_0_1"
-				(polyline
-					(pts
-						(xy -0.762 1.27) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 0) (xy 0 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0 2.54) (xy 0.762 1.27)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-			)
-			(symbol "+1V2_1_1"
-				(pin power_in line
-					(at 0 0 90)
-					(length 0) hide
-					(name "+1V2"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-					(number "1"
-						(effects
-							(font
-								(size 1.27 1.27)
-							)
-						)
-					)
-				)
-			)
-		)
 		(symbol "power:+3.3V"
 			(power)
 			(pin_names
@@ -12012,7 +11892,7 @@
 		(uuid "014d07ba-6555-4d26-ae2f-9dd9099f1326")
 	)
 	(label "PIN23_F"
-		(at 181.61 91.44 0)
+		(at 181.61 114.3 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12089,7 +11969,7 @@
 		(uuid "0808b407-111c-4f8d-9b8f-05b0fed4f6ca")
 	)
 	(label "PIN26_F"
-		(at 181.61 78.74 0)
+		(at 181.61 124.46 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12111,7 +11991,7 @@
 		(uuid "0928c78c-6350-419b-9199-2571938e5a94")
 	)
 	(label "PIN37_F"
-		(at 181.61 144.78 0)
+		(at 181.61 152.4 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12166,7 +12046,7 @@
 		(uuid "13a50f0d-3f86-4293-9a7b-710f8c92cb88")
 	)
 	(label "PIN16_F"
-		(at 181.61 119.38 0)
+		(at 181.61 78.74 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12177,7 +12057,7 @@
 		(uuid "14568dfb-0f4d-4fb0-9cf6-3e0c7ec251c5")
 	)
 	(label "PIN13_F"
-		(at 181.61 104.14 0)
+		(at 181.61 96.52 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12199,7 +12079,7 @@
 		(uuid "1627ab94-b850-4e3f-beac-ae0b095a7724")
 	)
 	(label "PIN14_F"
-		(at 181.61 116.84 0)
+		(at 181.61 81.28 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12243,7 +12123,7 @@
 		(uuid "1cd1d602-6e8b-4d08-965d-6370691d9544")
 	)
 	(label "PIN11_F"
-		(at 181.61 101.6 0)
+		(at 181.61 99.06 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12364,7 +12244,7 @@
 		(uuid "26d80c40-3f2c-4084-8fd1-064eed8b3076")
 	)
 	(label "PIN10_F"
-		(at 181.61 111.76 0)
+		(at 181.61 93.98 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12375,7 +12255,7 @@
 		(uuid "275279fe-53eb-4907-8ded-bcb54096ff47")
 	)
 	(label "PIN12_F"
-		(at 181.61 127 0)
+		(at 181.61 86.36 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12386,7 +12266,7 @@
 		(uuid "2a24bd04-3495-497e-bafc-d9d9feb5926d")
 	)
 	(label "PIN31_F"
-		(at 181.61 76.2 0)
+		(at 181.61 127 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12408,7 +12288,7 @@
 		(uuid "2cb48516-82d8-4b6d-996f-cf273256be0e")
 	)
 	(label "PIN32_F"
-		(at 181.61 81.28 0)
+		(at 181.61 129.54 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12496,7 +12376,7 @@
 		(uuid "3b7fe832-7de7-437d-b713-3635bca6dc03")
 	)
 	(label "PIN7_F"
-		(at 173.99 160.02 0)
+		(at 181.61 175.26 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12507,7 +12387,7 @@
 		(uuid "3c89363b-d510-47d8-b8fd-e6e407b1028f")
 	)
 	(label "PIN39_F"
-		(at 181.61 137.16 0)
+		(at 181.61 144.78 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12518,7 +12398,7 @@
 		(uuid "3cdd119f-c2f9-46ef-b57b-3bdd27bde2b8")
 	)
 	(label "PIN19_F"
-		(at 181.61 129.54 0)
+		(at 181.61 101.6 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12562,7 +12442,7 @@
 		(uuid "4302b87b-da1a-4501-b845-6e0f04982ddd")
 	)
 	(label "PIN22_F"
-		(at 181.61 93.98 0)
+		(at 181.61 111.76 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12595,7 +12475,7 @@
 		(uuid "451b37bd-de67-49e0-b90d-520a6f35f47c")
 	)
 	(label "PIN24_F"
-		(at 181.61 86.36 0)
+		(at 181.61 119.38 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12661,7 +12541,7 @@
 		(uuid "4c1e67c9-be80-4e59-914c-e6485343308e")
 	)
 	(label "PIN18_F"
-		(at 181.61 124.46 0)
+		(at 181.61 83.82 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12672,7 +12552,7 @@
 		(uuid "4e8de2e5-3dfe-4904-bee0-902d56aedd74")
 	)
 	(label "PIN30_F"
-		(at 181.61 99.06 0)
+		(at 181.61 109.22 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12694,7 +12574,7 @@
 		(uuid "4f1b56ee-ba32-48c4-b527-b499fc31e691")
 	)
 	(label "PIN6_F"
-		(at 173.99 162.56 0)
+		(at 181.61 172.72 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12727,7 +12607,7 @@
 		(uuid "5444d9fd-4c07-4f11-89ad-746cc1c38f8c")
 	)
 	(label "PIN20_F"
-		(at 181.61 106.68 0)
+		(at 181.61 104.14 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12760,7 +12640,7 @@
 		(uuid "5b572bc2-6371-4b7e-8b72-3c18eed3c21f")
 	)
 	(label "PIN29_F"
-		(at 181.61 88.9 0)
+		(at 181.61 116.84 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12771,7 +12651,7 @@
 		(uuid "5d1cb528-7a78-4c63-9bc8-49c95e39b277")
 	)
 	(label "PIN40_F"
-		(at 181.61 142.24 0)
+		(at 181.61 149.86 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12848,7 +12728,7 @@
 		(uuid "60065852-d277-48ea-8396-9ad4a29e78c9")
 	)
 	(label "PIN33_F"
-		(at 181.61 149.86 0)
+		(at 181.61 157.48 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12870,7 +12750,7 @@
 		(uuid "610c9708-b62c-4111-bcf0-9371a71e9b4d")
 	)
 	(label "PIN27_F"
-		(at 181.61 134.62 0)
+		(at 181.61 132.08 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12881,7 +12761,7 @@
 		(uuid "6404c3c6-4893-43f3-bae6-1b9a217fd714")
 	)
 	(label "PIN34_F"
-		(at 181.61 152.4 0)
+		(at 181.61 137.16 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12980,7 +12860,7 @@
 		(uuid "6e5f3e4b-ae6e-4333-a22f-fa6a39fa8742")
 	)
 	(label "PIN1_F"
-		(at 173.99 175.26 0)
+		(at 181.61 160.02 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13068,7 +12948,7 @@
 		(uuid "7eca5bd7-1131-4611-aeb6-f79698863909")
 	)
 	(label "PIN38_F"
-		(at 181.61 139.7 0)
+		(at 181.61 147.32 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13112,7 +12992,7 @@
 		(uuid "8315c404-1a67-4cf1-8661-ad88989fc963")
 	)
 	(label "PIN5_F"
-		(at 173.99 165.1 0)
+		(at 181.61 170.18 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13178,7 +13058,7 @@
 		(uuid "8baa91b9-9f8e-4dda-8fe0-457cafd88ea5")
 	)
 	(label "PIN35_F"
-		(at 181.61 154.94 0)
+		(at 181.61 139.7 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13211,7 +13091,7 @@
 		(uuid "91efe819-8049-4cbc-ab3a-addc12df9b23")
 	)
 	(label "PIN21_F"
-		(at 181.61 96.52 0)
+		(at 181.61 106.68 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13376,7 +13256,7 @@
 		(uuid "a6f767df-c129-4a78-b33c-f42a4a61df31")
 	)
 	(label "PIN2_F"
-		(at 173.99 172.72 0)
+		(at 181.61 162.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13420,7 +13300,7 @@
 		(uuid "a9d918b0-1629-423c-b7e0-fcd2cdcb81d4")
 	)
 	(label "PIN25_F"
-		(at 181.61 83.82 0)
+		(at 181.61 121.92 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13431,7 +13311,7 @@
 		(uuid "aa7f6da5-c245-4383-a4d2-6aa017311b06")
 	)
 	(label "PIN9_F"
-		(at 181.61 109.22 0)
+		(at 181.61 91.44 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13475,7 +13355,7 @@
 		(uuid "ac038ef2-938e-4c80-bc50-3a60845068cf")
 	)
 	(label "PIN3_F"
-		(at 173.99 170.18 0)
+		(at 181.61 165.1 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13541,7 +13421,7 @@
 		(uuid "b6632432-23e3-4527-b27c-3052dee466aa")
 	)
 	(label "PIN8_F"
-		(at 173.99 157.48 0)
+		(at 181.61 154.94 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13552,7 +13432,7 @@
 		(uuid "b7442887-b9a6-4929-9692-4ffcd0098f71")
 	)
 	(label "PIN4_F"
-		(at 173.99 167.64 0)
+		(at 181.61 167.64 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13563,7 +13443,7 @@
 		(uuid "b79d96ec-7ebd-474a-8582-b7524c23b944")
 	)
 	(label "PIN36_F"
-		(at 181.61 132.08 0)
+		(at 181.61 142.24 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13684,7 +13564,7 @@
 		(uuid "c3009b25-d1d8-4ece-bf55-d0796157e8ee")
 	)
 	(label "PIN15_F"
-		(at 181.61 114.3 0)
+		(at 181.61 88.9 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13893,7 +13773,7 @@
 		(uuid "e43de219-c3e5-4f1b-ac1f-d22620efcc25")
 	)
 	(label "PIN28_F"
-		(at 181.61 147.32 0)
+		(at 181.61 134.62 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -13981,7 +13861,7 @@
 		(uuid "f27c6d40-2fb7-473b-810e-c13204c738fc")
 	)
 	(label "PIN17_F"
-		(at 181.61 121.92 0)
+		(at 181.61 76.2 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -18257,6 +18137,71 @@
 		)
 	)
 	(symbol
+		(lib_id "power:+1V1")
+		(at 427.99 71.12 0)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "1d979495-6e27-4e11-afc7-888c2e23153d")
+		(property "Reference" "#PWR020"
+			(at 427.99 74.93 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Value" "+1V1"
+			(at 428.371 66.7258 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 427.99 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" ""
+			(at 427.99 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 427.99 71.12 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f8df4320-d667-444a-ac15-43ebf1a6a2c2")
+		)
+		(instances
+			(project "unic_rp"
+				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
+					(reference "#PWR020")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Transistor_FET:2N7002")
 		(at 496.57 243.84 270)
 		(unit 1)
@@ -20145,72 +20090,6 @@
 			(project "unic_gw1"
 				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
 					(reference "D64")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:+1V2")
-		(at 427.99 71.12 0)
-		(unit 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(dnp no)
-		(fields_autoplaced yes)
-		(uuid "29563e37-204a-4afc-b3e7-ba83aba45195")
-		(property "Reference" "#PWR020"
-			(at 427.99 74.93 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Value" "+1V2"
-			(at 427.99 66.04 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" ""
-			(at 427.99 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Datasheet" ""
-			(at 427.99 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(property "Description" ""
-			(at 427.99 71.12 0)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(hide yes)
-			)
-		)
-		(pin "1"
-			(uuid "d9c674d6-8f05-4c07-a916-4e8d3dc1ce80")
-		)
-		(instances
-			(project "unic_gw1"
-				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
-					(reference "#PWR020")
 					(unit 1)
 				)
 			)
