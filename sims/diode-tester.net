@@ -1,0 +1,9 @@
+* Z:\home\tantos\unic_stuff\unic\sims\diode-tester.asc
+D1 N001 0 MBR0520L
+I1 0 N001 PULSE(0 0.1 0 1 1 1 4 10) AC 0.2
+.model D D
+.lib C:\users\tantos\AppData\Local\LTspice\lib\cmp\standard.dio
+;.tran 1
+.dc I1 0 0.2 0.001
+.backanno
+.end

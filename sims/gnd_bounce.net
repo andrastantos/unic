@@ -1,0 +1,29 @@
+* Z:\home\tantos\unic_stuff\unic\sims\gnd_bounce.asc
+D1 VGND 0 BAT54
+C1 toggle 0 1n
+R1 N001 toggle 100
+M1 toggle N004 VGND VGND 2N7002
+V1 N003 VGND PULSE(0 3.3 0 1n 1n 100n 2000n 10)
+R2 N004 N003 0.1
+V2 N001 0 5
+D2 N001 N002 BAT54
+R3 N002 VGND 10
+M2 open N005 VGND VGND 2N7002
+R4 N005 VGND 0.1
+R5 N001 open 10k
+C2 open 0 100p
+M3 low N006 VGND VGND 2N7002
+R6 N006 N002 0.1
+R7 N001 low 10k
+C3 low 0 100p
+.model D D
+.lib C:\users\tantos\AppData\Local\LTspice\lib\cmp\standard.dio
+.model NMOS NMOS
+.model PMOS PMOS
+.lib C:\users\tantos\AppData\Local\LTspice\lib\cmp\standard.mos
+.tran 10000n
+* Toggle gate
+* Open gate
+* Drive low gate
+.backanno
+.end
