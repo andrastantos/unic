@@ -12658,7 +12658,7 @@
 		)
 		(uuid "124f9ca5-a98e-426c-b576-88181a9cb695")
 	)
-	(text "NOT SURE HOW TO IMPLEMENT SWI OVER USB\nOR HOW TO DETECT WHEN TO SUPPLY POWER (OTG?)\n"
+	(text "NOT SURE HOW TO IMPLEMENT SWI OVER USB\nOR HOW TO DETECT WHEN TO SUPPLY POWER (OTG?)\n\nSomeone thought of this already:\nhttps://hackaday.io/project/192857-swd-over-usb-type-c-new-way-of-programming-boards\nLooks sketchy though...\n\nThis looks much better: https://hackaday.com/2022/02/24/an-unbusy-usb-c-port-doubles-up-for-jtag-programming/\n\n\n"
 		(exclude_from_sim no)
 		(at 281.432 120.396 0)
 		(effects
