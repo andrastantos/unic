@@ -457,7 +457,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "unic_gw1.kicad_pro",
+    "filename": "unic_rp.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -484,6 +484,7 @@
       "version": 3
     },
     "net_colors": {
+      "+1V1": "rgb(255, 185, 115)",
       "+1V2": "rgb(255, 229, 191)",
       "+3V3": "rgb(0, 132, 0)",
       "+5V": "rgb(0, 194, 194)",
