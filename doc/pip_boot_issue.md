@@ -29,7 +29,7 @@ when it enters NMI processing, but maybe the T80 doesn't? In fact, this can be s
 while the NMI line is held active.
 
 The expected operation is not all that explicit in the datasheet, but it seems the T80 is clearly at fault here: it doesn't even seem to generate
-the requsit interrupt response cycle for an NMI, which *is* described in the datasheet (page 14). Well, actually the datasheet is rather 
+the requsit interrupt response cycle for an NMI, which *is* described in the datasheet (page 14). Well, actually the datasheet is rather
 confusing here. Maybe the T80 cycles are correct.
 
 So, yeah: what should happen (https://raine.1emulation.com/archive/dev/z80-documented.pdf page 17) is that NMI should clear IFF1, while INT should
@@ -51,7 +51,7 @@ These flags are called 'IntE_FF1' and 'IntE_FF2' in the source and it appears th
 
 It also appears that IntE_FF1 is used as the interrupt enable signal:
 
-	IntE <= IntE_FF1;
+        IntE <= IntE_FF1;
 
 So, we'll need to simulate.
 
@@ -114,24 +114,24 @@ IntE_FF1 is not altered in all that many places. Can we figure out where it gets
 
 There's this spot:
 
-			if DIRSet = '1' then
-				IntE_FF2 <= DIR(211);
-				IntE_FF1 <= DIR(210);
-			else
+                        if DIRSet = '1' then
+                                IntE_FF2 <= DIR(211);
+                                IntE_FF1 <= DIR(210);
+                        else
 
 DIRSet is an external signal, defaults to '0' and is not assigned to on the next level (T80a_dido). It's not that.
 
 Then there's this code:
 
                     if TState = 2 then
-						if SetEI = '1' then
-							IntE_FF1 <= '1';
-							IntE_FF2 <= '1';
-						end if;
-						if I_RETN = '1' then
-							IntE_FF1 <= IntE_FF2;
-						end if;
-					end if;
+                                                if SetEI = '1' then
+                                                        IntE_FF1 <= '1';
+                                                        IntE_FF2 <= '1';
+                                                end if;
+                                                if I_RETN = '1' then
+                                                        IntE_FF1 <= IntE_FF2;
+                                                end if;
+                                        end if;
 
 So it could be an EI or a RETN instruction. Well, no surprise there... And... that's it. No other place.
 
@@ -148,34 +148,34 @@ SetEI
 
 SetEI comes from T80_MCode. In there it gets set in MCycle 3 for instruction 11011001. The comment seems to indicate that this is RETI. Not sure how exactly as the instruction code for RETI is ED 4D, no D9 in there anywhere, but oh well... So, that's one place:
 
-		when "11011001" =>
-			if Mode = 3 then
-				-- RETI
-				MCycles <= "100";
-				case to_integer(unsigned(MCycle)) is
-				when 1 =>
-					Set_Addr_TO <= aSP;
-				when 2 =>
-					IncDec_16 <= "0111";
-					Set_Addr_To <= aSP;
-					LDZ <= '1';
-				when 3 =>
-					Jump <= '1';
-					IncDec_16 <= "0111";
-					--I_RETN <= '1';
-					SetEI <= '1';
-				when others => null;
-				end case;
-			elsif Mode < 2 then
-				-- EXX
-				ExchangeRS <= '1';
-			end if;
+                when "11011001" =>
+                        if Mode = 3 then
+                                -- RETI
+                                MCycles <= "100";
+                                case to_integer(unsigned(MCycle)) is
+                                when 1 =>
+                                        Set_Addr_TO <= aSP;
+                                when 2 =>
+                                        IncDec_16 <= "0111";
+                                        Set_Addr_To <= aSP;
+                                        LDZ <= '1';
+                                when 3 =>
+                                        Jump <= '1';
+                                        IncDec_16 <= "0111";
+                                        --I_RETN <= '1';
+                                        SetEI <= '1';
+                                when others => null;
+                                end case;
+                        elsif Mode < 2 then
+                                -- EXX
+                                ExchangeRS <= '1';
+                        end if;
 
 We also have this:
 
-		when "11111011" =>
-			-- EI
-			SetEI <= '1';
+                when "11111011" =>
+                        -- EI
+                        SetEI <= '1';
 
 This checks out, it's the EI instruction. And that's it. Notice though that 'SetEI' is set unconditionally. So, maybe we trigger this incorrectly?
 
@@ -186,27 +186,27 @@ case statement. IRB is just IR under a different name and is an input PIN.
 
 IR gets set (in T80.vhd) in two places meaningfully:
 
-				if MCycle  = "001" and TState(2) = '0' then
-				-- MCycle = 1 and TState = 1, 2, or 3
+                                if MCycle  = "001" and TState(2) = '0' then
+                                -- MCycle = 1 and TState = 1, 2, or 3
 
-					if TState = 2 and Wait_n = '1' then
+                                        if TState = 2 and Wait_n = '1' then
 
                         ...
 
-						if IntCycle = '1' and IStatus = "01" then
-							IR <= "11111111";
-						elsif Halt_FF = '1' or (IntCycle = '1' and IStatus = "10") or NMICycle = '1' then
-							IR <= "00000000";
-						else
-							IR <= DInst;
-						end if;
+                                                if IntCycle = '1' and IStatus = "01" then
+                                                        IR <= "11111111";
+                                                elsif Halt_FF = '1' or (IntCycle = '1' and IStatus = "10") or NMICycle = '1' then
+                                                        IR <= "00000000";
+                                                else
+                                                        IR <= DInst;
+                                                end if;
 
 Here we guard it with wait being high, so it can't get accidentally assigned. The other place is this:
 
-					if TState = 2 and Wait_n = '1' then
-						if ISet = "01" and MCycle = "111" then
-							IR <= DInst;
-						end if;
+                                        if TState = 2 and Wait_n = '1' then
+                                                if ISet = "01" and MCycle = "111" then
+                                                        IR <= DInst;
+                                                end if;
 
 Again, guarded by Wait_n = '1'. So, it seems my hypothesis is wrong. At any rate, it seems we are quite cavalier with setting IFF1, so something must be going on. Let's see if SetEI randomly triggers...
 
@@ -231,7 +231,7 @@ I_RETN
 
 Let's route this signal out for starters...
 
-Ha!!! (Picture 57) 
+Ha!!! (Picture 57)
 
 This - again - a different type of hang, but it clearly shows the pulse on I_RETN. In fact, the 6.0us delta between the rising edge of IORQ and the rising edge of I_RETN shows that this is the instruction (???) - or most likely the mis-decoded instruction - that triggers the problem.
 
@@ -265,25 +265,25 @@ I_RETN is also an output of the micro-code engine...
 
 It's set (and only set) here:
 
-			when "01000101"|"01001101"|"01010101"|"01011101"|"01100101"|"01101101"|"01110101"|"01111101" =>
-				-- RETI/RETN
-				MCycles <= "011";
-				case to_integer(unsigned(MCycle)) is
-				when 1 =>
-					Set_Addr_TO <= aSP;
-				when 2 =>
-					IncDec_16 <= "0111";
-					Set_Addr_To <= aSP;
-					LDZ <= '1';
-				when 3 =>
-					Jump <= '1';
-					IncDec_16 <= "0111";
-					LDW <= '1';
-					I_RETN <= '1';
-				when others => null;
-				end case;
+                        when "01000101"|"01001101"|"01010101"|"01011101"|"01100101"|"01101101"|"01110101"|"01111101" =>
+                                -- RETI/RETN
+                                MCycles <= "011";
+                                case to_integer(unsigned(MCycle)) is
+                                when 1 =>
+                                        Set_Addr_TO <= aSP;
+                                when 2 =>
+                                        IncDec_16 <= "0111";
+                                        Set_Addr_To <= aSP;
+                                        LDZ <= '1';
+                                when 3 =>
+                                        Jump <= '1';
+                                        IncDec_16 <= "0111";
+                                        LDW <= '1';
+                                        I_RETN <= '1';
+                                when others => null;
+                                end case;
 
-RETN is 0xED 0x45, so not sure how all these codes map to that. This is prefixed with the 'EB' group, so 
+RETN is 0xED 0x45, so not sure how all these codes map to that. This is prefixed with the 'EB' group, so
 
 The first is 0x45 (retn), the second is 0x4d (reti), but the next ones are not marked anything in the ISA. Could that be?
 
@@ -445,7 +445,7 @@ BTW: the NMI handler properly saved and restored the PC (107e), so now that the 
 1e4e  a1         AND c
 1e4f  e6 20      AND 20            test for FDC interrupt
 1e51  28 08      JR Z,xxxxx        we won't jump here of course as the bit is set.
-1e53  21 7a 00   LD hl,007a 
+1e53  21 7a 00   LD hl,007a
 1e56  cd 70 1f   CALL 1f70
 
 
@@ -465,7 +465,7 @@ BTW: the NMI handler properly saved and restored the PC (107e), so now that the 
 1f7d  32 62 00   LD (0062),a
 1f80  D3 F2      OUT (f2),a        swap extended bank 3 into address space 8000-bfff
 1f82  EB         EX de,hl          swap DE and HL
-1f83  E9         JP (hl)           
+1f83  E9         JP (hl)
 
     hl at this point contains 1051. This is what we've just loaded at the beginning of the context restore. So maybe this isn't really restoring a context, more like a long jump. to a certain page.
 
@@ -496,4 +496,442 @@ BTW: the NMI handler properly saved and restored the PC (107e), so now that the 
 
     Hmmm... At this point we see the NMI line staying low for a little longer even though we've read the data.
     Could this be the problem? Not sure, have to read up on the FDC. I really don't think the sign bit (p) would be set incorrectly, that would cause all sorts of havoc. Overall, I haven't seen any reason why this could should not work.
-    
+
+
+Disassembly
+-----------
+
+It's probably time to start looking into large-scale disassembly.
+
+Searching for the hex sequence starting 1e4b in memory, it's  at 1ecb in j15acpm3.ems.
+
+This suggests at 128-byte header at the front. The sequence starting at 1051 in memory
+can be found in the same file at 10d1. Still, the same 128-byte offset.
+
+Not much documentation on the file format. At any rate, this is good enough, I think.
+I'll strip the header and disassemble the rest.
+
+So, the disassembly has been done, but of course there are issues. For instance
+the interrupt vector table is not there at the beginning.
+
+That piece of code apparently (for RAM address 0x0038) is at offset 0x2518. That suggests an offset of 24e0 into the file for at least this section. For what
+it's worth, that does look like a section of code that works as reset vector
+and various interrupt vectors.
+
+What it's worth, the EMS file (the beginning of it) does feel like an executable.
+
+It starts by:
+
+l0000h:
+        ld sp,0c100h                Set up stack
+        ld a,088h                   Set up page 8 in section 0xc000-0xffff
+        out (0f3h),a
+
+        ; Copy 0xc80 bytes from offset 54e0 to ed80 (which is in page 8)
+        ld hl,l54e0h                ;0007        21 e0 54         ! . T
+        ld de,0ed80h                ;000a        11 80 ed         . . .
+        ld bc,00c80h                ;000d        01 80 0c         . . .
+        ldir                        ;0010        ed b0         . .
+
+        ; Copy 0x27c0 bytes from offset 2520 to c440 (which is in page 8)
+        ld hl,l2520h                ;0012        21 20 25         !   %
+        ld de,0c440h                ;0015        11 40 c4         . @ .
+        ld bc,l27c0h                ;0018        01 c0 27         . . '
+        ldir                        ;001b        ed b0         . .
+
+        ; Zero 0x17f bytes from 0xec00
+        ld hl,0ec00h                ;001d        21 00 ec         ! . .
+        ld de,0ec01h                ;0020        11 01 ec         . . .
+        ld bc,0017fh                ;0023        01 7f 01         .  .
+        ld (hl),000h                ;0026        36 00         6 .
+        ldir                        ;0028        ed b0         . .
+
+        ; Copy 0x800 bytes from 4ce0 to b800
+        ld hl,l4ce0h                ;002a        21 e0 4c         ! . L
+        ld de,0b800h                ;002d        11 00 b8         . . .
+        ld bc,l0800h                ;0030        01 00 08         . . .
+        ldir                        ;0033        ed b0         . .
+
+        ; Set page 7 in memory region 0xc000-0xffff
+        ld a,087h                   ;0035        3e 87         > .
+        out (0f3h),a                ;0037        d3 f3         . .
+
+        ; This is where we're going to jump to with the RET instruction, which happens to be the target address of the copy
+        ; Copy 90 bytes from 0x46 to 0xc100.
+        ld de,0c100h                ;0039        11 00 c1         . . .
+        push de                     ;003c        d5         .
+        ld hl,l0046h                ;003d        21 46 00         ! F .
+        ld bc,00090h                ;0040        01 90 00         . . .
+        ldir                        ;0043        ed b0         . .
+        ret                         ;0045        c9         .
+
+                -------------------- THIS PIECE OF CODE EXECUTES AT LOCATION 0xC100
+                This is the code that got copied over in the last ldir
+
+        ; Copy 0x23e0 bytes from address 0x100 to 0x0080.
+        ; This is the code that establishes the 128-byte offset for most of the code in here.
+        ; It also deletes som crap, in the process, but leaves the first 128 bytes in place.
+        ld hl,l0100h                ;0046        21 00 01         ! . .
+        ld de,l0080h                ;0049        11 80 00         . . .
+        ld bc,l23e0h                ;004c        01 e0 23         . . #
+        ldir                        ;004f        ed b0         . .
+
+        ; Copy 128 bytes from 24e0 to 0
+        ; This is the piece of code that creates the reset vector and what not
+        ; in the first 128 bytes of memory.
+        ld hl,l24e0h                ;0051        21 e0 24         ! . $
+        ld de,l0000h                ;0054        11 00 00         . . .
+        ld bc,l0040h                ;0057        01 40 00         . @ .
+        ldir                        ;005a        ed b0         . .
+
+
+        ld hl,l6500h                ;005c        21 00 65         ! . e
+        ld de,0fc00h                ;005f        11 00 fc         . . .
+        ld a,006h                ;0062        3e 06         > .
+        call 0c186h                ;0064        cd 86 c1         . . .
+
+        ld hl,l6b00h                ;0067        21 00 6b         ! . k
+        ld de,0f600h                ;006a        11 00 f6         . . .
+        ld a,00ch                ;006d        3e 0c         > .
+        call 0c186h                ;006f        cd 86 c1         . . .
+
+        ld hl,l6a80h                ;0072        21 80 6a         ! . j
+        ld de,l4e00h                ;0075        11 00 4e         . . N
+        ld bc,03200h                ;0078        01 00 32         . . 2
+        ldir                ;007b        ed b0         . .
+
+        ld a,083h                ;007d        3e 83         > .
+        out (0f2h),a                ;007f        d3 f2         . .
+
+        ld hl,l5280h                ;0081        21 80 52         ! . R
+        ld de,0ba00h                ;0084        11 00 ba         . . .
+        ld a,008h                ;0087        3e 08         > .
+        call 0c186h                ;0089        cd 86 c1         . . .
+
+        ld hl,08080h                ;008c        21 80 80         ! . .
+        ld de,l8c00h                ;008f        11 00 8c         . . .
+        ld a,05ch                ;0092        3e 5c         > \
+        call 0c186h                ;0094        cd 86 c1         . . .
+
+        xor a                        ;0097        af         .
+        ld hl,02460h                ;0098        21 60 24         ! ` $
+        ld de,02461h                ;009b        11 61 24         . a $
+        ld bc,l0525h                ;009e        01 25 05         . % .
+        ld (hl),a                        ;00a1        77         w
+        ldir                ;00a2        ed b0         . .
+
+        ld hl,0bdf0h                ;00a4        21 f0 bd         ! . .
+        ld de,0bdf1h                ;00a7        11 f1 bd         . . .
+        ld bc,l01ffh                ;00aa        01 ff 01         . . .
+        ld (hl),a                        ;00ad        77         w
+        ldir                ;00ae        ed b0         . .
+
+        ld hl,l0040h                ;00b0        21 40 00         ! @ .
+        ld de,l0040h+1                ;00b3        11 41 00         . A .
+        ld bc,l003dh+2                ;00b6        01 3f 00         . ? .
+        ld (hl),a                        ;00b9        77         w
+        ldir                ;00ba        ed b0         . .
+
+        ld hl,0fea0h                ;00bc        21 a0 fe         ! . .
+        ld de,0fea1h                ;00bf        11 a1 fe         . . .
+        ld bc,l013fh                ;00c2        01 3f 01         . ? .
+        ld (hl),a                        ;00c5        77         w
+        ldir                ;00c6        ed b0         . .
+
+        di                        ;00c8        f3         .
+        jp 0fc00h                ;00c9        c3 00 fc         . . .
+
+
+
+
+l00cch:
+        dec h                        ;00cc        25         %
+        ld bc,l007fh+1                ;00cd        01 80 00         . . .
+l00d0h:
+        ldir                ;00d0        ed b0         . .
+        dec a                        ;00d2        3d         =
+        jr nz,l00cch                ;00d3        20 f7           .
+        ret                        ;00d5        c9         .
+
+The routine that gets called here (c186) is the following:
+
+sub_c186h:
+        dec h		        ;c186	25 	%
+        ld bc,00080h		;c187	01 80 00 	. . .
+        ldir     		;c18a	ed b0 	. .
+        dec a			;c18c	3d 	=
+        jr nz,sub_c186h		;c18d	20 f7 	  .
+        ret			;c18f	c9 	.
+
+At any rate, I think I understand enough now to have the main pieces of the OS code that I care about disassembled.
+
+So here's what the NMI handler looks like:
+
+        ; What we do here (or at least attempt to) is this:
+        ; The destination buffer address is stored in 0x0283c; the buffer length is in 0x0283a.
+        ; We attempt to read 5 bytes of header info and store it at address: 0x02840-0x2844
+        ; We follow this by a full block transfer from the FDC to the buffer.
+        ; What I'm learning is this:
+        ;   Each command has three phases.
+        ;    1. The command phase is when the command is issued, not interesting for our purposes.
+        ;    2. The execution phase is when the DMA occurs (which we don't use, so I'm not sure). During this phase the EXM bit is set
+        ;       and presumably says that we're dealing with data transfers as opposed to...
+        ;    3. The result phase, when up to 7 status bytes can be read from the DATA register.
+        ; The interleaving of the code is to satisfy the minimum 12us interval between reading the status register after a data transfer
+        ; !!!!!!!!!!!!!!!!!!!!!!!! A SUBTLE TIMING BUG CAN CAUSE VIOLATION OF THIS !!!!!!!!!!!!!!!!!!!!!!
+        ; In non-DMA mode, every byte generates an interrupt; however the RQM bit can also be polled to check if data is available.
+        ; Data read/writes in this case happen through tha data-register, albeit this is not clear from the datasheet.
+        ; Another reason to generate interrupts is a change of a drive 'ready' bit, which would mean a disk-change, most likely.
+        ; So, if we get an interrupt with the EXM but cleared, it means we triggered the polling feature, so we need to read ST0 from
+        ; the data register. ST0 status register contains the following:
+        ;  b7/6: interrupt code; here we're interested in 00 (normal termination) 01 (abnormal termination) and 11 (FDD status change)
+        ;  b5: seek end
+        ;  b4: equipment failure
+        ;  b3: not ready (i.e. door open or something)
+        ;  b2: head address (???)
+        ;  b1/0: unit select
+        ; Given all this, what's most likely going on here is this:
+        ; 0. We issue a command, and route FDC interrupts to NMI
+        ; 1. In NMI, we check if we're in EXC mode. If so, we're in the execution phase and deal with the inflowing data.
+        ;    if not, we re-route the FDC to normal interrupt and bail (at which point the interrupt probably will trigger immediately)
+        ; 2. In the interrupt handler, we check for ST0 (read from the data register) and test for various cases of failures.
+        ;
+        ; This still doesn't explain why we handle the first 5 bytes of a sector in a special way, but whatever...
+        ;
+        nmi_handler:
+                push af			;1d32	f5 	.
+                in a,(000h)		; READ FDC STATUS
+                and 020h		; check for EXM bit
+                jr z,l1dach		; jump if EXM bit is clear -> we jump here in the case of a hang (i.e. we skip all processing)
+                in a,(001h)		; READ FDC DATA
+                ld (02840h),a		; store it
+                push bc
+                push de
+        l1d40h:
+                in a,(000h)		; READ FDC STATUS again
+                add a,a
+                jr nc,l1d40h		; Wait until RQM bit is set
+                and 040h		; Test bit 020, which is EXM (after the addition it's shifted by 1)
+                jr z,l1daah		; Bail if not
+                in a,(001h)		; READ FDC DATA
+                ld (02841h),a		; store it
+                push hl
+                ld hl,(0283eh)
+        l1d52h:
+                in a,(000h)		; READ FDC STATUS again
+                add a,a
+                jr nc,l1d52h		; Wait until RQM bit is set
+                and 040h		; Test bit 020, which is EXM (after the addition it's shifted by 1)
+                jr z,l1da0h		; Bail if not and restore middle 2 memory pages
+                in a,(001h)		; READ FDC DATA
+                ld (02842h),a		; store it
+                ld a,l			; change middle 2 stages of memory to ... something (page info comes from address 0x0283e)
+                out (0f1h),a
+                ld a,h
+                out (0f2h),a
+        l1d66h:
+                in a,(000h)		; READ FDC STATUS again
+                add a,a
+                jr nc,l1d66h		; Wait until RQM bit is set
+                and 040h		; Test bit 020, which is EXM (after the addition it's shifted by 1)
+                jr z,l1da0h		; Bail if not and restore middle 2 memory pages
+                in a,(001h)		; READ FDC DATA
+                ld (02843h),a		; store it
+                ld c,001h               ; This is the input port address (FDC data port) for the rest of the transfer
+                ld de,(0283ah)          ; DE is the transfer size for the rest of the transfer
+                ld b,e
+        l1d7bh:
+                in a,(000h)		; READ FDC STATUS again
+                add a,a
+                jr nc,l1d7bh		; Wait until RQM bit is set
+                and 040h		; Test bit 020, which is EXM (after the addition it's shifted by 1)
+                jr z,l1da0h		; Bail if not and restore middle 2 memory pages
+                in a,(001h)		; READ FDC DATA
+                ld (02844h),a		; store it
+                ld hl,(0283ch)
+        l1d8ch:
+                in a,(000h)		; READ FDC STATUS again
+                add a,a
+                jr nc,l1d8ch		; Wait until RQM bit is set
+                and 040h		; Test bit 020, which is EXM (after the addition it's shifted by 1)
+                jr z,l1da0h		; Bail if not and restore middle 2 memory pages
+                ini		        ; In a weird way, we load yet another byte from FDC and store it... somewhere
+                jr nz,l1d8ch		; Keep looping if B is non-zero (B used to be E)
+                dec d
+                jr nz,l1d8ch		; Keep looping if D is non-zero
+                ld a,005h		; Set up some memory page stuff...
+                out (0f8h),a
+
+        l1da0h: ; Restore middle two pages of memory and return
+                ld hl,(00061h)
+                ld a,l
+                out (0f1h),a
+                ld a,h
+                out (0f2h),a
+                pop hl
+        l1daah:
+                pop de
+                pop bc
+        l1dach:
+                ld a,003h		; Switch FDC interrupt from NMI to INT
+                out (0f8h),a
+                pop af
+                retn
+
+The FDC interrupt handler appears to be at address 0x1051:
+
+
+l1051h:
+        ld hl,(02838h)		;1051	2a 38 28 	* 8 (
+        ld a,(hl)			;1054	7e 	~
+        or a			;1055	b7 	.
+        ld hl,0285eh		;1056	21 5e 28 	! ^ (
+        jr z,l1068h		;1059	28 0d 	( .
+        ld hl,0ffe0h		;105b	21 e0 ff 	! . .
+        call l1068h		;105e	cd 68 10 	. h .
+        ret nc			;1061	d0 	.
+        ld hl,(02838h)		;1062	2a 38 28 	* 8 (
+        jp l20eah		;1065	c3 ea 20 	. .
+l1068h:
+        in a,(000h)		; Read FDC status register
+        and 030h		; Test for EXM and FDC busy
+        jr z,l1074h		; If both 0, (i.e. not busy and not in execute phase), jump
+        cp 030h                 ; Return if both bits are set (i.e. we're in execute phase and busy)
+        ret z
+        jp l0fech		; Continue execution
+l1074h: ; we get here if FDC not in execute phase and not busy
+        call sub_0fe7h
+        and 020h
+        ret z
+        scf
+        ret
+
+; We get here if the FDC is not in execute phase but busy -> presumably needs attention
+; What we do here is to read all the returned status information and store it in (HL)
+; Return value is going to be ST0, I think.
+l0fech:
+        push bc
+        ld b,000h
+        inc hl
+        push hl
+l0ff1h:
+        in a,(000h)		; Read FDC status register
+        add a,a
+        jr nc,l0ff1h		; Wait for RQM bit
+        jp p,l1004h		; Jump if the DIO bit is cleared, that is, if no need to read the data register
+        in a,(001h)		; Read data register. At this point, we assume that we're in the status phase, so it should be ST0
+        ld (hl),a               ; Store status register value
+        inc hl
+        inc b
+        ex (sp),hl
+        ex (sp),hl
+        ex (sp),hl
+        ex (sp),hl
+        jr l0ff1h		; Keep on looping
+l1004h:
+        pop hl
+        ld a,(hl)
+        dec hl
+        ld (hl),b
+        pop bc
+        ret
+
+So, what do we get? The byte read back that the code thinks is ST0 is 0x46. What would that mean in terms of a status info? It would be an abnormal command termination on unit 2 (which is the same as unit 0 from our perspective). So, maybe it checks out?
+
+Notice, how we get this status code in what is essentially the *NMI* handler. We've read the status register sufficient times to not be in violation of anything in this particular instance; we also consistently read the same value, so I guess we can trust it.
+
+Now, if my theory of how the FDC code deals with interrupts is correct, the NMI handler invocation is important: it means that we got an error code instead of the data for a read. I.e. the read never even started.
+
+That would mean, that we did something naughty during the command phase which then the FDC really balked at and refused to cooperate. Since this is not something that should happen, the FDC code is not set up to deal with it and just waits for the read (in this case) to complete, which of course it never does.
+
+So, if I'm right, we need to track down the *command phase* and see what's going on there. Searching for 'out (001h),a' gets only 6 results:
+
+        out (001h),a		;1087	d3 01 	. .
+
+        out (001h),a		;1dbc	d3 01 	. .
+        out (001h),a		;1dd1	d3 01 	. .
+        out (001h),a		;1de3	d3 01 	. .
+        out (001h),a		;1df7	d3 01 	. .
+        out (001h),a		;1e0c	d3 01 	. .
+
+All but the first one are in one cluster, so it's probably worth a closer look. Well, not really. That's just the NMI handler for a sector write. It's right next to the NMI handler we've looked at and has a very similar structure, even terminating in a RETN instruction. So that's going to be dealing with the execution phase, and thus not all that interesting. That leaves us with a single location (of course there can be several other sections of code in other files that do this too):
+
+; This routine outputs the A to the FDC controller.
+sub_107ch:
+        push bc
+        ld b,a
+l107eh:
+        in a,(000h)		; Read FDC status
+        add a,a
+        jr nc,l107eh		; Wait for RQM
+        add a,a
+        jr c,l108bh		; if DIO is set (i.e. transfer TO the CPU) bail
+        ld a,b
+        out (001h),a		; Output byte that we've received
+        ex (sp),hl
+        ex (sp),hl
+l108bh:
+        pop bc			;108b	c1 	.
+        ret			;108c	c9 	.
+
+OK, not terribly interesting, we'll need to see who calls this
+
+sub_0f61h calls with command code 0xf, so that's SEEK
+sub_0f57h calls with command code 0x7, so that's RECALIBRATE
+l0bceh or thereabouts calls with command code 0x3, so that's SPECIFY (whatever that is)
+sub_0fd9h calls with command code 0x4, so that's SENSE DRIVE STATUS
+sub_0fe7h calls with command code 0x8, so that's SENSE INTERRUPT STATUS
+sub_1042h does something funky.
+
+sub_1025h issues a long command coming from (hl). So this is what we need.
+
+This in turn gets called from two places:
+
+l100ah:
+	call sub_1ccbh		;100a	cd cb 1c 	. . .
+	call sub_1025h		;100d	cd 25 10 	. % .
+	jp l1c9ch		;1010	c3 9c 1c 	. . .
+l1013h:
+	call sub_1cb0h		;1013	cd b0 1c 	. . .
+	call sub_1025h		;1016	cd 25 10 	. % .
+	ld a,(02872h)		;1019	3a 72 28 	: r (
+l101ch:
+	dec a			;101c	3d 	=
+	inc bc			;101d	03 	.
+	inc bc			;101e	03 	.
+	inc bc			;101f	03 	.
+	jr nz,l101ch		;1020	20 fa 	  .
+	jp l1ca2h		;1022	c3 a2 1c 	. . .
+
+
+Both of which appears to some sort of system calls:
+
+l0080h:
+	jp l0bc7h		;00 0080	c3 c7 0b 	. . .
+	jp l0bceh		;01 0083	c3 ce 0b 	. . .
+	jp l0c94h		;02 0086	c3 94 0c 	. . .
+	jp l0ca2h		;03 0089	c3 a2 0c 	. . .
+	jp l0cabh		;04 008c	c3 ab 0c 	. . .
+	jp l0cb9h		;05 008f	c3 b9 0c 	. . .
+	jp 00d3ch		;06 0092	c3 3c 0d 	. < .
+	jp l0da6h		;07 0095	c3 a6 0d 	. . .
+	jp l0fd0h		;08 0098	c3 d0 0f 	. . .
+	jp l0ccbh		;09 009b	c3 cb 0c 	. . .
+	jp l0e07h		;0a 009e	c3 07 0e 	. . .
+	jp l0db9h		;0b 00a1	c3 b9 0d 	. . .
+	jp l108dh		;0c 00a4	c3 8d 10 	. . .
+	jp l10abh		;0d 00a7	c3 ab 10 	. . .
+	jp l10c7h		;0e 00aa	c3 c7 10 	. . .
+	jp l100ah		;0f
+	jp l1013h		;10
+
+This is not a BDOS table though, not sure. At any rate, this is getting less and less interesting.
+
+What is more interesting is this: we appear to be doing something nasty to the poor FDC controller so it
+occasionally gives up interpreting a command. This could be:
+
+1. Incorrect write timing (i.e. setup/hold violations) in I/O writes
+2. Signal integrity on wires (most likely data wires at this point) resulting in wrong command getting latched
+3. Violation of the 12us timing interval between DATA and STATUS register accesses. If this is violated, we can overwrite a command in the sequence.
+
+Now, #3 is not likely because it would result in a command not getting issued (and being incorrect as well) most likely. So we wouldn't advance to the execute phase with an error, the FDC would just be hanging around waiting for more command bytes to arrive.
