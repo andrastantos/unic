@@ -351,9 +351,149 @@ THIS IS THE POINT WHERE I NEED A DECENT LOGIC ANALYZER!!!! EBAY IT IS.
 
 So, a few ideas to try before the LA shows up:
 
-1. Slowly probe all the data-bus signals (one by one) on the first and second I/O operation. Working theory is that the first I/O reads something incorrect in, that prematurely terminates the NMI handler, thus preventing the actual condition in the FDC to be cleared, thus preventing further progress. Do this on both Z0 and T80 and compare.
+1. Slowly probe all the data-bus signals (one by one) on the first and second I/O operation. Working theory is that the first I/O reads something incorrect in, that prematurely terminates the NMI handler, thus preventing the actual condition in the FDC to be cleared, thus preventing further progress. Do this on both Z80 and T80 and compare.
 2. Test voltage levels on I/O operations, check that signal-integrity is good, setup/hold times as well as voltage levels are what they should be. Compare Levels measured on the bus to what is detected by the FPGA (through loop-back on the debug pin).
 3. Get the f-ing GAO working by reducing the number of warnings during synthesis. Idea is that the trigger sequencer is busted, so maybe a single trigger condition will work (as evidenced by not being able to trigger even on reset anymore).
 
 
 Now, the cleaned up LA doesn't work at all. As in, it doesn't even appear to recognize the device!
+
+
+At least some clarity: the LA didn't work because - I think - I've lost permissions on the module rule file, so I needed re-run it as root.
+
+So now it at least can communicate, but the trigger - sadly - still is elusive. But, strangely only on NMI. The INT line interrupt works just fine.
+
+Oh the JOY, it triggered!!!!!
+
+This capture (nmi1) is not a failing one, in fact it doesn't have an interrupt around the NMI at all, but captures a full NMI processing sequence. So, let's see what's going on!
+
+1d32 f5
+1d33 db 00  --> IN A, (0) - red back 0xf0
+1d35 e6 20  --> AND 0x20
+1d37 28 73  --> jump conditional - doesn't happen
+1d39 db 01  --> IN A, (1) - not only reads data from FDC, but clears NMI source.
+
+This matches the previous sequence, so there's that:
+
+    0x0066 JP 0x1d32
+    0x1d32 PUSH AF
+    0x1d34 IN A,(0)   ; read FDC status register
+    0x1d35 AND A,0x20 ; test for the 'EXE' bit
+    0x1d37 JR Z,0x73  ; jump if EXE bit is cleared (we jump here most likely in the hanging case, not in the one I have a trace for)
+    0x1d39 IN A,(1)
+
+But, now I can check my understanding of the jump: the data read back has bit 0x20 set, and the jump didn't happen. So, my comment is correct: we jump if the bit is cleared.
+
+So, let's try to capture the hang! The hang happened, but the trigger didn't. God damn this thing...
+So maybe we can only trigger once?
+
+Really don't seem to be able to getting reliable trigger on NMI. Not sure why as it clearly is happening.
+
+
+So, apparently, the f-ing LA can trigger only the first one or two signals in the trigger unit list?!
+
+With this capture (nmi_and_int_no_crash1) there's another interesting case. I don't see the initial processing of the NMI, but I do see when it gets de-asserted. It's also curious that the interrupt happens in sync with an OUT instruction, which is similar to the hanging case. Could this be?
+
+So, just before the interrupt hit, we start execution from 0x0074. Before that the trace cuts off, so not sure...
+
+We eventually jump to 0x1e31:
+
+1e31 3e 03  LD A,3
+1e33 d3 f8  OUT (f8), A  (data is 03) -> CONNECT FDC INTERRUPT TO INT, DISCONNECT FROM NMI!!!
+
+OK, so we understand why the interrupt line goes active. It apparently doesn't get disconnected from NMI though. Not that it matters as that should be edge-driven. Still, interesting...
+
+FINALLY!!! I THINK I HAVE A CAPTURE OF THE HANG!!!!!!!
+
+So, we've read 0xD0 from the FDC, which means 0x20 is cleared, so we jump:
+
+BTW: address hold time seems to be 0 in an M1 cycle. Is that kosher? Yes, it is.
+
+1dac  3e 03  LD A,3
+1dae  d3 f8  OUT (f8), A  (data is 03) -> CONNECT FDC INTERRUPT TO INT, DISCONNECT FROM NMI!!!
+
+So, we do the same here, this explains the yanking of the IRQ.
+
+1db0  f1     POP AF - we read back what we've pushed, from the right addresses it seems as well (0x2020 from 0xff20)
+1db1  ed 45  RETN   - we return from the NMI handler.
+
+OK, so, since we haven't read that data bit, the FDC still yanks on the - now - interrupt line, so we should immediately go into interrupt handling...
+
+BTW: the NMI handler properly saved and restored the PC (107e), so now that the interrupt handler gets invoked, the same address gets pushed onto the stack. So, we go into the interrupt handler:
+
+0038  c3 40 1e   JP 1e40
+1e40  f3         DI
+1e41  e5         PUSH hl           (pushed value: 23 dc)
+1e42  f5         PUSH af           (pushed value: 20 20)
+1e43  2a 61 00   LD hl, (0061)     (loaded value: 81 83)
+1e46  e5         PUSH hl           (pushed value: 83 81)
+1e47  d5         PUSH de           (pushed value: 43 00)
+1e48  c5         PUSH bc           (pushed value: ff 00)
+1e49  db f8      IN a,(f8)         read system status, returned value is 30
+
+    The status bits are as follows:
+
+        b6: 1 line flyback, read twice in succession indicates frame flyback.
+        b5: FDC interrupt - this is set
+        b4: indicates 32-line screen - this is set as well
+        b3-0: 300Hz interrupt counter: stays at 1111 until reset by in a,(&F4) (see above).
+
+    So, we have a 32-line screen and an FDC interrupt. And indeed, we have a 32-line screen (not a 25 line one). So, really it's just the FDC interrupt that's interesting here.
+
+1e4b  4f         LD c,a            store A in C
+1e4c  db f8      IN a,(f8)         read status again (see b6 above as to why). returned value is still 30
+1e4e  a1         AND c
+1e4f  e6 20      AND 20            test for FDC interrupt
+1e51  28 08      JR Z,xxxxx        we won't jump here of course as the bit is set.
+1e53  21 7a 00   LD hl,007a 
+1e56  cd 70 1f   CALL 1f70
+
+
+    We seem to be restoring some context here from context pointer HL.
+...
+
+1f70  5e         LD e,(hl)         load from 0x7a, e=51
+1f71  23         INC hl
+1f72  56         LD d,(hl)         loaded value 10 so now DE=1051
+1f73  23         INC hl
+1f74  7e         LD a,(hl)         loaded value is 81
+1f75  23         INC hl
+1f76  32 61 00   LD (0061),a
+1f79  D3 F1      OUT (f1),a        swapping memory banks. This selects extended bank 1 into address space 4000-7fff.
+1f7b  7e         LD a,(hl)         loaded value is 83
+1f7c  23         INC hl
+1f7d  32 62 00   LD (0062),a
+1f80  D3 F2      OUT (f2),a        swap extended bank 3 into address space 8000-bfff
+1f82  EB         EX de,hl          swap DE and HL
+1f83  E9         JP (hl)           
+
+    hl at this point contains 1051. This is what we've just loaded at the beginning of the context restore. So maybe this isn't really restoring a context, more like a long jump. to a certain page.
+
+...
+
+1051  2A 38 28   LD hl,(2838)      HL=23dc
+1054  7E         LD a,(hl)         A=0
+1055  B7         OR a              test if a is 0, I guess?
+1056  21 5E 28   LD hl,285e
+1059  28 0D      JR z,1068         we are going to jump as a is 0
+...
+1068  DB 00      IN A,(0)          read FDC status, returned D0, that is: still not ready
+106a  E6 30      AND 30            now we test for two conditions: EXE and FDC busy (Which is set)
+106c  28 06      JR z,xxxx         we won't jump as one fo this is set.
+106e  FE 30      CP 30             test if a is 30 (no it's not for us)
+1070  C8         RET z             return, if zero (we won't)
+1071  C3 EC 0F   JP 0fec
+...
+0fec  C5         PUSH bc           pushed values: ff 30
+0fed  06 00      LD b,0
+0fef  23         INC hl
+0ff0  E5         PUSH hl           pushed values: 28 5f
+0ff1  DB 00      IN a,(0)          still reading back status D0
+0ff3  87         ADD a,a
+0ff4  30 FB      JR nc,xxxx        this is a loop and we're NOT looping, until MSB (request for master) bit is set
+0ff6  F2 04 10   JP p,1004         jump if the sign flag is set. I think it will not be set, but I'm not sure...
+0ff9  DB 01      IN a,(1)          we finally read the data, even though we haven't waited for it to be ready!!!! We read back 46 if that makes a difference.
+
+    Hmmm... At this point we see the NMI line staying low for a little longer even though we've read the data.
+    Could this be the problem? Not sure, have to read up on the FDC. I really don't think the sign bit (p) would be set incorrectly, that would cause all sorts of havoc. Overall, I haven't seen any reason why this could should not work.
+    
