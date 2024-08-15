@@ -829,7 +829,7 @@
 			)
 		)
 	)
-	(model "/home/tantos/unic/lib/3dmodels/12402032.stp"
+	(model "./3dmodels/12402032.stp"
 		(offset
 			(xyz 0 0 9.96)
 		)
