@@ -656,12 +656,12 @@ l00d0h:
 The routine that gets called here (c186) is the following:
 
 sub_c186h:
-        dec h		        ;c186	25 	%
-        ld bc,00080h		;c187	01 80 00 	. . .
-        ldir     		;c18a	ed b0 	. .
-        dec a			;c18c	3d 	=
-        jr nz,sub_c186h		;c18d	20 f7 	  .
-        ret			;c18f	c9 	.
+        dec h                        ;c186        25         %
+        ld bc,00080h                ;c187        01 80 00         . . .
+        ldir                     ;c18a        ed b0         . .
+        dec a                        ;c18c        3d         =
+        jr nz,sub_c186h                ;c18d        20 f7           .
+        ret                        ;c18f        c9         .
 
 At any rate, I think I understand enough now to have the main pieces of the OS code that I care about disassembled.
 
@@ -699,67 +699,70 @@ So here's what the NMI handler looks like:
         ; This still doesn't explain why we handle the first 5 bytes of a sector in a special way, but whatever...
         ;
         nmi_handler:
-                push af			;1d32	f5 	.
-                in a,(000h)		; READ FDC STATUS
-                and 020h		; check for EXM bit
-                jr z,l1dach		; jump if EXM bit is clear -> we jump here in the case of a hang (i.e. we skip all processing)
-                in a,(001h)		; READ FDC DATA
-                ld (02840h),a		; store it
+                push af                        ;1d32        f5         .
+                in a,(000h)                ; READ FDC STATUS
+                and 020h                ; check for EXM bit
+                jr z,l1dach                ; jump if EXM bit is clear -> we jump here in the case of a hang (i.e. we skip all processing)
+                in a,(001h)                ; READ FDC DATA
+                ld (02840h),a                ; store it
                 push bc
                 push de
         l1d40h:
-                in a,(000h)		; READ FDC STATUS again
+                in a,(000h)                ; READ FDC STATUS again
                 add a,a
-                jr nc,l1d40h		; Wait until RQM bit is set
-                and 040h		; Test bit 020, which is EXM (after the addition it's shifted by 1)
-                jr z,l1daah		; Bail if not
-                in a,(001h)		; READ FDC DATA
-                ld (02841h),a		; store it
+                jr nc,l1d40h                ; Wait until RQM bit is set
+                and 040h                ; Test bit 020, which is EXM (after the addition it's shifted by 1)
+                jr z,l1daah                ; Bail if not
+                in a,(001h)                ; READ FDC DATA
+                ld (02841h),a                ; store it
                 push hl
                 ld hl,(0283eh)
         l1d52h:
-                in a,(000h)		; READ FDC STATUS again
+                in a,(000h)                ; READ FDC STATUS again
                 add a,a
-                jr nc,l1d52h		; Wait until RQM bit is set
-                and 040h		; Test bit 020, which is EXM (after the addition it's shifted by 1)
-                jr z,l1da0h		; Bail if not and restore middle 2 memory pages
-                in a,(001h)		; READ FDC DATA
-                ld (02842h),a		; store it
-                ld a,l			; change middle 2 stages of memory to ... something (page info comes from address 0x0283e)
+                jr nc,l1d52h                ; Wait until RQM bit is set
+                and 040h                ; Test bit 020, which is EXM (after the addition it's shifted by 1)
+                jr z,l1da0h                ; Bail if not and restore middle 2 memory pages
+                in a,(001h)                ; READ FDC DATA
+                ld (02842h),a                ; store it
+                ld a,l                        ; change middle 2 stages of memory to ... something (page info comes from address 0x0283e)
                 out (0f1h),a
                 ld a,h
                 out (0f2h),a
         l1d66h:
-                in a,(000h)		; READ FDC STATUS again
+                in a,(000h)                ; READ FDC STATUS again
                 add a,a
-                jr nc,l1d66h		; Wait until RQM bit is set
-                and 040h		; Test bit 020, which is EXM (after the addition it's shifted by 1)
-                jr z,l1da0h		; Bail if not and restore middle 2 memory pages
-                in a,(001h)		; READ FDC DATA
-                ld (02843h),a		; store it
+                jr nc,l1d66h                ; Wait until RQM bit is set
+                and 040h                ; Test bit 020, which is EXM (after the addition it's shifted by 1)
+                jr z,l1da0h                ; Bail if not and restore middle 2 memory pages
+                in a,(001h)                ; READ FDC DATA
+                ld (02843h),a                ; store it
                 ld c,001h               ; This is the input port address (FDC data port) for the rest of the transfer
                 ld de,(0283ah)          ; DE is the transfer size for the rest of the transfer
                 ld b,e
         l1d7bh:
-                in a,(000h)		; READ FDC STATUS again
+                in a,(000h)                ; READ FDC STATUS again
                 add a,a
-                jr nc,l1d7bh		; Wait until RQM bit is set
-                and 040h		; Test bit 020, which is EXM (after the addition it's shifted by 1)
-                jr z,l1da0h		; Bail if not and restore middle 2 memory pages
-                in a,(001h)		; READ FDC DATA
-                ld (02844h),a		; store it
+                jr nc,l1d7bh                ; Wait until RQM bit is set
+                and 040h                ; Test bit 020, which is EXM (after the addition it's shifted by 1)
+                jr z,l1da0h                ; Bail if not and restore middle 2 memory pages
+                in a,(001h)                ; READ FDC DATA
+                ld (02844h),a                ; store it
                 ld hl,(0283ch)
         l1d8ch:
-                in a,(000h)		; READ FDC STATUS again
-                add a,a
-                jr nc,l1d8ch		; Wait until RQM bit is set
-                and 040h		; Test bit 020, which is EXM (after the addition it's shifted by 1)
-                jr z,l1da0h		; Bail if not and restore middle 2 memory pages
-                ini		        ; In a weird way, we load yet another byte from FDC and store it... somewhere
-                jr nz,l1d8ch		; Keep looping if B is non-zero (B used to be E)
-                dec d
-                jr nz,l1d8ch		; Keep looping if D is non-zero
-                ld a,005h		; Set up some memory page stuff...
+                ; All of these instructions include a single M1 cycle, thus a single refresh as well.
+                ; So the actual number of clock cycles is (N-2)*4+2, because the 2 refresh cycles don't honor nWAIT.
+                in a,(000h)         ; 11 cycles     38 cycles     READ FDC STATUS again
+                add a,a             ;  4 cycles      6 cycles
+                jr nc,l1d8ch        ; 12/7 cycles   42/22 cycles  Wait until RQM bit is set
+                and 040h            ;  7 cycles     22 cycles     Test bit 020, which is EXM (after the addition it's shifted by 1)
+                jr z,l1da0h         ; 12/7 cycles   42/22 cycles  Bail if not and restore middle 2 memory pages
+                ini                 ; 16 cycles     58 cycles     Load data byte and store it in destination buffer
+                jr nz,l1d8ch        ; 12/7 cycles   42/22 cycles  Keep looping if B is non-zero (B used to be E)
+                dec d               ;  4 cycles
+                jr nz,l1d8ch        ; 12/7 cycles   42/22 cycles  Keep looping if D is non-zero
+    
+                ld a,005h           ;  7 cycles    Set up some memory page stuff...
                 out (0f8h),a
 
         l1da0h: ; Restore middle two pages of memory and return
@@ -773,7 +776,7 @@ So here's what the NMI handler looks like:
                 pop de
                 pop bc
         l1dach:
-                ld a,003h		; Switch FDC interrupt from NMI to INT
+                ld a,003h                ; Switch FDC interrupt from NMI to INT
                 out (0f8h),a
                 pop af
                 retn
@@ -782,23 +785,23 @@ The FDC interrupt handler appears to be at address 0x1051:
 
 
 l1051h:
-        ld hl,(02838h)		;1051	2a 38 28 	* 8 (
-        ld a,(hl)			;1054	7e 	~
-        or a			;1055	b7 	.
-        ld hl,0285eh		;1056	21 5e 28 	! ^ (
-        jr z,l1068h		;1059	28 0d 	( .
-        ld hl,0ffe0h		;105b	21 e0 ff 	! . .
-        call l1068h		;105e	cd 68 10 	. h .
-        ret nc			;1061	d0 	.
-        ld hl,(02838h)		;1062	2a 38 28 	* 8 (
-        jp l20eah		;1065	c3 ea 20 	. .
+        ld hl,(02838h)                ;1051        2a 38 28         * 8 (
+        ld a,(hl)                        ;1054        7e         ~
+        or a                        ;1055        b7         .
+        ld hl,0285eh                ;1056        21 5e 28         ! ^ (
+        jr z,l1068h                ;1059        28 0d         ( .
+        ld hl,0ffe0h                ;105b        21 e0 ff         ! . .
+        call l1068h                ;105e        cd 68 10         . h .
+        ret nc                        ;1061        d0         .
+        ld hl,(02838h)                ;1062        2a 38 28         * 8 (
+        jp l20eah                ;1065        c3 ea 20         . .
 l1068h:
-        in a,(000h)		; Read FDC status register
-        and 030h		; Test for EXM and FDC busy
-        jr z,l1074h		; If both 0, (i.e. not busy and not in execute phase), jump
+        in a,(000h)                ; Read FDC status register
+        and 030h                ; Test for EXM and FDC busy
+        jr z,l1074h                ; If both 0, (i.e. not busy and not in execute phase), jump
         cp 030h                 ; Return if both bits are set (i.e. we're in execute phase and busy)
         ret z
-        jp l0fech		; Continue execution
+        jp l0fech                ; Continue execution
 l1074h: ; we get here if FDC not in execute phase and not busy
         call sub_0fe7h
         and 020h
@@ -815,11 +818,11 @@ l0fech:
         inc hl
         push hl
 l0ff1h:
-        in a,(000h)		; Read FDC status register
+        in a,(000h)                ; Read FDC status register
         add a,a
-        jr nc,l0ff1h		; Wait for RQM bit
-        jp p,l1004h		; Jump if the DIO bit is cleared, that is, if no need to read the data register
-        in a,(001h)		; Read data register. At this point, we assume that we're in the status phase, so it should be ST0
+        jr nc,l0ff1h                ; Wait for RQM bit
+        jp p,l1004h                ; Jump if the DIO bit is cleared, that is, if no need to read the data register
+        in a,(001h)                ; Read data register. At this point, we assume that we're in the status phase, so it should be ST0
         ld (hl),a               ; Store status register value
         inc hl
         inc b
@@ -827,7 +830,7 @@ l0ff1h:
         ex (sp),hl
         ex (sp),hl
         ex (sp),hl
-        jr l0ff1h		; Keep on looping
+        jr l0ff1h                ; Keep on looping
 l1004h:
         pop hl
         ld a,(hl)
@@ -846,13 +849,13 @@ That would mean, that we did something naughty during the command phase which th
 
 So, if I'm right, we need to track down the *command phase* and see what's going on there. Searching for 'out (001h),a' gets only 6 results:
 
-        out (001h),a		;1087	d3 01 	. .
+        out (001h),a                ;1087        d3 01         . .
 
-        out (001h),a		;1dbc	d3 01 	. .
-        out (001h),a		;1dd1	d3 01 	. .
-        out (001h),a		;1de3	d3 01 	. .
-        out (001h),a		;1df7	d3 01 	. .
-        out (001h),a		;1e0c	d3 01 	. .
+        out (001h),a                ;1dbc        d3 01         . .
+        out (001h),a                ;1dd1        d3 01         . .
+        out (001h),a                ;1de3        d3 01         . .
+        out (001h),a                ;1df7        d3 01         . .
+        out (001h),a                ;1e0c        d3 01         . .
 
 All but the first one are in one cluster, so it's probably worth a closer look. Well, not really. That's just the NMI handler for a sector write. It's right next to the NMI handler we've looked at and has a very similar structure, even terminating in a RETN instruction. So that's going to be dealing with the execution phase, and thus not all that interesting. That leaves us with a single location (of course there can be several other sections of code in other files that do this too):
 
@@ -861,18 +864,18 @@ sub_107ch:
         push bc
         ld b,a
 l107eh:
-        in a,(000h)		; Read FDC status
+        in a,(000h)                ; Read FDC status
         add a,a
-        jr nc,l107eh		; Wait for RQM
+        jr nc,l107eh                ; Wait for RQM
         add a,a
-        jr c,l108bh		; if DIO is set (i.e. transfer TO the CPU) bail
+        jr c,l108bh                ; if DIO is set (i.e. transfer TO the CPU) bail
         ld a,b
-        out (001h),a		; Output byte that we've received
+        out (001h),a                ; Output byte that we've received
         ex (sp),hl
         ex (sp),hl
 l108bh:
-        pop bc			;108b	c1 	.
-        ret			;108c	c9 	.
+        pop bc                        ;108b        c1         .
+        ret                        ;108c        c9         .
 
 OK, not terribly interesting, we'll need to see who calls this
 
@@ -888,42 +891,42 @@ sub_1025h issues a long command coming from (hl). So this is what we need.
 This in turn gets called from two places:
 
 l100ah:
-	call sub_1ccbh		;100a	cd cb 1c 	. . .
-	call sub_1025h		;100d	cd 25 10 	. % .
-	jp l1c9ch		;1010	c3 9c 1c 	. . .
+        call sub_1ccbh                ;100a        cd cb 1c         . . .
+        call sub_1025h                ;100d        cd 25 10         . % .
+        jp l1c9ch                ;1010        c3 9c 1c         . . .
 l1013h:
-	call sub_1cb0h		;1013	cd b0 1c 	. . .
-	call sub_1025h		;1016	cd 25 10 	. % .
-	ld a,(02872h)		;1019	3a 72 28 	: r (
+        call sub_1cb0h                ;1013        cd b0 1c         . . .
+        call sub_1025h                ;1016        cd 25 10         . % .
+        ld a,(02872h)                ;1019        3a 72 28         : r (
 l101ch:
-	dec a			;101c	3d 	=
-	inc bc			;101d	03 	.
-	inc bc			;101e	03 	.
-	inc bc			;101f	03 	.
-	jr nz,l101ch		;1020	20 fa 	  .
-	jp l1ca2h		;1022	c3 a2 1c 	. . .
+        dec a                        ;101c        3d         =
+        inc bc                        ;101d        03         .
+        inc bc                        ;101e        03         .
+        inc bc                        ;101f        03         .
+        jr nz,l101ch                ;1020        20 fa           .
+        jp l1ca2h                ;1022        c3 a2 1c         . . .
 
 
 Both of which appears to some sort of system calls:
 
 l0080h:
-	jp l0bc7h		;00 0080	c3 c7 0b 	. . .
-	jp l0bceh		;01 0083	c3 ce 0b 	. . .
-	jp l0c94h		;02 0086	c3 94 0c 	. . .
-	jp l0ca2h		;03 0089	c3 a2 0c 	. . .
-	jp l0cabh		;04 008c	c3 ab 0c 	. . .
-	jp l0cb9h		;05 008f	c3 b9 0c 	. . .
-	jp 00d3ch		;06 0092	c3 3c 0d 	. < .
-	jp l0da6h		;07 0095	c3 a6 0d 	. . .
-	jp l0fd0h		;08 0098	c3 d0 0f 	. . .
-	jp l0ccbh		;09 009b	c3 cb 0c 	. . .
-	jp l0e07h		;0a 009e	c3 07 0e 	. . .
-	jp l0db9h		;0b 00a1	c3 b9 0d 	. . .
-	jp l108dh		;0c 00a4	c3 8d 10 	. . .
-	jp l10abh		;0d 00a7	c3 ab 10 	. . .
-	jp l10c7h		;0e 00aa	c3 c7 10 	. . .
-	jp l100ah		;0f
-	jp l1013h		;10
+        jp l0bc7h                ;00 0080        c3 c7 0b         . . .
+        jp l0bceh                ;01 0083        c3 ce 0b         . . .
+        jp l0c94h                ;02 0086        c3 94 0c         . . .
+        jp l0ca2h                ;03 0089        c3 a2 0c         . . .
+        jp l0cabh                ;04 008c        c3 ab 0c         . . .
+        jp l0cb9h                ;05 008f        c3 b9 0c         . . .
+        jp 00d3ch                ;06 0092        c3 3c 0d         . < .
+        jp l0da6h                ;07 0095        c3 a6 0d         . . .
+        jp l0fd0h                ;08 0098        c3 d0 0f         . . .
+        jp l0ccbh                ;09 009b        c3 cb 0c         . . .
+        jp l0e07h                ;0a 009e        c3 07 0e         . . .
+        jp l0db9h                ;0b 00a1        c3 b9 0d         . . .
+        jp l108dh                ;0c 00a4        c3 8d 10         . . .
+        jp l10abh                ;0d 00a7        c3 ab 10         . . .
+        jp l10c7h                ;0e 00aa        c3 c7 10         . . .
+        jp l100ah                ;0f
+        jp l1013h                ;10
 
 This is not a BDOS table though, not sure. At any rate, this is getting less and less interesting.
 
@@ -935,3 +938,112 @@ occasionally gives up interpreting a command. This could be:
 3. Violation of the 12us timing interval between DATA and STATUS register accesses. If this is violated, we can overwrite a command in the sequence.
 
 Now, #3 is not likely because it would result in a command not getting issued (and being incorrect as well) most likely. So we wouldn't advance to the execute phase with an error, the FDC would just be hanging around waiting for more command bytes to arrive.
+
+To test this, we need a signal that toggles every time we access the FDC. This can easily be concocted up in the FPGA.
+
+Picture 65 shows a typical read. The two data lines (green and blue) are not driven for a while but then get driven high. The delay is about 280ns, but some of it for sure gets eaten up by the ULA decoding the access. T_rd is 200ns per datasheet. Max.
+
+Let's try to catch something when data is driven low.
+
+That didn't take long. Picture 66 shows it. and 67 shows about 60ns hold time. Plenty.
+
+OK, so data reads should not be problematic. How about writes? I need to modify my trigger logic a bit for that...
+
+Picture 68 shows very clear logic levels and plenty of setup (and hold) time.
+
+It also shows 600ns of pulse width, again, plenty.
+
+Logic levels are also clean: ~0.2V low, 3.3V high.
+
+So, we pretty much have ruled out #1 and #2. Well, actually, we should check what the signals on the FDC look like...
+
+Pictures 60 and 70 shows the impact (and the delay through) the ULA. Since the delay is almost exactly 250ns, I'm inclined to think that it's a registered version of the signal. Then again, the rising edge is at the same place, so it's not exactly a registered version. This was RD, how about WR? It's the same though I don't have a scope capture (ran out of hands).
+
+So, it must be #3 than. How can we capture *that*? I think what I'm looking for is this: two falling edges on the chip-select with less than 12us between them. Given the pulse is 0.6us, that would mean, I'll need to trigger on a 'high' section of less than 11.4us. Let's try that.
+
+We have reads happening as close as 8 us from one another, but that's not an issue. So, how I can I catch status-after-data accesses? I think more complicated triggering will be needed.
+
+FDC access log
+................
+
+I've created a counter and captured the following signals:
+
+counter
+PC
+RD
+WR
+A0
+D[7:0]
+
+I've captured these one cycle after the falling edge of FDC_access (That is IORQ=0 & M1=1 & A7=0). The capture seems to work except for RD and WR for some reason. At any rate, what I see there is the beginnings of a successful sector read I think.
+
+1. Issuance of the command with PC at 1089/1080 which - from above - is the routine for actually issuing a command. Good.
+2. Here the writes to the data register and the read of the status register are separated as follows:
+
+data-to-status: ~180 cycles
+status-to-data: 40 cycles
+
+This makes sense: we read status than write data if allowed. Then we return from the subroutine, muck around a little and come back eventually with the next piece of data to write. So, it would be pretty hard to violate data-to-status timing.
+
+Then we go into the read portion inside the NMI handler at address 1d35 and onwards. Here the timing is as follows:
+
+data-to-status: 60 cycles
+status-to-data: 40 cycles (maybe reversed though!!)
+
+So, depending on which way it is we either have 10 or 15us. Which makes a *huge* difference.
+
+... And given that the timing of 40 cycles matches that of the transmit case, I bet that's what it is.
+At any rate, I'll need to double-check and triple-check that.
+
+Taking the trace for its word, I get:
+
+60 cycles
+64 cycles
+60 cycles
+58 cycles
+48 cycles
+34 cycles ??!!!!! This is at 1d97 v.s. 1d8e <-- this is the final loop and it's very consistently that much.
+
+So, reads actually do violate the 12us timing, but that's not where we have issues, I think. Unless we have a cascade of failures that a previous read was incorrectly terminated, thus the next read never starts, thus we have a hang.
+
+So, worth going through the timing of that loop around 1d97 with a fine-tooth comb and check timing.
+
+Annotated the loop in question (reading data portion of sector into buffer) with clock cycles from datasheet and adjusting it for WAIT-states:
+
+        l1d8ch:
+                ; All of these instructions include a single M1 cycle, thus a single refresh as well.
+                ; Taking wait-states into account is rather annoying, but one can say that every memory access (not I/O!) incurs 3 extra cycles.
+                ; At least first guess.
+                in a,(000h)         ; 11 cycles     17 cycles     READ FDC STATUS again
+                add a,a             ;  4 cycles      7 cycles
+                jr nc,l1d8ch        ; 12/7 cycles   42/22 cycles  Wait until RQM bit is set
+                and 040h            ;  7 cycles     22 cycles     Test bit 020, which is EXM (after the addition it's shifted by 1)
+                jr z,l1da0h         ; 12/7 cycles   42/22 cycles  Bail if not and restore middle 2 memory pages
+                ini                 ; 16 cycles     58 cycles     Load data byte and store it in destination buffer
+                jr nz,l1d8ch        ; 12/7 cycles   42/22 cycles  Keep looping if B is non-zero (B used to be E)
+                dec d               ;  4 cycles
+                jr nz,l1d8ch        ; 12/7 cycles   42/22 cycles  Keep looping if D is non-zero
+
+Looking at an actual through this loop one can see 31 clock cycles of difference between rising edge of data read and falling edge of status read (data_read_loop_timing). This, with the extra 3 cycles for the actual I/O access rounds up to 34, matching that of the previous measurement, so, that is real, and clearly a violation of the datasheet, being only 7.75us. Which BTW also matches what I've seen on the scope before (see 'as low as 8us').
+
+But what should it be?
+
+We have the tail-end of INI (store the data), which is a memory store, so it should take 6 cycles. Then we have the M1 cycle for the JR instruction, which (with refresh) takes 7 cycles. Then of course we have to read the target address, that's another 5 cycles. Now, the execution phase starts. According to the datasheet (http://www.zilog.com/docs/z80/um0080.pdf, page 287) if a conditional branch is taken, it'll have 3 M cycles and and 12 T cycles. The first M cycle takes 4 T cycles, the second one takes 3. These both get extended by 3 each due to wait-states. The third M cycle takes 5 T cycles, but might not include any memory accesses, thus no dependence on wait-states. So, the JR should take 18 clock cycles total. After that, we start fetching the IN A instruction, which takes an M1 cycle (3+2+3 clocks) and an M2 cycle (3+3 clocks) including wait-states to complete. So overall we have:
+
+6+7+6+5+7+6 cycles here. This adds up to 37 clocks. So we're off by maybe 3 clock cycles, but either way, even going with the datasheet, this should not be within 12us. But, is this enough to make a difference? Don't forget: it mostly works!!
+
+Let's do cycle-by-cycle annotations (cycles_marked_on_in_loop.odg).
+
+The store in the INI takes 5 active cycles, but since memory access start and end on half-cycle boundaries, that's a total of 6 cycles.
+The subsequent M1 cycles only takes 3, because two extra wait-states are eaten up by the finishing of the previous M3 cycle and the setup of the M1. This is predictable, it will always happen this way. So, we only have 3 cycles here (instead of 2) plus the 2 refresh cycles, totalling 4 for M1.
+For the next M-cycle, we fetch the target address offset, which should take 3 cycles normally, and it doesn't get extended at all: the enable just falls on the right cycle. Again, completely predictable, will happen every time. Now we enter the 6 (!!!) cycles of pondering about taking the jump and coming up with the target address. During this time we don't have memory accesses, thus we don't extend this at all. **** THIS IS SOMETHING TO CHECK. MAYBE THE Z80 DOES GENERATE A MEMORY CYCLE AND THUS GETS IMPACTED!! **** Let's go to the gate-level simulator and see what happens! 
+The gate-level simulator shows that no memory access is happening in M3 of the JR instruction. So we should be fine.
+These 6 cycles actually match up with the gate-level sim, so I must have my cycle boundaries mixed up. At any rate, we enter a 5-cycle (+2 for refresh) M1 cycle. This is because we get the wait-states in the worst possible lineup, so we get penalized for 3 cycles. The next memory read (port address) hits the wait-state generator with perfect stride though so we don't get any problems and fly through in just 3 cycles. Then, in the next cycle we drop IORQ, starting the I/O read.
+
+Overall, I don't see anything that a real Z80 would be doing differently.
+
+So, where does it leave us? We do violate timing on the uPD765, but we should be doing exactly the same as the Z80. This should not be the cause for worry. We've also learned that the naive way of calculating execution cycles is wrong (and an over-estimate) as sometimes we get the right rhythm and don't incur the full 3-cycle penalty on every memory access.
+
+Still it doesn't explain what's going wrong. Damn!
+
+One option is to try the A-Z80 core instead (https://github.com/gdevic/A-Z80). This seems to be a gate-level re-implementation, maybe it fairs better?
