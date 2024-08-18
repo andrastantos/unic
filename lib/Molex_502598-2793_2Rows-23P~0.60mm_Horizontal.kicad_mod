@@ -39,6 +39,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -51,6 +52,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -63,6 +65,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 		)
 	)
@@ -419,7 +422,7 @@
 		(layers "F.Cu" "F.Paste" "F.Mask")
 		(uuid "d0103d7b-855e-4cc8-b8cd-86a52d1e113b")
 	)
-	(model "/home/tantos/unic/lib/3dmodels/5025982793.stp"
+	(model "3dmodels/5025982793.stp"
 		(offset
 			(xyz 0 -0 0.6)
 		)
