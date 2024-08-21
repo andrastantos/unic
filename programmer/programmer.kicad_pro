@@ -678,13 +678,19 @@
           "label": "DNP",
           "name": "${DNP}",
           "show": false
+        },
+        {
+          "group_by": false,
+          "label": "HAVE IT",
+          "name": "HAVE IT",
+          "show": false
         }
       ],
-      "filter_string": "D*",
+      "filter_string": "",
       "group_symbols": true,
       "name": "",
-      "sort_asc": false,
-      "sort_field": "manf#"
+      "sort_asc": true,
+      "sort_field": "Reference"
     },
     "connection_grid_size": 50.0,
     "drawing": {
