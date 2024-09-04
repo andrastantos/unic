@@ -20776,7 +20776,7 @@
 	)
 	(symbol
 		(lib_id "4xxx:4066")
-		(at 115.57 297.18 0)
+		(at 105.41 284.48 0)
 		(mirror y)
 		(unit 4)
 		(exclude_from_sim no)
@@ -20785,7 +20785,7 @@
 		(dnp no)
 		(uuid "130b3738-57fa-41b7-af76-4c9398b555b4")
 		(property "Reference" "U12"
-			(at 115.57 302.26 0)
+			(at 105.41 289.56 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20793,7 +20793,7 @@
 			)
 		)
 		(property "Value" "4066"
-			(at 115.57 304.8 0)
+			(at 105.41 292.1 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20801,7 +20801,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:DHVQFN-14-1EP_2.5x3mm_P0.5mm_EP1x1.5mm"
-			(at 115.57 297.18 0)
+			(at 105.41 284.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20810,7 +20810,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT4066.pdf"
-			(at 115.57 297.18 0)
+			(at 105.41 284.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20819,7 +20819,7 @@
 			)
 		)
 		(property "Description" "Quad Analog Switches"
-			(at 115.57 297.18 0)
+			(at 105.41 284.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20828,7 +20828,7 @@
 			)
 		)
 		(property "mpn" "74HC4066BQ,115"
-			(at 115.57 297.18 0)
+			(at 105.41 284.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31328,7 +31328,7 @@
 	)
 	(symbol
 		(lib_id "4xxx:4066")
-		(at 105.41 284.48 0)
+		(at 115.57 297.18 0)
 		(unit 3)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -31337,7 +31337,7 @@
 		(fields_autoplaced yes)
 		(uuid "50e5c520-7e2e-4ca7-9098-fd01fc435c2d")
 		(property "Reference" "U12"
-			(at 105.41 289.56 0)
+			(at 115.57 302.26 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31345,7 +31345,7 @@
 			)
 		)
 		(property "Value" "4066"
-			(at 105.41 292.1 0)
+			(at 115.57 304.8 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31353,7 +31353,7 @@
 			)
 		)
 		(property "Footprint" "Package_DFN_QFN:DHVQFN-14-1EP_2.5x3mm_P0.5mm_EP1x1.5mm"
-			(at 105.41 284.48 0)
+			(at 115.57 297.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31362,7 +31362,7 @@
 			)
 		)
 		(property "Datasheet" "https://assets.nexperia.com/documents/data-sheet/74HC_HCT4066.pdf"
-			(at 105.41 284.48 0)
+			(at 115.57 297.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31371,7 +31371,7 @@
 			)
 		)
 		(property "Description" "Quad Analog Switches"
-			(at 105.41 284.48 0)
+			(at 115.57 297.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -31380,7 +31380,7 @@
 			)
 		)
 		(property "mpn" "74HC4066BQ,115"
-			(at 105.41 284.48 0)
+			(at 115.57 297.18 0)
 			(effects
 				(font
 					(size 1.27 1.27)
