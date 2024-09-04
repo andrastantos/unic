@@ -9085,6 +9085,16 @@
 	)
 	(wire
 		(pts
+			(xy 229.87 195.58) (xy 254 195.58)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "5bfc4a44-336a-4dd0-9cb2-23d3aa82cf84")
+	)
+	(wire
+		(pts
 			(xy 325.12 309.88) (xy 292.1 309.88)
 		)
 		(stroke
@@ -9222,6 +9232,16 @@
 			(type default)
 		)
 		(uuid "65e9ca3a-5a27-4e57-82ec-aab9da74925f")
+	)
+	(wire
+		(pts
+			(xy 229.87 193.04) (xy 254 193.04)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "65ffe98e-f27c-4003-8c59-13a38c4ff153")
 	)
 	(wire
 		(pts
@@ -11434,7 +11454,7 @@
 		(uuid "fefb4647-a307-4d61-85e5-168e0e1831a4")
 	)
 	(label "FT_JTAG_SEL_N"
-		(at 294.64 309.88 0)
+		(at 294.64 320.04 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11489,7 +11509,7 @@
 		(uuid "0f62ebfa-f231-4c2a-b2b7-e09da20f3b58")
 	)
 	(label "SER_RXD"
-		(at 416.56 276.86 0)
+		(at 416.56 289.56 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11532,6 +11552,28 @@
 		)
 		(uuid "15d117c1-9980-4bea-a997-6df0e62f880e")
 	)
+	(label "FT_ACBUS5"
+		(at 237.49 198.12 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1663558e-240f-43a1-9f3e-9f957191485b")
+	)
+	(label "FT_ACBUS6"
+		(at 237.49 200.66 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "16647392-2b71-4753-b4a4-798b0f765b22")
+	)
 	(label "JTAG_TDI"
 		(at 372.11 218.44 0)
 		(fields_autoplaced yes)
@@ -11555,7 +11597,7 @@
 		(uuid "1bfc0dbc-c153-493d-b168-575debe6a53f")
 	)
 	(label "IO4B"
-		(at 416.56 281.94 0)
+		(at 416.56 292.1 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11575,6 +11617,17 @@
 			(justify left bottom)
 		)
 		(uuid "1f902a38-a583-42d9-953d-a914b7622d16")
+	)
+	(label "FT_ACBUS4"
+		(at 237.49 195.58 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "1fa7ebde-b232-4273-a30c-d7719ef92aac")
 	)
 	(label "JTAG_TDI"
 		(at 480.06 217.17 0)
@@ -11654,7 +11707,7 @@
 		(uuid "2c8cf11a-2942-4721-8694-36e40b18ef44")
 	)
 	(label "IO4A"
-		(at 416.56 284.48 0)
+		(at 416.56 294.64 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11676,7 +11729,7 @@
 		(uuid "3669c237-ce36-4738-aaf7-d8af24b0797e")
 	)
 	(label "FT_RECONFIG_N"
-		(at 294.64 307.34 0)
+		(at 294.64 317.5 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11687,7 +11740,7 @@
 		(uuid "3758fee9-e241-4229-9c7b-9e6f12be6b14")
 	)
 	(label "FT_JTAG_TMS"
-		(at 294.64 312.42 0)
+		(at 294.64 322.58 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11709,7 +11762,7 @@
 		(uuid "3b8ddda7-5a53-481c-a07f-6922c82fc857")
 	)
 	(label "FT_JTAG_TCK"
-		(at 294.64 330.2 0)
+		(at 294.64 332.74 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11807,6 +11860,17 @@
 		)
 		(uuid "4c80e725-a56a-4cd2-83f8-b3758bceed11")
 	)
+	(label "FT_ACBUS4"
+		(at 294.64 312.42 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "4cd9830a-022e-4c02-b058-a660b403ebf4")
+	)
 	(label "JTAG_TMS"
 		(at 478.79 123.19 0)
 		(fields_autoplaced yes)
@@ -11830,7 +11894,7 @@
 		(uuid "56cb9fa7-d9e2-445f-b826-76779ec6b186")
 	)
 	(label "FT_JTAG_TDI"
-		(at 294.64 317.5 0)
+		(at 294.64 327.66 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11861,6 +11925,17 @@
 			(justify left bottom)
 		)
 		(uuid "590943ce-d4a4-431c-aa31-743247968767")
+	)
+	(label "FT_ACBUS5"
+		(at 294.64 309.88 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "5acf7c0e-b5f3-433e-b36b-8d2f2e90c40e")
 	)
 	(label "FT_IO2B"
 		(at 294.64 281.94 0)
@@ -11918,7 +11993,7 @@
 		(uuid "62b48b39-db16-429a-ab3f-19d4bd027451")
 	)
 	(label "JTAG_LED"
-		(at 294.64 332.74 0)
+		(at 294.64 330.2 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -11938,6 +12013,17 @@
 			(justify left bottom)
 		)
 		(uuid "68c2b6dd-125a-4866-9ad2-31f045043146")
+	)
+	(label "FT_ACBUS7"
+		(at 237.49 203.2 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "68d6d857-579e-40ea-96e7-8b9cc97bddbc")
 	)
 	(label "SER_RXD"
 		(at 478.79 171.45 0)
@@ -12302,6 +12388,17 @@
 		)
 		(uuid "b8abcab8-707a-49b9-be91-d0e6cd0972c0")
 	)
+	(label "FT_ACBUS6"
+		(at 294.64 307.34 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "bd903d64-0c48-40d0-9b42-62f6fa25c46b")
+	)
 	(label "JTAG_TDO"
 		(at 416.56 309.88 0)
 		(fields_autoplaced yes)
@@ -12323,6 +12420,17 @@
 			(justify left bottom)
 		)
 		(uuid "c7a13718-fa24-4b49-836c-b5706c4f741c")
+	)
+	(label "FT_ACBUS3"
+		(at 237.49 193.04 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "c9cbcc72-e2c7-4300-b447-877924e4005a")
 	)
 	(label "EPRG_TCK"
 		(at 294.64 266.7 0)
@@ -12389,6 +12497,17 @@
 			(justify left bottom)
 		)
 		(uuid "db567919-a5cd-4388-aded-58641cefb738")
+	)
+	(label "FT_ACBUS3"
+		(at 294.64 314.96 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "df32a183-dc56-4e27-8d36-d4c64f1a7893")
 	)
 	(label "FT_JTAG_TDI"
 		(at 234.95 165.1 0)
@@ -12468,7 +12587,7 @@
 		(uuid "f2f85c17-1a52-44d7-aa27-f5b7edd14c29")
 	)
 	(label "SER_TXD"
-		(at 416.56 274.32 0)
+		(at 416.56 287.02 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12501,7 +12620,7 @@
 		(uuid "fd271db2-2596-4651-9014-31f6c12a76da")
 	)
 	(label "FT_JTAG_TDO"
-		(at 294.64 314.96 0)
+		(at 294.64 325.12 0)
 		(fields_autoplaced yes)
 		(effects
 			(font
@@ -12510,6 +12629,17 @@
 			(justify left bottom)
 		)
 		(uuid "fe396796-8c5d-4899-b3de-0528f64d12b6")
+	)
+	(label "FT_ACBUS7"
+		(at 294.64 304.8 0)
+		(fields_autoplaced yes)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "fef625c6-11bd-4220-9267-bccdf6c3a49a")
 	)
 	(label "EPRG_TDI"
 		(at 294.64 264.16 0)
@@ -12524,7 +12654,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 254 200.66 270)
+		(at 434.34 276.86 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -12533,7 +12663,7 @@
 		(fields_autoplaced yes)
 		(uuid "05253e33-1611-43fb-9c00-f5eeb6319372")
 		(property "Reference" "TP2"
-			(at 259.08 200.6599 90)
+			(at 439.42 276.8599 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12542,7 +12672,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 259.08 201.9299 90)
+			(at 439.42 278.1299 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12552,7 +12682,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
-			(at 254 205.74 0)
+			(at 434.34 281.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12561,7 +12691,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 254 205.74 0)
+			(at 434.34 281.94 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12570,7 +12700,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 254 200.66 0)
+			(at 434.34 276.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -12579,7 +12709,7 @@
 			)
 		)
 		(property "HAVE IT" "YES"
-			(at 254 200.66 0)
+			(at 434.34 276.86 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13854,7 +13984,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 254 203.2 270)
+		(at 434.34 279.4 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -13863,7 +13993,7 @@
 		(fields_autoplaced yes)
 		(uuid "17cdbcb2-8d95-4bfa-a6f8-aae6f3bb332a")
 		(property "Reference" "TP3"
-			(at 259.08 203.1999 90)
+			(at 439.42 279.3999 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13872,7 +14002,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 259.08 204.4699 90)
+			(at 439.42 280.6699 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13882,7 +14012,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
-			(at 254 208.28 0)
+			(at 434.34 284.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13891,7 +14021,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 254 208.28 0)
+			(at 434.34 284.48 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13900,7 +14030,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 254 203.2 0)
+			(at 434.34 279.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -13909,7 +14039,7 @@
 			)
 		)
 		(property "HAVE IT" "YES"
-			(at 254 203.2 0)
+			(at 434.34 279.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -17706,6 +17836,83 @@
 		)
 	)
 	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 434.34 284.48 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "467691bd-1bc5-46b3-8ac3-dac0507f53e4")
+		(property "Reference" "TP8"
+			(at 439.42 284.4799 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 439.42 285.7499 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
+			(at 434.34 289.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 434.34 289.56 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 434.34 284.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "HAVE IT" "YES"
+			(at 434.34 284.48 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "f40528c2-3f20-44fe-ac4e-dbba369c44d6")
+		)
+		(instances
+			(project "programmer2"
+				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
+					(reference "TP8")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "Connector:USB_C_Receptacle_USB2.0_14P")
 		(at 76.2 170.18 0)
 		(unit 1)
@@ -19362,7 +19569,7 @@
 	)
 	(symbol
 		(lib_id "Connector:TestPoint")
-		(at 254 198.12 270)
+		(at 434.34 274.32 270)
 		(unit 1)
 		(exclude_from_sim no)
 		(in_bom yes)
@@ -19371,7 +19578,7 @@
 		(fields_autoplaced yes)
 		(uuid "6228db2c-a935-40fd-96d7-225c0edac97c")
 		(property "Reference" "TP1"
-			(at 259.08 198.1199 90)
+			(at 439.42 274.3199 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19380,7 +19587,7 @@
 			)
 		)
 		(property "Value" "TestPoint"
-			(at 259.08 199.3899 90)
+			(at 439.42 275.5899 90)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19390,7 +19597,7 @@
 			)
 		)
 		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
-			(at 254 203.2 0)
+			(at 434.34 279.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19399,7 +19606,7 @@
 			)
 		)
 		(property "Datasheet" "~"
-			(at 254 203.2 0)
+			(at 434.34 279.4 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19408,7 +19615,7 @@
 			)
 		)
 		(property "Description" "test point"
-			(at 254 198.12 0)
+			(at 434.34 274.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -19417,7 +19624,7 @@
 			)
 		)
 		(property "HAVE IT" "YES"
-			(at 254 198.12 0)
+			(at 434.34 274.32 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -20061,6 +20268,83 @@
 			(project "programmer"
 				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
 					(reference "#PWR011")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector:TestPoint")
+		(at 434.34 281.94 270)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(fields_autoplaced yes)
+		(uuid "719aa763-d1d3-4230-a7c4-432775502ecc")
+		(property "Reference" "TP7"
+			(at 439.42 281.9399 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "TestPoint"
+			(at 439.42 283.2099 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+				(hide yes)
+			)
+		)
+		(property "Footprint" "TestPoint:TestPoint_THTPad_1.0x1.0mm_Drill0.5mm"
+			(at 434.34 287.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 434.34 287.02 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" "test point"
+			(at 434.34 281.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "HAVE IT" "YES"
+			(at 434.34 281.94 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "da71c70d-5297-4cf2-8b49-1b227154d915")
+		)
+		(instances
+			(project "programmer2"
+				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
+					(reference "TP7")
 					(unit 1)
 				)
 			)
