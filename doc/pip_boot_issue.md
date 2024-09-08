@@ -1047,3 +1047,13 @@ So, where does it leave us? We do violate timing on the uPD765, but we should be
 Still it doesn't explain what's going wrong. Damn!
 
 One option is to try the A-Z80 core instead (https://github.com/gdevic/A-Z80). This seems to be a gate-level re-implementation, maybe it fairs better?
+
+Clock issues
+------------
+
+The clock is very marginal on the design: adding just a little bit of trace (such as a logic analyzer wire) breaks it. Looking into it, it turns out there's a ferrite bead in it (helpfully omitted on the schematic) that destroys signal quality (FCC issues I'm sure). Images of the clock: 71,72,73,74 with the ferrite in place, 75,76,77,78 with it shorted. The places: before ferrite, after ferrite, at first socket, at shadow tracer socket (CPU pin). First set doesn't boot, second set does.
+
+A-Z80
+-----
+
+This thing is full of logical loops and tri-state wires that need to be re-synthesized into muxes. It just barely closes timing at 5MHz. In my first attempt it didn't even remotely boot. This isn't encouraging and I decided to not invest more time in it, instead concentrate on Shadow Tracer that's more generic and forward-looking of a solution.
