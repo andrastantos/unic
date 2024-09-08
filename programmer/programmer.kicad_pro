@@ -683,7 +683,7 @@
           "group_by": false,
           "label": "HAVE IT",
           "name": "HAVE IT",
-          "show": false
+          "show": true
         }
       ],
       "filter_string": "",
