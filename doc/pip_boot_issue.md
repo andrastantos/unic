@@ -761,7 +761,7 @@ So here's what the NMI handler looks like:
                 jr nz,l1d8ch        ; 12/7 cycles   42/22 cycles  Keep looping if B is non-zero (B used to be E)
                 dec d               ;  4 cycles
                 jr nz,l1d8ch        ; 12/7 cycles   42/22 cycles  Keep looping if D is non-zero
-    
+
                 ld a,005h           ;  7 cycles    Set up some memory page stuff...
                 out (0f8h),a
 
@@ -1036,7 +1036,7 @@ Let's do cycle-by-cycle annotations (cycles_marked_on_in_loop.odg).
 
 The store in the INI takes 5 active cycles, but since memory access start and end on half-cycle boundaries, that's a total of 6 cycles.
 The subsequent M1 cycles only takes 3, because two extra wait-states are eaten up by the finishing of the previous M3 cycle and the setup of the M1. This is predictable, it will always happen this way. So, we only have 3 cycles here (instead of 2) plus the 2 refresh cycles, totalling 4 for M1.
-For the next M-cycle, we fetch the target address offset, which should take 3 cycles normally, and it doesn't get extended at all: the enable just falls on the right cycle. Again, completely predictable, will happen every time. Now we enter the 6 (!!!) cycles of pondering about taking the jump and coming up with the target address. During this time we don't have memory accesses, thus we don't extend this at all. **** THIS IS SOMETHING TO CHECK. MAYBE THE Z80 DOES GENERATE A MEMORY CYCLE AND THUS GETS IMPACTED!! **** Let's go to the gate-level simulator and see what happens! 
+For the next M-cycle, we fetch the target address offset, which should take 3 cycles normally, and it doesn't get extended at all: the enable just falls on the right cycle. Again, completely predictable, will happen every time. Now we enter the 6 (!!!) cycles of pondering about taking the jump and coming up with the target address. During this time we don't have memory accesses, thus we don't extend this at all. **** THIS IS SOMETHING TO CHECK. MAYBE THE Z80 DOES GENERATE A MEMORY CYCLE AND THUS GETS IMPACTED!! **** Let's go to the gate-level simulator and see what happens!
 The gate-level simulator shows that no memory access is happening in M3 of the JR instruction. So we should be fine.
 These 6 cycles actually match up with the gate-level sim, so I must have my cycle boundaries mixed up. At any rate, we enter a 5-cycle (+2 for refresh) M1 cycle. This is because we get the wait-states in the worst possible lineup, so we get penalized for 3 cycles. The next memory read (port address) hits the wait-state generator with perfect stride though so we don't get any problems and fly through in just 3 cycles. Then, in the next cycle we drop IORQ, starting the I/O read.
 
@@ -1057,3 +1057,486 @@ A-Z80
 -----
 
 This thing is full of logical loops and tri-state wires that need to be re-synthesized into muxes. It just barely closes timing at 5MHz. In my first attempt it didn't even remotely boot. This isn't encouraging and I decided to not invest more time in it, instead concentrate on Shadow Tracer that's more generic and forward-looking of a solution.
+
+Logic analyzer
+--------------
+
+Another slow-moving disaster: thi thing showed up with 16 out of it's 32 channels not working. This of course took me a better of a day to figure out as it simply was showing weird results. Eventually, I connected all 32 inputs together and drove a pulse to it to see what's going on.
+
+<<< add picture >>>
+
+Clearly 16 channels show bonkers data. What's interesting is that if I trigger on one of the failing channels, the *trigger* happens at the right spot. This strongly points to a an address bus connectivity problem on one of the DRAM chips. I still can't believe I have to debug test equipment I paid money for. At any rate, I'm pursuing a replacement through eBay and might take it to work and XRay it for fun.
+
+Programmer
+----------
+
+Gah, things are not going well this weekend. This simple circuit should have taken a couple of hours to get working. Instead it took more than a day, total.
+
+Issues found:
+
+1. ESD diode kills USB communication
+2. LDO unstable with just 3.3uF cap, or even the data-sheet suggested 22uF. It need that *and* a 2.2ohm series resistor
+3. The FPC connector is a major PITA to hand-solder. All sorts of connectivity issues
+4. Pull-up on TDO. Not sure if needed, but TDO is not always driven by the FPGA.
+5. Missing bypass caps on the VIO side of the level shifters. Again, not sure if they are necessary (I'm running at 2.5MHz after all) but not nice for sure.
+
+At any rate, it is finally working. This should give me access (provided the extra pins on the FPC connector are functional) access to a bunch more FPGA pins which I can hook up to the LA (at least the 16 working channels) and start hunting for differences.
+
+Shadow Tracer
+-------------
+
+The ZIFF sockets have much wider pins than the default KiCAD holes for the DIP 40 socket. I managed to force them in place by destroying only one socket in the process, but what a pain.
+
+Clock troubles
+--------------
+
+I have finally found out why the PCW was so unstable if I moved the Z80 further away from the board. Or even just hooked up an LA: the clock pin was driven through a very large ferrite bead (thanks FCC!). This created a shitty enough clock that things stopped working. Even with that shorted through things are a bit shaky, but at least workable.
+
+Comparison
+----------
+
+The first thing to note is that that the T80 gets out of reset one cycle earlier than the Z80. This can easily be remedied. <<< T80_early_reset.png>>>.
+
+It is also obvious just how much faster UnIC is in getting the control signals changed after a clock edge. The LA can't even see the setup time, where for Z80 it can see one-to-two 40MHz (25ns) pulses. Hopefully that's not the root of my problems, that would be a bad day!
+
+After fixing a few additional issues around data matching (inverted logic is hard!), the first - what appears to be - true difference in behavior is observed: <<<t80_first_differnce.png>>>. This is early enough in the boot that we should be able to trace it to an instruction even with this very limited visibility. What appears to be happening though is that the T80 starts the M1 cycle too late (one cycle too late) and thus catching the WAIT train in the wrong phase.
+
+There is an OUT that terminates the first phase of the boot. That OUT seems to be this one:
+
+                ; Note, different contents again for address 0.
+0000    D3      OUT     (0F8h),A        ; A is still 0.
+0001    F8
+                ; This is the "end bootstrap mode" sequence.
+                ; Execution continues in the copied boot ROM, see
+                ; below.
+
+Then we have M1 RFSH RD RD. This corresponds to this instruction:
+
+0002    01      LD      BC,83F3h
+0003    F3
+0004    83
+
+After that, we have:
+
+After that we have M1 RFSH M1 RFSH IOWR. The reason for the two M1 cycles must be that this is a prefix instruction:
+
+0005    ED      OUT     (C),B
+0006    41
+
+This is followed by M1 RFSH M1 RFSH M1 RFSH M1 RFSH M1 RFSH RD (i.e. 5 instructions, the last one needing a second byte). That matches:
+
+0007    0D      DEC     C
+0008    78      LD      A,B
+0009    05      DEC     B
+000A    87      ADD     A,A
+000B    20      JR      NZ,memmaplp
+000C    F8
+
+The first time, the jump should take, but apparently a taken jump takes one extra cycles on the T80 compared to the real thing. That's weird. What should the timing be?
+
+It should be 12 cycles for branches taken, 7 for not taken. But that's without wait-states. The M1 cycle catches the right phase and doesn't incur any extra waits. Indeed all cycles are 0-wait-state, so it should take 12 cycles total. And it does. For the Z80. For the T80 however, it's 13. That'll take some tracking down, but at least the fact that no wait-states complicate the picture is a good thing. <<<t80_annotated_jr_timing_bug.png>>>
+
+Created a small simulation environment to test the issue. The code is the following <<<sim/cbranch_timing_test.asm>>>. This shows an interesting problem: the jump taken is now **3** extra cycles instead of 6, as in real HW. This has probably something to do with the wait-states. Either way, 3 is just as incorrect as 6. So let's investigate (BTW: the timing of the jump not taken is correct)! So the reason for this was simply an incorrect generic setting: 'MODE' should be set to 0, which is traditional Z80, not 1, which is fast Z80. This was a simulation only problem, so that is not an issue. What *is* an issue is that in the real HW, the wait signal is apparently honored even though it shouldn't be. Let's try to re-create the problem. This will take some finessing to find the right phase of the wait signal. BTW: not sure if the Z80 did honor wait-states in this machine cycle. It doesn't generate a memory access signal, so one would think, no. We can probably test it in the visual Z80... Luckily I got it right the first try and in fact, I see the problem: now we have 6 cycles.
+
+So, I've implemented a fix that ignores wait-states when NOREAD is set. This is the signal (rather mislabeled) that seems to be controlling whether an MCycle will generate a bus access. It fixed the timing of the jump instruction, but also affected the timing of several dozen other instructions: NOREAD was set in many many places.
+
+Trying the change in real HW, I see a marked improvement: the timing now lines up at the spot where it didn't before. BTW: it's nice that the markers SHIFTED in SigRok between runs. Not sure why, the trigger should be repeatable. At any rate, SigRok is not the pinnacle of SW maturity.
+
+The control signals seem to stay in sync all the way to the end of the trace, which is nice. There are 'data_match' triggers, not sure I should take them seriously. What might be more interesting is address mismatches: those would be indicative of divergent control flow and would start triggering like crazy if we get there.
+
+Actually, I think I should take them seriously. Let's try to figure out where they start triggering. <<<z80_data_mismatch.png>>>. This start happening soon after the 5th OUT statement.
+
+
+0012    D3      OUT     (0F8h),A        ; start drive motor(s)
+0013    F8
+0014    11      LD      DE,0732h        ; E = wait_for_disc loop variable
+                                        ; D affects no. beeps on error
+0015    32
+0016    07
+                ; Sit around for about 100 seconds, prodding the
+                ; FDC every so often to see if there's a disc.
+            wait_for_disc:
+0017    06      LD      B,0C8h
+0018    C8
+0019    DC      CALL    C,delay
+001A    B1
+001B    00
+
+The first mismatch is when we try to push our PC to the stack. That's bad, actually. That means that we've had divergent control flow prior to this point and we only kept in sync because we've force-fed the instruction-stream to the T80. So, indeed, we should look at address mismatches.
+
+Hmm... The address mismatches start at the first branch (JR) instruction. The timing matches, which is to say that the branch goes the same way, yet the address doesn't match afterwards? That's weird. Hold on! Looking back at the sim, indeed, the branch doesn't happen. WTF?! So it turns out more fixes need to be sprinkled around: the wait-state was guarding several paths, all needing changes. With that, we're progressing a little further.
+
+We get into the call, but the address mismatches start soon after...
+
+            delay:
+00B1    3E      LD      A,0B3h
+00B2    B3
+            delaylp:                    ; inner loop controlled by A
+00B3    E3      EX      (SP),HL         ; beefy NOPs?
+00B4    E3      EX      (SP),HL
+00B5    E3      EX      (SP),HL
+00B6    E3      EX      (SP),HL
+00B7    3D      DEC     A
+00B8    20      JR      NZ,delaylp
+00B9    F9
+00BA    10      DJNZ    delay
+00BB    F5
+00BC    C9      RET
+
+OK, this is *highly* problematic here. So, this is the second instruction that is the issue: EX (SP),HL. What the Z80 is doing is two reads followed by two writes. The T80 does it one byte at a time. <<<z80_ex16_issue>>> Not sure if this is benign or not, but would be a very involved thing to fix. I've verified the operation in simulation as well. This is troubling, but not sure if it's important. Technically one could envision a case where it matters, but only if someone implemented some 16-bit peripheral that depends on atomic reads *both* from a HW and a SW perspective. This is extremely unlikely.
+
+The problem though is that this behavioral difference throws all sorts of sand into the gears of shadowtracer. Maybe it wasn't all that hard. I have a prototype fix that seems to do the trick. Let's test beef up the test-case to be self-checking at least for correctness and then check for real HW.
+
+Actually, as usual this was way more complicated as expected; there's a lot of dependency on special signals, in fact, I had to introduce a new control signal to MCode to handle all the intricacies. At any rate, the unit test seems to be passing now, so maybe it's time for an FPGA test?
+
+Hmm... Things are not quite what they should be still: the first EX (SP),HL seems to work, but the next one reports an address mismatch. This seems to indicate some problem with SP getting corrupted?! But I don't see that in the simulator. Maybe if I add back wait-states? Is it possible that we double-touch SP? Oh! It's only the write part that mismatches, wanna bet that the bytes are written in reverse order?
+
+Yup, that was it!
+
+Setup issue on RQM bit from FDC
+-------------------------------
+
+Looking at the trace later in time, we do get address mismatches. It's difficult to say where they start to appear as the initial, synchronized trace looks perfect. One can try a longer trace or clean up the trigger signals and trigger on the actual mismatch comparators.
+
+Unfortunately even the longest trace shows no signs of disagreement. I think I'll have to clean up the comparators as a next step!
+
+In order to make forward progress, I'll have to leave the LA I'm using (I need to ship it back for the return anyway). It doesn't give me enough visibility. What I did do is to bring out the registered (clean) version of ctrl_match, which *does* trigger way into the boot. So it's time to fire up the integrated LA and try to make that work.
+
+SOME GREAT PROGRESS!!! It is quite possible that the integrated LA (GAO) is useable as root. If that were the case, it would indeed be great news and I could keep my $200...
+
+The repro is saved as 'missing_m1'.
+
+The instruction stream seams to be:
+
+0xf170  add a,a
+0xf171  jr nc,d
+
+oh... it's pretty obvious: we want to jump in the T80 case, but not in the real world. <<<divergent_branch.png>>> Hmm... So the control mismatch is explained, but not the root cause. For that, I'll need to fire up data bus comparison.
+
+This is interesting: even after enabling data mismatch, we trigger at the same spot. Maybe data mismatch is not ... well, matching? It only tracks writes for sure. Let's look at a slightly wider context...
+
+The previous instruction is an 'IN a,n'. That's great! So, let's seee....
+
+0xf16e  in a, 0  --> reads hmmm... either 0x70 or 0xf0. Hard to say because the data changes on the rising edge.
+0xf170  add a,a
+0xf171  jr nc,d
+
+OK, if this is true, it is very bad news: we might have a setup violation that goes one way in the T80 and the other in the Z80. For this, I'll need a scope. I can trigger on the mismatch and with enough history, I should be able to see the rising edge of IORQ (or RD) and the change of D7.
+
+But, BUT, **BUT**! The integrated LA is rather reliably suddenly.
+
+So, some more thinking: *if* the T80 reads 0x70, then the MSB is cleared. After the shift, C is cleared, and the jump should happen. At the same time, if the Z80 reads the later value (0xf0), it would set C and thus not jump. While on the LA I can't see the data-bit, I can see the IORQ mismatch. It's a good test for 400MHz capture... The difference is 40ns, in that the Z80 deasserts IORQ later.
+
+So, after cranking up the sampling rate on the GAO as well to about 50MHz, we can see the problem <<<setup_violation.png>>>: the data changes between the rising edge of the internal (T80) IORQ and the external (Z80) one.
+
+Of course the uPD765 doesn't know when IORQ will disappear, it's just that it's slow enough to respond to straddle the two signals.
+
+T_RD is 200ns for the disc controller, which is way way lower than the 625ns (640 measured) low-pulse of the IORQ. Of course I would have to check what nCS for the controller looks like, that's going to be different/shorter.
+
+The ULA delay I actually have already looked at along with the data lines. This is scope trace 70. Data is a bit harder to see, but it's clear that data is driven soon after nCS goes active. nCS itself is delayed by about a clock cycle, so, even arguing for worst-case, the data should be ready 450ns after the assertion of IORQ. GAO shows the difference to be 274-258=16 clock cycles. Each clock cycles is approximately 210/4=52.5MHz or 19ns, so the whole affair takes place in 304ns. Yeah, that's believable. Roughly at least. The IORQ in this case takes 640ns (2.5 clock cycles). That should give us 625-250-200 = 200ns setup time for data. As we will see later, the Z80 specifies 50ns, so timing is met.
+
+What do we get then? We get that the 765 *asynchronously* changes the status output as the read is on-going. Most status bits gets their way onto the bus in about 300ns, but at some later time (any time really) the MSB might flip. Which side we happen to capture it is any ones guess. If that is true, that's really bad news for ShadowTracer though: this ambiguity can't be designed out of the system. Not easily at least.
+
+The Z80 datasheet for it's part (https://www.zilog.com/docs/z80/ps0178.pdf page 22) specifies 25 28 (23) minimum 50ns data setup time and 85ns (85ns) (47.5ns measured) IORQ (and RD) hold times. Again, nothing alarming, everything is within spec.
+
+OK, so this is a bit problematic, but maybe not terribly. We can attempt at this point to re-run the full T80 without shadow-tracer mode: both modified instructions (JR and EX (SP),HL) seem to be part of the write-command-to-FDC routine above. While the first should have improved timing and the second should not have affected it, still, there is some remote chance that the problem was mitigated.
+
+We can also attempt to do this: reset shadow-tracer whenever we see an M1 cycle to 0x0100. This would involve forcing the PC to be that of the externally presented address thus resetting the program flow to the same location. On entry, we could make ZEXALL (if not done already) to clear out all registers. Looking at the source (https://github.com/agn453/ZEXALL/blob/main/zexall.mac) it appears that we initialize every register except for A and B. According to https://rvbelzen.tripod.com/cpm3-prg/cpm3prg2.htm CP/M system calls don't save/restore registers, thus there probably won't be any PUSH A/B in there. At least not before their content is blasted away. Flags, I'm sure get destroyed very quickly too.
+
+So that's what we're going to do. If this works, we should be able to execute ZEXALL and (very slowly) scour the instruction set for any further mismatches.
+
+DEC (HL) and INC (HL)
+-----------------------
+
+BTW: it seems that at least after a while we find our way back to the same execution stream (PC matches again), but there are still mismatches triggering GAO.
+
+(z80_data_mismatch2.png)
+
+Here the issue might be spurious: we're getting a half-cycle data-mismatch, which we're driving the data-bus, but not yet WR. By the time WR gets asserted, we're in sync. Well, maybe not: the datasheet says that we should be driving the proper data out when we assert MREQ.
+
+This normally should be benign, except that the PCW doesn't take WR into consideration for address decoding. If it's not a RD (and it's not) than it's a write (RD gets asserted in sync with MREQ). So, of someone foolishly depends on the falling edge of MREQ for capturing the databus data, we might be doing things wrong here. So what is this instruction?
+
+0x1384   35  dec (hl)
+
+It is the write phase of this thing that presents the wrong data. BTW: this doesn't seem to matter at all even: all writes present this problem, though not all trigger the full wrath of 'match' getting asserted.
+
+This is strange: the simulation shows proper behavior. That is, data is presented with the same edge as MREQ. In fact, this bears out in the FPGA trace as well for *most* writes. In fact we are - as usual - faster than the Z80 in setting up the data, thus the brief mismatch.
+
+What's curious about this particular case though is that we underflow the value (go from 0 to 0xff). Let's try that in sim...
+
+Cool! We have a repro!!! It's not the underflow, actually, even the second dec (hl) has this issue. It's an unfortunate value chosen so that the first attempt didn't show the issue. So, what gives?!
+
+So, it turns out, I've already fixed this issue for other read-modify-write instructions, just missed INC/DEC (HL). It's an easy fix, we just need to introduce "Early_T_Res <= '1';" to cycles M2 and M3.
+
+Great, that fix took hold and now we're idling (after OS boot) with no triggers and synchronized PC.
+
+This sets the stage for a ZEXALL run!
+
+ZEXALL
+------
+
+Started ZEXALL at 6:11pm. This will take a while. Hopefully...
+
+So, not sure when (didn't pay attention) but the LA eventually triggered during ZEXALL. And now I'm rebooting for some random reason. Probably interaction between the FTDI chips.
+
+At any rate, let's re-run! From what I can tell, this was a data mismatch as the control signals are identical.
+
+In fact there was another mismatch (also a data one) during ZEXALL load. Let's investigate that while we're waiting on the other one to repro...
+
+(data_mismatch_during_zexall_load.vcd)
+
+Here we seem to write 0x44 into address 0xff48 instead of what we should (0x6c). No idea where this value is coming from; the instruction seems to be a PUSH AF.
+
+It is the second write, so it's (probably) F. So we have a flags mismatch.
+
+0x44 decodes to 10001000
+0x6c decodes to 10101100
+
+Bit 5 is not used, that's one difference. Bit 3 is also not used, that's the other difference. Not used at least in the documented way.
+
+I'll let this one slide for now.
+
+So let's keep on waiting for the repro...
+
+We have our repro (first_zexall_mismatch.vcd). This is the same problem. The next trigger is the same problem as well.
+
+The documentation says a lot about bit 5 and 3. What does the T80 do about them? (I think there was even a comment that they are not handled 100% correctly). Actually the documentation says it's 'almost 100%'. (The flags behavior is described here: http://www.z80.info/zip/z80-documented.pdf, chapter 4).
+
+On this, it very much appears to me that the code meticulously implements chapter 4, but forgets about the default behavior: Flag_X and Flag_Y are normally just bit 3 and 5 of the result. Actually, that's probably not the case. Line t80.vhd:858 seems to be dealing with it:
+
+						F(7 downto 1) <= F_Out(7 downto 1);
+
+Yup, and the ALU seems to be doing the right thing. So then, why are these set incorrectly so often? I think I'll need a test-case for this! Something better than ZEXALL...
+
+At any rate, since no (documented) Z80 code should depend on either of these bits, this is not an issue for disk-IO.
+
+Mid-point review
+................
+
+So, where are we after all this?
+
+1. We've changed the timing (improved actually) of conditional jumps in the taken case. This should not have an impact on disk-IO. If anything it should regress it further.
+2. We've changed the order of of the memory operations in EX (HL),BC, but not the timing. This instruction *is* used as a delay loop component, but - since we haven't changed the timing - it should't have an impact.
+3. We've fixed the data presented on the first cycle of writes for in-place INC (HL) and DEC (HL) instructions. This *could* have caused some issues, but why would they only impact disk-IO? Plus, if they do, that would be really sloppy system design: one would have to use the falling edge instead of the rising one to capture the write data. And since the memory controller (the only place that these instructions can target) needs to issue a /RAS and a /CAS cycle, it is next to impossible to screw this up.
+4. We've seen a problem where the FDC controller changes its mind about the RQM flag mid-status-read. This can cause issues, in fact it does cause issues where the T80 and the Z80 disagree on the status bit. Technically it can also cause meta-stability, but I doubt that would be a problem. And an incorrect reading just results in an extra execution of a delay loop, so I don't see how this could be the root cause. And of course, there's almost nothing that can be done about it either.
+5. We see the X and Y flags (both being undocumented) set incorrectly at least under some circumstances. It would be good to know under what, but - since we know that ZEXALL is passing on the T80 - it can't be all that well documented. All the failing cases I've seen so far have these flags SET on the real deal while CLEARED on the T80. Some targeted tests might get me closer, but that's a PITA to do as I would need to execute it under CP/M. Plus, this is almost certainly not the problem, it would be shocking if CP/M depended on undocumented flags behavior even as a bug.
+
+Of all this, the most likely (maybe better to put it this way: least unlikely) culprit is #4. But that's the one I don't think I can fix. Well, maybe I can: I can re-read the register and repeat until I get two consistent readings, but that's ... yuck. (I can't under any circumstances *repeat* the read transaction. That's a big no-no. I can however insert extra wait-states and keep sampling the data-bus beyond what is defined by the system if the previous two readings disagree.) So, this is how it would work:
+
+T1: as usual
+T2: as usual
+T3: stay here, until WAIT samples high, also sample DATA
+T4: sample data again. If different, stay in T4 for one more cycle.
+
+Now, there are two reasons why this is not good:
+
+1. In T4 we release IORQ and RD in the second half of the cycle, when we sample the DATA. The comparison happens after, we can't really - easily - go back in time and undo the decision about the release
+2. In our failure case, RQM changes after we've sampled it. The Z80 samples a little latter and sees the change. This double-sampling would not catch the problematic behavior.
+
+Post-rising-edge sampling is not a valid solution either: the data hold time requirement by the DS is 0.
+
+But, maybe I got lucky and these things have fixed the problem? I don't know that, actually.
+
+Back to the flags problem
+-------------------------
+
+Flags are rather volatile, right? They are more or less set by every instruction. So, looking back in the trace, I should be able to identify the place where they got corrupted!!
+
+1C41  ED B0          LDIR <--- we've gotten an interrupt here
+0038  C3 A1 FD       JP FDA1
+FDA1  ED 73 A3 FE    LD (FEA3), SP
+FDA5  31 4A FF       LD SP, FF4A
+FDA8  F5             PUSH AF <--- this has wrong X and Y flags
+
+OK, now we're talking!!!! This is chapter 4.2, and one of the weird corner-cases of X,Y register handling. I'll copy it here:
+
+        The LDI/LDIR/LDD/LDDR instructions affect the flags in a strange way. At every iteration, a byte
+        is copied. Take that byte and add the value of register A to it. Call that value n. Now, the flags
+        are:
+
+        YF flag A copy of bit 1 of n. <-- bit 5 of F
+        HF flag Always reset.
+        XF flag A copy of bit 3 of n. <-- bit 3 of F
+        PF flag Set if BC not 0.
+        SF, ZF, CF flags These flags are unchanged
+
+What does the T80 do? Well, nothing special! This is *bad*. And, most importantly, testable!!! But that's a thing for tomorrow. Well, turns out there *is* special handing for the X/Y flags for these instructions. The 'I_BT' signal is set, which has some special-casing. There are a couple of options:
+
+1. The flags handing is botched still
+2. The interrupt handing causes the flags to be set differently between the two implementations. (Such as flags are not updated in the T80 in time for the interrupt to pick them up.) Though that would be very bad if it were the case as the loop termination would be affected.
+3. It's also possible that interrupt handling is done such that the iteration is one-off in the two implementations. Though, again, it's unlikely that it would effect only these instructions and interrupts are firing left right and center, normally without triggering differences.
+
+The first test, A=2 and the byte is 0. This means that bit 1 of the sum should be 1 and bit 3 should be 0. The X and Y flags are set as they should be.
+
+Similarly, for all other test, the bits seem to be set as they should be. That's good and bad, I guess. Can it be that the documentation is wrong about this?
+
+Let's try to reconstruct the problem from the LA logs. After all, we have visibility into the data being copied and A as well (through the PUSH).
+
+        A = 0x02
+        F = 0x64 (T80) 0x4C (Z80)
+        byte = 0
+
+So, following the logic described above,
+
+        n = 0x02 (0b00000010)
+        n[1] = 1 --> Y should be set, so F[5] should be 1 (Z80 is 0)
+        n[3] = 0 --> X should be clr, so F[3] should be 0 (Z80 is 1)
+
+In both accounts the T80 is correct, the Z80 is incorrect. Which of course is preposterous, the Z80 cannot be wrong by definition. Oh! The bits are swapped!!! Could that be?! In another instance (second_zexall_mismatch.vcd):
+
+        A = 0x0f
+        F = 0x2C (T80) 0x04 (Z80)
+        byte = 0x60
+
+        n = 0x6f (0b01101111)
+
+        n[1] = 1 --> X should be set, so F[5] should be 1 (Z80 is 0)
+        n[3] = 1 --> Y should be set, so F[3] should be 1 (Z80 is 0)
+
+In both accounts the T80 is correct, but the Z80 is not bit-swapped! So it's not that simple. In fact, if we look at 'n' here the only two bits that are 0 are bit 7 and 4. Those were both 0 in the previous case as well. So it appears the documentation is rather incorrect and something more complex is afoot.
+
+I think I'll have to roll up my sleeves and get CPM-based test disk creation working. Let's start by making a ZEXALL disk from source....
+
+Building cpmtools needs building libdsk. This can be downloaded from https://www.seasip.info/Unix/LibDsk/#download, but it doesn't work right out of the bat. One needs to modify two compress.c and drvlinux.c to include the following:
+
+        #ifdef MAJOR_IN_MKDEV
+        #include <mkdev.h>
+        #endif
+
+        #ifdef MAJOR_IN_SYSMACROS
+        #include <sys/sysmacros.h>
+        #endif
+
+Dependencies seem to include lyx which is some sort of LaTex package.
+
+OK, as usual, things took *way* longer then they should have, but I finally have a CP/M bootable disk image with my custom code on it. Yay! I can compile and execute CP/M applications.
+
+OK, so what do we learn from this? We do get a fairly reliable triggering of the failure, but, interestingly it's always preceded by an interrupt. It's also usually one of the two repros above. Weird.
+
+Let's try to disable interrupts in the test and see if we get anything!
+
+OK, so even after disabling the interrupts, I get the same behavior. Also, just to be clear, the PC is *not* in my
+test code. This seems to indicate that the difference is not in instruction behavior but in interrupt handling behavior.
+
+That *sucks*.
+
+But actually, this is a 3rd set of data:
+
+(third_zexall_mismatch.vcd).
+
+Here we see:
+
+        A = 0x00
+        F = 0x6D (Z80) 0x45 (T80)
+        byte = 0x44
+
+        n = 0x44 (0x01000100)
+        n[1] = 0 F[5] is 0 for T80 1 for Z80
+        n[3] = 0 F[3] is 0 for T80 1 for Z80
+
+Let's try to make the test longer so I can safely trigger inside it!
+
+Yeah, at this point, I'm 99.999% certain, this is interrupt behavior that's different, not actual
+instruction behavior.
+
+Which, BTW is interesting: interrupts DESTROY the X Y flags, thus they are not all that useful. But that's besides the point, to match the behavior, I'll need to figure out what is going on.
+
+Is there any way to see what the previous set of flags should have been?
+
+So, in this particular iteration:
+
+        A = 0x01
+        F = 0x04 (Z80) 0x2C (T80)
+        data = 0x2E
+        data -1 = 0x02
+        data -2 = 0x2E
+
+        n    = 0x2F (0b00101111) [1] = 1 [3] = 1 F[5] = 1 F[3] = 1
+        n -1 = 0x03 (0b00000011) [1] = 1 [3] = 0 F[5] = 1 F[3] = 0
+        n -2 = 0x2F (0b00101111) [1] = 1 [3] = 1 F[5] = 1 F[3] = 1
+
+        NONE of these matches the Z80, which is F[5] = 0 F[3] = 0
+
+So, it's not that the interrupt happens before updating the flags. The flags get overwritten during the interrupt process. There are of course several instructions between the interrupt and the PUSH AF, so there is a possibility that some of those alter the X Y flags (in the Z80) while don't touch them in the T80. So, here's what's happening:
+
+        1C41  ED B0          LDIR <--- we've gotten an interrupt here
+        0038  C3 A1 FD       JP FDA1
+        FDA1  ED 73 A3 FE    LD (FEA3), SP
+        FDA5  31 4A FF       LD SP, FF4A
+        FDA8  F5             PUSH AF <--- this has wrong X and Y flags
+
+The JP should not affect any of the flags according to documentation. The first load is missing from the instruction table, not no load is marked as altering any of the flags (as they shouldn't). Same goes for the second load. And then we get to the push, which of course already exposes the problem.
+
+So, I really don't think that any of the instructions mock around with the flags, which leaves the interrupt handling itself. How can we gain visibility into this though? Maybe the visual Z80 can give us some clues?
+
+At any rate, I haven't uncovered anything tragic, so let's try to build a CPU image!
+
+And, as expected, the hang is still there with disk operations. I can try removing all superfluous logic, such as the OLED driver and see if that makes a difference...
+
+Yeah, that didn't make a difference either. Of course, as I haven't changed anything that should have made a difference, so it's no surprise nothing did.
+
+OK, so this leaves us with the one issue around the uPD765 mocking with the status bits mid-read. Could that be the problem? I said before that I could set up a trigger for that (in shadow-tracer mode) and look at the timing more carefully on the scope. Maybe it's time for that...
+
+OK, so there's one more thing that I can do: mask out the existing triggers and try to run ZEXALL to completion.
+
+But first, let's do the scope thingy...
+
+OK, I have the repro going. What I want to do is this:
+
+- Trigger on 'match' a.k.a. io5a (pin 9)
+- Look at D7
+- Look at CS on FDC (pin 4)
+- Look at RD on FDC (pin 2)
+
+As a second one, look at D7 and D6 (or some other data pin) to capture the delta. So let's set this up!
+
+OK, I need new probes. But besides that, I've learned that the 'match' signal tirggers quite often.
+
+But I don't quite get what's going on for the control lines. Let's double check!
+
+So CS is on channel 3 and that's low for many many many cycles. But that's fine because that's just A7.
+
+So, the theory goes that either WR or RD must be low on top of CS to select this chip.
+
+Now, the mismatch doesn't seem to happen during a *read*! I don't see the write, but that's probably what I should be looking at instead of CS: the address hold time is greater than 0 just as the setup time, so the actual chip-select will be bounded by those signals. So...
+
+Oh, hold on! The mismatch happens when the branch happens, there should be a read shortly before that. That's the signature I'm really looking for.
+
+FDC RQM bit issue, looking at the scope, it is clar (00081) that the RQM signal changes mid-read, after about 400ns from the start of the read. It starts by clearly being driven 0 but then changes it's mind and gets driven high. I think that was what the LA told me as well... Maybe not, but I can't really find that note. At any rate, clear violation of the DS.
+
+So I have symultaneous captures both on the LA and the scope (00087). This is very different though! What's going on here?
+
+More control mismatches
+-----------------------
+
+So, the piece of code triggering here is this:
+
+	di			;1f50	f3 	.
+	ld hl,(026e0h)		;1f51	2a e0 26 	* . &
+	ld a,h			;1f54	7c 	|
+	or a			;1f55	b7 	.
+	jr nz,l1f32h		;1f56	20 da 	  .
+	ld (026e4h),a		;1f58	32 e4 26 	2 . &
+	ld hl,(l23d0h)		;1f5b	2a d0 23 	* . #  <----------- CTRL mismatch
+	ld a,h			;1f5e	7c 	|
+	or a			;1f5f	b7 	.
+
+So, neither core wants to take the jump at 0x1f56, they execute the store in sync (we can see that A is 0)
+
+But the next instruction is something completely different. For the Z80 it seems it's something that stores
+1F5B at location 2764.
+
+Oh, I know what's going on: it's an NMI. IT IS AN NMI!!!!
+
+So one thing: I need to capture NMI. But the T80 either didn't take the NMI at all or it didn't take it at the same time.
+Which is bizare as we do know it takes the NMI just fine.
+
+Let's try this with a few more signals captured!
+
+
+OK, I can't seem to get to this mismatch, but there's another one with a trivial repro: every ENTER triggers one.
+
+Mismatch on Enter
+------------------
+
+Oh, this is the interrupt during LDI, I'm sure. It has the same signature. So let's try to ignore this.
