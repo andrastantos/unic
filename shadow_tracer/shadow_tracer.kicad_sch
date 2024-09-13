@@ -5,8 +5,8 @@
 	(uuid "f6df1e3b-3728-4bb2-8d84-c5251d58c11a")
 	(paper "A")
 	(title_block
-		(title "UNIC 40")
-		(date "2023-11-24")
+		(title "UNIC 40 Shadow Tracer")
+		(date "2024-09-01")
 		(rev "1.0")
 		(company "Modular Circuits")
 	)
@@ -11474,7 +11474,7 @@
 		(dnp no)
 		(uuid "77586d7a-f952-499c-af24-e27b5eb2c514")
 		(property "Reference" "J3"
-			(at 238.76 139.6999 0)
+			(at 242.062 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11483,7 +11483,7 @@
 			)
 		)
 		(property "Value" "Conn_01x20"
-			(at 238.76 142.2399 0)
+			(at 250.444 114.046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11665,10 +11665,9 @@
 		(in_bom yes)
 		(on_board yes)
 		(dnp no)
-		(fields_autoplaced yes)
 		(uuid "b3abaabd-2f62-494a-adcd-db17f2a0af89")
 		(property "Reference" "J2"
-			(at 233.68 139.6999 0)
+			(at 229.616 111.76 0)
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -11677,7 +11676,7 @@
 			)
 		)
 		(property "Value" "Conn_01x20"
-			(at 233.68 142.2399 0)
+			(at 225.044 114.046 0)
 			(effects
 				(font
 					(size 1.27 1.27)
