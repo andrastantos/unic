@@ -134,6 +134,7 @@ def load_png(file_name: str) -> Sequence[int]:
                 byte |= bit << y
             array.append(byte | 0x100)
     return array
+
 class OledCtrl(Module):
     clk = ClkPort()
     rst = RstPort()
