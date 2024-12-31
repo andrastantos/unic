@@ -29,21 +29,20 @@ module oled_top (
     logic [7:0] clk_divider;
     logic [7:0] rst_divider;
 
-    logic [31:0] refresh_divider;
     logic refresh;
     logic lcd_nrst;
 
-    always @(posedge clk) begin
-        if (refresh_divider == 10000000) begin
-            refresh = 1'b1;
-            refresh_divider = 0;
-        end else begin
-            refresh = 1'b0;
-            refresh_divider = refresh_divider + 1'b1;
-        end
-    end
-
-
+    //logic [31:0] refresh_divider;
+    //always @(posedge clk) begin
+    //    if (refresh_divider == 10000000) begin
+    //        refresh = 1'b1;
+    //        refresh_divider = 0;
+    //    end else begin
+    //        refresh = 1'b0;
+    //        refresh_divider = refresh_divider + 1'b1;
+    //    end
+    //end
+    assign refresh = 1'b0;
 
     assign clk_divider = 20; // Roughly 1MHz SPI clk
     assign rst_divider = 100; // Roughly 5us of reset pulse
