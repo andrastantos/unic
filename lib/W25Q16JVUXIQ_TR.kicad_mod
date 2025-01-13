@@ -35,6 +35,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 			(justify mirror)
 		)
@@ -48,6 +49,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 			(justify mirror)
 		)
@@ -61,6 +63,7 @@
 		(effects
 			(font
 				(size 1.27 1.27)
+				(thickness 0.15)
 			)
 			(justify mirror)
 		)
@@ -420,7 +423,7 @@
 		(layers "F.Cu" "F.Mask")
 		(uuid "227afe1a-2aba-4302-b85a-c675abdb8300")
 	)
-	(model "/home/tantos/unic/lib/3dmodels/W25Q16JVUXIQ_TR.stp"
+	(model "./3dmodels/W25Q16JVUXIQ_TR.stp"
 		(offset
 			(xyz 0 0 0)
 		)
