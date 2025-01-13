@@ -6,8 +6,8 @@
 	(paper "C")
 	(title_block
 		(title "UNIC 40")
-		(date "2023-11-24")
-		(rev "1.0")
+		(date "2025-01-13")
+		(rev "2.0")
 		(company "Modular Circuits")
 	)
 	(lib_symbols
@@ -16105,9 +16105,9 @@
 		)
 		(uuid "ffe8dc62-c29b-4b5c-a0d7-196b0b678e65")
 	)
-	(text "Issues reported with GoWin FPGAs:\n\nhttps://github.com/juj/gowin_flipflop_drainer"
+	(text "Issues reported with GoWin FPGAs:\nhttps://github.com/juj/gowin_flipflop_drainer\nHave not seen this issue, probably fixed in recent stepping"
 		(exclude_from_sim no)
-		(at 355.6 412.75 0)
+		(at 96.52 36.83 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -16171,9 +16171,9 @@
 		)
 		(uuid "124f9ca5-a98e-426c-b576-88181a9cb695")
 	)
-	(text "TODO:\n- Add more vias to EPAD, make sure they are of the 'ENCROACHED' style,\n  which is to say, that they are open on the top and solder-mask-defined\n  on the bottom. See Microchip AN18.15 for details. They recommend:\n  0.25-0.3mm FHS and 0.055-0.075mm larger solder mask opening.\n  ... I don't think KiCAD can do this kind of thing.\n- Can we relax manufacturing cost? by making the holes 0.3mm FHS?"
+	(text "TODO:\n- Add more vias to EPAD, make sure they are of the 'ENCROACHED' style,\n  which is to say, that they are open on the top and solder-mask-defined\n  on the bottom. See Microchip AN18.15 for details. They recommend:\n  0.25-0.3mm FHS and 0.055-0.075mm larger solder mask opening.\n  ... I don't think KiCAD can do this kind of thing."
 		(exclude_from_sim no)
-		(at 251.46 -33.02 0)
+		(at 236.22 130.81 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -16192,18 +16192,6 @@
 			(justify left bottom)
 		)
 		(uuid "1a6b38cd-24e2-4780-9bbd-7cf44659f37b")
-	)
-	(text "Volume      PCB      Assembly   BOM      Total\n========   =======  =========  =======  =======\n100          1.5     4.3        22.05     27.85\n200          1.08    2.8        21.61     25.49\n1000         0.43    1.3        19.49     21.22"
-		(exclude_from_sim no)
-		(at 36.83 -5.08 0)
-		(effects
-			(font
-				(face "LM Mono 10")
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "1c983e5a-3a39-4072-a24f-9583059498bc")
 	)
 	(text "VSS"
 		(exclude_from_sim no)
@@ -16271,9 +16259,9 @@
 		)
 		(uuid "47e2c1b8-67c8-4081-8a5b-6260424c587f")
 	)
-	(text "Clock considerations:\n- 2 PLLs with a secondary output divider each, only integer mode\n- PLL VCO is between 400 and 1000MHz for fast, 350 to 800 for slow devices\n- Internal clock is based on 105/125MHz (based on device)\n- There are CLKDIV resources that support 2/3.5/4/5/(8) divisor settings"
+	(text "Clock considerations:\n- 2 PLLs with a secondary output divider each, only integer mode\n- PLL VCO is between 400 and 1000MHz for fast, 350 to 800 for slow devices\n- Internal clock is 105/125MHz (based on device)\n- There are CLKDIV resources that support 2/3.5/4/5/(8) divisor settings"
 		(exclude_from_sim no)
-		(at 135.89 -20.32 0)
+		(at 237.49 147.32 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -16405,7 +16393,7 @@
 	)
 	(text "QN88 package is common between N4, N9, NR4 and NR9.\nN2 also supports this package, but very different pinout\n\nCarried by RuTronic, Mouser and these guys:\nhttps://www.edgeelectronics.com/fpga/?start=49\n"
 		(exclude_from_sim no)
-		(at 109.22 27.94 0)
+		(at 96.52 27.94 0)
 		(effects
 			(font
 				(size 1.27 1.27)
