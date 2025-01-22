@@ -10539,7 +10539,7 @@
 	)
 	(wire
 		(pts
-			(xy 168.91 146.05) (xy 204.47 146.05)
+			(xy 168.91 146.05) (xy 182.88 146.05)
 		)
 		(stroke
 			(width 0)
@@ -11826,6 +11826,16 @@
 			(type default)
 		)
 		(uuid "cfd99f57-a06f-442e-91c4-43dc2b3aea6f")
+	)
+	(wire
+		(pts
+			(xy 187.96 146.05) (xy 204.47 146.05)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "d163a707-59cd-49eb-bfe3-e5ac3ec38d63")
 	)
 	(wire
 		(pts
@@ -14079,7 +14089,7 @@
 		(uuid "fcc07942-0e7d-4d59-9dda-e46919281f15")
 	)
 	(label "CLK1"
-		(at 182.88 146.05 0)
+		(at 195.58 146.05 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -27006,6 +27016,127 @@
 		)
 	)
 	(symbol
+		(lib_id "Device:R_Small_US")
+		(at 185.42 146.05 90)
+		(unit 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(dnp no)
+		(uuid "7041fe95-a0a0-4928-b91d-7fdd55f435f5")
+		(property "Reference" "R14"
+			(at 181.61 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "220"
+			(at 187.96 144.78 90)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0201_0603Metric"
+			(at 185.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Datasheet" "~"
+			(at 185.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "Description" ""
+			(at 185.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "mpn" ""
+			(at 185.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manufacturer" ""
+			(at 185.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf" ""
+			(at 185.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "manf#" ""
+			(at 185.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "MP" ""
+			(at 185.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(property "SnapEDA_Link" ""
+			(at 185.42 146.05 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "907da2c7-4f97-45fc-b5e7-e236e1e4a549")
+		)
+		(pin "2"
+			(uuid "09399e26-e257-483c-aa1d-86de00a899a8")
+		)
+		(instances
+			(project "board_gw1_24"
+				(path "/f6df1e3b-3728-4bb2-8d84-c5251d58c11a"
+					(reference "R14")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
 		(lib_id "power:GND")
 		(at 474.98 44.45 0)
 		(unit 1)
@@ -33378,7 +33509,7 @@
 				)
 			)
 		)
-		(property "Footprint" "UNIC:Oscillator_SMD_Abracon_ASE-4Pin_3.2x2.5mm"
+		(property "Footprint" "UNIC:Oscillator_SMD_2.5x2.0mm"
 			(at 194.31 154.94 0)
 			(effects
 				(font
@@ -33405,7 +33536,7 @@
 				(hide yes)
 			)
 		)
-		(property "mpn" ""
+		(property "mpn" "SG-210STF 12.0000ML5"
 			(at 212.09 146.05 0)
 			(effects
 				(font
@@ -33414,7 +33545,7 @@
 				(hide yes)
 			)
 		)
-		(property "manufacturer" ""
+		(property "manufacturer" "EPSON"
 			(at 212.09 146.05 0)
 			(effects
 				(font

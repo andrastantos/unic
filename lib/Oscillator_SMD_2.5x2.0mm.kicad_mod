@@ -1,0 +1,226 @@
+(footprint "Oscillator_SMD_2.5x2.0mm"
+	(version 20240108)
+	(generator "pcbnew")
+	(generator_version "8.0")
+	(layer "F.Cu")
+	(descr "Miniature Crystal Clock Oscillator Abracon ASDMB series, 2.5x2.0mm package, http://www.abracon.com/Oscillators/ASDMB.pdf")
+	(tags "SMD SMT crystal oscillator")
+	(property "Reference" "REF**"
+		(at 0 -2.45 0)
+		(layer "F.SilkS")
+		(uuid "06dc9c73-b175-44f0-84d5-976659006bc6")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Oscillator_SMD_2.5x2.0mm"
+		(at 0 2.45 0)
+		(layer "F.Fab")
+		(uuid "dfcc583f-0737-4380-af50-0a367b67b3dd")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Footprint" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "79c8c175-f01d-4223-b55f-c50648505d82")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "dc1aa00d-2daf-4ff2-b36a-ca4a4a1ed360")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(unlocked yes)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "cda47561-6e75-4873-8e3c-52e3a04905d7")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_line
+		(start -1.5 0.08)
+		(end -1.5 1.2)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(uuid "74039e67-d29c-4cc7-a869-d1b5319c24a1")
+	)
+	(fp_line
+		(start -1.5 1.2)
+		(end -0.3 1.2)
+		(stroke
+			(width 0.1)
+			(type default)
+		)
+		(layer "F.SilkS")
+		(uuid "41084f13-69af-47b8-ac74-c339edda745e")
+	)
+	(fp_line
+		(start -1.5 -1.25)
+		(end -1.5 1.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "12c3a368-6dbf-4638-b887-c546909becdd")
+	)
+	(fp_line
+		(start -1.5 1.25)
+		(end 1.5 1.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0c643929-bd58-4e9f-a2ba-3790552fae10")
+	)
+	(fp_line
+		(start 1.5 -1.25)
+		(end -1.5 -1.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "0ed4a375-99f8-4fb8-9e27-517143ea3107")
+	)
+	(fp_line
+		(start 1.5 1.25)
+		(end 1.5 -1.25)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(layer "F.CrtYd")
+		(uuid "4468092d-6b64-4727-a932-71ea6bbdc1f2")
+	)
+	(fp_line
+		(start -1.25 -1)
+		(end 1.25 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "f6901798-981d-4240-bbb0-6f356a9bbe8b")
+	)
+	(fp_line
+		(start -1.25 0.5)
+		(end -1.25 -1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "54aca38e-a649-4b60-812e-b1d936a27d70")
+	)
+	(fp_line
+		(start -1.25 0.5)
+		(end -0.75 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7aad2cd4-7640-48e0-8b9e-6431b987e003")
+	)
+	(fp_line
+		(start 1.25 -1)
+		(end 1.25 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "7f57bc5c-46a7-4cb0-a4c9-a9d06652b2cc")
+	)
+	(fp_line
+		(start 1.25 1)
+		(end -0.75 1)
+		(stroke
+			(width 0.1)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(uuid "e2fa0d27-01d4-49a7-8fb5-9ed4916663cb")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(uuid "5dfa358a-8b0c-4782-966d-7706495ee34d")
+		(effects
+			(font
+				(size 0.6 0.6)
+				(thickness 0.105)
+			)
+		)
+	)
+	(pad "1" smd rect
+		(at -0.85 0.65)
+		(size 1.1 0.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "3ef6dd51-1601-4574-9517-deed73524f12")
+	)
+	(pad "2" smd rect
+		(at 0.85 0.65)
+		(size 1.1 0.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "f4744137-d35b-4017-b821-26741a0ef3fb")
+	)
+	(pad "3" smd rect
+		(at 0.85 -0.65)
+		(size 1.1 0.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "7fdfae9a-0c09-4feb-b93e-ec2ecee452a5")
+	)
+	(pad "4" smd rect
+		(at -0.85 -0.65)
+		(size 1.1 0.9)
+		(layers "F.Cu" "F.Paste" "F.Mask")
+		(uuid "99350488-ba50-4023-a899-ad99595bb1f3")
+	)
+	(model "./3dmodels/SG-210 STF.stp"
+		(offset
+			(xyz 0 0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz -90 0 0)
+		)
+	)
+)
