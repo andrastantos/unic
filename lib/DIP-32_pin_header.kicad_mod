@@ -17,7 +17,7 @@
 			)
 		)
 	)
-	(property "Value" "Conn_02x20_Counter_Clockwise"
+	(property "Value" "Conn_02x16_Counter_Clockwise"
 		(at 0 0 0)
 		(layer "F.Fab")
 		(hide yes)
@@ -29,7 +29,7 @@
 			)
 		)
 	)
-	(property "Footprint" "UNIC:DIP-40_pin_header"
+	(property "Footprint" "UNIC:DIP-32_pin_header"
 		(at 0 0 0)
 		(unlocked yes)
 		(layer "F.Fab")
