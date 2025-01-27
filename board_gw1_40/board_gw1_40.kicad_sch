@@ -16523,7 +16523,7 @@
 		(uuid "014d07ba-6555-4d26-ae2f-9dd9099f1326")
 	)
 	(label "PIN23_F"
-		(at 182.88 85.09 0)
+		(at 88.9 87.63 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -16613,7 +16613,7 @@
 		(uuid "0808b407-111c-4f8d-9b8f-05b0fed4f6ca")
 	)
 	(label "PIN26_F"
-		(at 182.88 74.93 0)
+		(at 175.26 77.47 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -16943,7 +16943,7 @@
 		(uuid "275279fe-53eb-4907-8ded-bcb54096ff47")
 	)
 	(label "PIN12_F"
-		(at 80.01 113.03 0)
+		(at 88.9 92.71 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17163,7 +17163,7 @@
 		(uuid "4302b87b-da1a-4501-b845-6e0f04982ddd")
 	)
 	(label "PIN22_F"
-		(at 205.74 91.44 0)
+		(at 175.26 74.93 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17213,7 +17213,7 @@
 		(uuid "461b9d0d-67b3-4446-ab21-f2cfb3ed7060")
 	)
 	(label "PIN24_F"
-		(at 182.88 82.55 0)
+		(at 175.26 80.01 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17293,7 +17293,7 @@
 		(uuid "4e8de2e5-3dfe-4904-bee0-902d56aedd74")
 	)
 	(label "PIN30_F"
-		(at 210.82 100.33 0)
+		(at 80.01 67.31 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17353,7 +17353,7 @@
 		(uuid "5444d9fd-4c07-4f11-89ad-746cc1c38f8c")
 	)
 	(label "PIN20_F"
-		(at 80.01 90.17 0)
+		(at 88.9 90.17 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17463,7 +17463,7 @@
 		(uuid "60065852-d277-48ea-8396-9ad4a29e78c9")
 	)
 	(label "PIN33_F"
-		(at 88.9 95.25 0)
+		(at 88.9 107.95 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17503,7 +17503,7 @@
 		(uuid "63ebd9d6-9014-493e-992a-e91fcf5882fe")
 	)
 	(label "PIN27_F"
-		(at 80.01 67.31 0)
+		(at 175.26 85.09 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17523,7 +17523,7 @@
 		(uuid "64380ea2-ed8a-471b-98da-a7fdc32d805c")
 	)
 	(label "PIN34_F"
-		(at 88.9 107.95 0)
+		(at 88.9 110.49 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17813,7 +17813,7 @@
 		(uuid "8baa91b9-9f8e-4dda-8fe0-457cafd88ea5")
 	)
 	(label "PIN35_F"
-		(at 88.9 110.49 0)
+		(at 88.9 113.03 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -17843,7 +17843,7 @@
 		(uuid "91efe819-8049-4cbc-ab3a-addc12df9b23")
 	)
 	(label "PIN21_F"
-		(at 212.09 102.87 0)
+		(at 175.26 82.55 0)
 		(effects
 			(font
 				(size 1.27 1.27)
@@ -18113,7 +18113,7 @@
 		(uuid "a9d918b0-1629-423c-b7e0-fcd2cdcb81d4")
 	)
 	(label "PIN25_F"
-		(at 182.88 80.01 0)
+		(at 88.9 95.25 0)
 		(effects
 			(font
 				(size 1.27 1.27)
